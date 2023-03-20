@@ -1,0 +1,96 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 40px 40px 0;
+  -webkit-transition: all 100ms linear;
+  -moz-transition: all 100ms linear;
+  -o-transition: all 100ms linear;
+  transition: all 100ms linear;
+  z-index: 990;
+}
+header #logo img {
+  filter: brightness(0) invert(1);
+}
+header #logo .logo-h {
+  display: none;
+}
+header nav {
+  display: flex;
+  justify-content: end;
+}
+header .header-menu {
+  display: flex;
+}
+header .header-menu li {
+  margin-right: 30px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+}
+header .header-menu li a {
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+header .header-menu .header-cta a {
+  display: inline-flex;
+  align-items: center;
+  font-size: 18px;
+  background: #b79a5e;
+  padding: 0 20px 0 60px;
+  border-radius: 30px;
+  height: 40px;
+  position: relative;
+}
+header .header-menu .header-cta a i {
+  position: absolute;
+  left: 15px;
+  font-size: 24px;
+}
+header .header-menu .header-cta a:hover i {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+#pagecontent header #logo img {
+  filter: brightness(0) invert(1);
+  width: 120px;
+}
+header.fixed {
+  background: white;
+  padding: 10px 40px;
+}
+header.fixed #logo img.logo-v {
+  display: none;
+}
+header.fixed #logo img.logo-h {
+  display: block !important;
+  width: 160px !important;
+  filter: brightness(1) invert(0) !important;
+}
+header.fixed li:not(.header-cta) a {
+  color: #213c13;
+  font-weight: 500;
+}
+header.fixed .header-menu li {
+  height: 66px;
+}
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(2px, 0, 0);
+  }
+}
+/*# sourceMappingURL=header.css.map */

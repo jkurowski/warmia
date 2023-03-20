@@ -1,0 +1,77 @@
+.property #page {
+  padding-top: 0;
+  padding-bottom: 1px;
+}
+.property #property {
+  background: #213c13;
+  padding: 60px 0;
+}
+.property #property h6 {
+  font-size: 30px;
+  color: white;
+  font-weight: 600;
+}
+.property .property-desc ul li {
+  color: #fff;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 5px 0;
+}
+.property .property-desc ul li span {
+  float: right;
+  font-weight: 600;
+}
+.property .property-desc .bttn {
+  color: white;
+  text-transform: uppercase;
+  padding: 14px 25px;
+  margin: 0 0 15px 0;
+}
+.property .property-img {
+  padding: 30px;
+}
+.property .property-img img {
+  border: 10px solid white;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.38);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.38);
+}
+.property #contact-form {
+  margin: 0;
+  padding: 40px;
+}
+.property #property-form h2 {
+  margin-bottom: 20px;
+}
+.property #property-form .alert {
+  line-height: normal;
+  margin: 0;
+}
+.property-desc {
+  position: relative;
+}
+.property-desc .room-status {
+  font-size: 16px;
+  padding: 3px 60px !important;
+  text-align: center;
+  position: relative;
+  margin: 20px 0;
+  border-radius: 6px;
+}
+.property-desc .room-status-1 {
+  color: white;
+  background: #3a9019;
+}
+.property-desc .room-status-2 {
+  color: white;
+  background: #1788c9;
+}
+.property-desc .room-status-3 {
+  color: white;
+  background: #ec2327;
+}
+.property-desc .room-status-4 {
+  color: white;
+  background: #de8300;
+}
+/*# sourceMappingURL=developro.css.map */
