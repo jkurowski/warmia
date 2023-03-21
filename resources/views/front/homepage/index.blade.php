@@ -14,36 +14,21 @@
             <div class="row row-with-icons">
                 <div class="col-6">
                     <div class="row">
-                        <div class="col-12">
-                            <div class="box-icon">
-                                <div class="box-icon-img">
-                                    <img src="https://placehold.co/80x80" alt="">
+
+                        @foreach($boxes as $box)
+                            @if($box->place_id == 1)
+                                <div class="col-12">
+                                    <div class="box-icon">
+                                        <div class="box-icon-img">
+                                            <img src="{{ asset('/uploads/box/'.$box->file) }}" alt="{{ $box->file_alt }}">
+                                        </div>
+                                        <div class="box-icon-text">
+                                            <h3>{{ $box->title }}</h3>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="box-icon-text">
-                                    <h3>40 luksusowych domów z ogrodem</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="box-icon">
-                                <div class="box-icon-img">
-                                    <img src="https://placehold.co/80x80" alt="">
-                                </div>
-                                <div class="box-icon-text">
-                                    <h3>40 luksusowych domów z ogrodem</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="box-icon">
-                                <div class="box-icon-img">
-                                    <img src="https://placehold.co/80x80" alt="">
-                                </div>
-                                <div class="box-icon-text">
-                                    <h3>40 luksusowych domów z ogrodem</h3>
-                                </div>
-                            </div>
-                        </div>
+                            @endif
+                        @endforeach
                     </div>
                 </div>
                 <div class="col-6 d-flex align-items-center">
@@ -80,126 +65,20 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
+                @foreach($boxes as $box)
+                    @if($box->place_id == 2)
+                        <div class="col-3">
+                            <div class="box-icon">
+                                <div class="box-icon-img">
+                                    <img src="{{ asset('/uploads/box/'.$box->file) }}" alt="{{ $box->file_alt }}">
+                                </div>
+                                <div class="box-icon-text">
+                                    <h3>{{ $box->title }}</h3>
+                                </div>
+                            </div>
                         </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>Działki od 745 m<sup>2</sup> <br>do 1100 m<sup>2</sup></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>Prawo własności <br>domu z działką</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>Powierzchnia domu <br>81 m<sup>2</sup></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
+                    @endif
+                @endforeach
             </div>
         </div>
     </section>
@@ -216,58 +95,24 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-3">
-                    <div class="blue-box">
-                        <div class="blue-box-img">
-                            <img src="https://placehold.co/67x67" alt="">
+
+                @foreach($boxes as $box)
+                    @if($box->place_id == 3)
+                        <div class="col-3">
+                            <div class="blue-box">
+                                <div class="blue-box-img">
+                                    <img src="{{ asset('/uploads/box/'.$box->file) }}" alt="{{ $box->file_alt }}">
+                                </div>
+                                <div class="blue-box-title">
+                                    <h3>{{ $box->title }}</h3>
+                                </div>
+                                <div class="blue-box-text">
+                                    <p>{{ $box->text }}</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="blue-box-title">
-                            <h3>Strefa wodna</h3>
-                        </div>
-                        <div class="blue-box-text">
-                            <p>Maecenas eu tortor luctus augue vulputdictum. Morbi nunc felis, molestie nec augue in, imperdiet dictum urna.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="blue-box">
-                        <div class="blue-box-img">
-                            <img src="https://placehold.co/67x67" alt="">
-                        </div>
-                        <div class="blue-box-title">
-                            <h3>Strefa rekreacyjno-wypoczynkowa</h3>
-                        </div>
-                        <div class="blue-box-text">
-                            <p>Maecenas eu tortor luctus augue vulputdictum. Morbi nunc felis, molestie nec augue in, imperdiet dictum urna.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="blue-box">
-                        <div class="blue-box-img">
-                            <img src="https://placehold.co/67x67" alt="">
-                        </div>
-                        <div class="blue-box-title">
-                            <h3>Strefa sportu</h3>
-                        </div>
-                        <div class="blue-box-text">
-                            <p>Maecenas eu tortor luctus augue vulputdictum. Morbi nunc felis, molestie nec augue in, imperdiet dictum urna.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="blue-box">
-                        <div class="blue-box-img">
-                            <img src="https://placehold.co/67x67" alt="">
-                        </div>
-                        <div class="blue-box-title">
-                            <h3>Strefa restauracyjna</h3>
-                        </div>
-                        <div class="blue-box-text">
-                            <p>Maecenas eu tortor luctus augue vulputdictum. Morbi nunc felis, molestie nec augue in, imperdiet dictum urna.</p>
-                        </div>
-                    </div>
-                </div>
+                    @endif
+                @endforeach
             </div>
         </div>
     </section>
@@ -278,6 +123,12 @@
             <p>Warmia to jeden z najpiękniejszych regionów w Polsce. Przyroda zachwyca pięknymi jeziorami, łąkami i pachnącymi lasami. Na Warmii nie ma drugiego takiego miejsca jak Warmia Residence, to prestiżowy resort klimatycznych domów, gdzie malownicze krajobrazy i czyste powietrze łączą się z luksusowymi udogodnieniami.</p>
         </div>
     </section>
+
+    <picture>
+        <source srcset="{{ asset('/images/mapa.webp') }}" type="image/webp">
+        <source srcset="{{ asset('/images/mapa.jpg') }}" type="image/jpeg">
+        <img src="{{ asset('/images/mapa.jpg') }}" alt="Mapa okolicy i lokalizacja inwestycji" loading="lazy" width="1920" height="1123" class="w-100">
+    </picture>
 
     <section id="gallery">
         <div class="container">
@@ -315,166 +166,20 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
+                @foreach($boxes as $box)
+                    @if($box->place_id == 4)
+                        <div class="col-3">
+                            <div class="box-icon">
+                                <div class="box-icon-img">
+                                    <img src="{{ asset('/uploads/box/'.$box->file) }}" alt="{{ $box->file_alt }}">
+                                </div>
+                                <div class="box-icon-text">
+                                    <h3>{{ $box->title }}</h3>
+                                </div>
+                            </div>
                         </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>Działki od 745 m<sup>2</sup> <br>do 1100 m<sup>2</sup></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>Prawo własności <br>domu z działką</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>Powierzchnia domu <br>81 m<sup>2</sup></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
+                    @endif
+                @endforeach
             </div>
         </div>
     </section>
@@ -490,86 +195,20 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
+                @foreach($boxes as $box)
+                    @if($box->place_id == 5)
+                        <div class="col-3">
+                            <div class="box-icon">
+                                <div class="box-icon-img">
+                                    <img src="{{ asset('/uploads/box/'.$box->file) }}" alt="{{ $box->file_alt }}">
+                                </div>
+                                <div class="box-icon-text">
+                                    <h3>{{ $box->title }}</h3>
+                                </div>
+                            </div>
                         </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>Działki od 745 m<sup>2</sup> <br>do 1100 m<sup>2</sup></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>Prawo własności <br>domu z działką</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>Powierzchnia domu <br>81 m<sup>2</sup></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="box-icon">
-                        <div class="box-icon-img">
-                            <img src="https://placehold.co/80x80" alt="">
-                        </div>
-                        <div class="box-icon-text">
-                            <h3>40 luksusowych domów z ogrodem</h3>
-                        </div>
-                    </div>
-                </div>
+                    @endif
+                @endforeach
             </div>
         </div>
     </section>
@@ -578,7 +217,7 @@
         <div class="container-fluid p-0">
             <div class="row no-gutters flex-row-reverse">
                 <div class="col-6">
-                    <img src="https://placehold.co/960x680" alt="">
+                    <img src="{{ asset('/images/klub-korzysci.jpg') }}" alt="">
                 </div>
                 <div class="col-6 d-flex justify-content-center align-items-center">
                     <div class="benefits-text">
@@ -594,7 +233,7 @@
             </div>
             <div class="row no-gutters">
                 <div class="col-6">
-                    <img src="https://placehold.co/960x680" alt="">
+                    <img src="{{ asset('/images/usluga-concierge.jpg') }}" alt="">
                 </div>
                 <div class="col-6 d-flex justify-content-center align-items-center">
                     <div class="benefits-text">
@@ -612,7 +251,7 @@
             </div>
             <div class="row no-gutters flex-row-reverse">
                 <div class="col-6">
-                    <img src="https://placehold.co/960x680" alt="">
+                    <img src="{{ asset('/images/polec-nas.jpg') }}" alt="">
                 </div>
                 <div class="col-6 d-flex justify-content-center align-items-center">
                     <div class="benefits-text">
@@ -624,7 +263,7 @@
             </div>
             <div class="row no-gutters">
                 <div class="col-6">
-                    <img src="https://placehold.co/960x680" alt="">
+                    <img src="{{ asset('/images/o-inwestorze.jpg') }}" alt="">
                 </div>
                 <div class="col-6 d-flex justify-content-center align-items-center">
                     <div class="benefits-text">

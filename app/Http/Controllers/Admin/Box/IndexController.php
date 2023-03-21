@@ -3,20 +3,20 @@
 namespace App\Http\Controllers\Admin\Box;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\BoxFormRequest;
-use App\Models\Boxes;
-use App\Repositories\Client\ClientRepository;
-use App\Services\BoxService;
 use Illuminate\Http\Request;
 
 // CMS
+use App\Http\Requests\BoxFormRequest;
+use App\Repositories\BoxRepository;
+use App\Services\BoxService;
+use App\Models\Box;
 
 class IndexController extends Controller
 {
     private $repository;
     private $service;
 
-    public function __construct(ClientRepository $repository, BoxService $service)
+    public function __construct(BoxRepository $repository, BoxService $service)
     {
 //        $this->middleware('permission:box-list|box-create|box-edit|box-delete', [
 //            'only' => ['index','store']
@@ -45,7 +45,7 @@ class IndexController extends Controller
         return view('admin.box.form', [
             'cardTitle' => 'Dodaj boks',
             'backButton' => route('admin.box.index')
-        ])->with('entry', Boxes::make());
+        ])->with('entry', Box::make());
     }
 
     public function store(BoxFormRequest $request)

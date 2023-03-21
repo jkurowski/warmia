@@ -4,10 +4,10 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-8">
                     <div class="row">
-                        <div class="col-3"><img src="https://placehold.co/200x125" alt=""></div>
-                        <div class="col-3"><img src="https://placehold.co/200x125" alt=""></div>
-                        <div class="col-3"><img src="https://placehold.co/200x125" alt=""></div>
-                        <div class="col-3"><img src="https://placehold.co/200x125" alt=""></div>
+                        <div class="col-3"><img src="{{ asset('/images/condo-ville-logo.png') }}" alt="Condo Ville logo"></div>
+                        <div class="col-3"><img src="{{ asset('/images/grunty-warmia-logo.png') }}" alt="Grunty Warmia logo"></div>
+                        <div class="col-3"><img src="{{ asset('/images/warmia-resort-logo.png') }}" alt="Warmia Resort logo"></div>
+                        <div class="col-3"><img src="{{ asset('/images/warmia-residence-logo.png') }}" alt="Warmia Residence logo"></div>
                     </div>
                 </div>
             </div>
@@ -17,7 +17,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <p>© Warmia Residence 2023&nbsp;&nbsp;|&nbsp;&nbsp;Projekt: <a href="">DeveloPRO</a></p>
+                    <p>© Warmia Residence 2023&nbsp;&nbsp;|&nbsp;&nbsp;Projekt: <a href="https://www.developro.pl/" target="_blank" title="System dla Deweloperów - DeveloPRO Marketing Nieruchomości">DeveloPRO</a></p>
                 </div>
             </div>
         </div>

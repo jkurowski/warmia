@@ -99,8 +99,8 @@ return [
     */
 
     'box' => [
-        'width' => 120,
-        'height' => 120,
+        'width' => 160,
+        'height' => 160,
         'file_path' => 'uploads/boxes/',
         'preview_file_path' => 'uploads/boxes/'
     ],

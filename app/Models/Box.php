@@ -12,6 +12,7 @@ class Box extends Model
      * @var array
      */
     protected $fillable = [
+        'place_id',
         'title',
         'text',
         'file',

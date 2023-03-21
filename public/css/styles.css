@@ -660,6 +660,14 @@ section {
   display: flex;
   margin-top: 110px;
 }
+.box-icon-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-icon-img img {
+  width: 80px;
+}
 .box-icon-text {
   padding-left: 25px;
   flex: 1;
@@ -685,6 +693,9 @@ section {
   background: rgba(37, 43, 84, 0.9);
   padding: 25px;
   margin-top: 140px;
+}
+.blue-box img {
+  width: 67px;
 }
 .blue-box-title {
   margin: 35px 0 25px;

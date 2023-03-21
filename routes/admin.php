@@ -17,6 +17,7 @@ Route::group([
 
     Route::post('gallery/set', 'Gallery\IndexController@sort')->name('gallery.sort');
     Route::post('image/set', 'Gallery\ImageController@sort')->name('image.sort');
+    Route::post('box/set', 'Box\IndexController@sort')->name('box.sort');
 
     Route::resources([
         'dictionary' => 'Dictionary\IndexController',
@@ -29,7 +30,7 @@ Route::group([
         'article' => 'Article\IndexController',
         'contract' => 'Contract\IndexController',
         'image' => 'Gallery\ImageController',
-        'map' => 'Map\IndexController',
+        'box' => 'Box\IndexController',
     ]);
 
     Route::get('dictionary/{slug}/{locale}/edit', 'Dictionary\IndexController@edit')->name('dictionary.edit');

@@ -40,13 +40,6 @@
                                 </span> Ustawienia</a>
                         </li>
 
-                        <li {{ Request::routeIs('admin.dictionary.*') ? 'class=active' : '' }}>
-                            <a href="{{ route('admin.dictionary.index') }}">
-                                <span class="menu-bullet">
-                                    <span class="bullet bullet-dot"></span>
-                                </span> Tłumaczenie</a>
-                        </li>
-
                         <li {{ Request::routeIs('admin.user.*') ? 'class=active' : '' }}>
                             <a href="{{ route('admin.user.index') }}">
                                 <span class="menu-bullet">
@@ -65,6 +58,12 @@
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
                                 </span> Galeria</a>
+                        </li>
+                        <li {{ Request::routeIs('admin.box.*') ? 'class=active' : '' }}>
+                            <a href="{{ route('admin.box.index') }}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span> Boxy z ikonkami</a>
                         </li>
                     </ul>
                 </li>
@@ -112,13 +111,6 @@
                         <span> DeveloCMS </span>
                     </a>
                     <ul class="sub-menu">
-                        <li class="{{ Request::routeIs('admin.map.*') ? 'active' : '' }}">
-                            <a href="{{route('admin.map.index')}}">
-                                <span class="menu-bullet">
-                                    <span class="bullet bullet-dot"></span>
-                                </span> Mapa
-                            </a>
-                        </li>
                         <li class="{{ Request::routeIs('admin.developro.*') ? 'active' : '' }}">
                             <a href="{{route('admin.developro.investment.index')}}">
                                 <span class="menu-bullet">
