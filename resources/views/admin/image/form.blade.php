@@ -6,14 +6,15 @@
     @method('PUT')
     @csrf
     <div class="container">
-        <div class="card">
-            <div class="card-head container">
-                <div class="row">
-                    <div class="col-12 pl-0">
-                        <h4 class="page-title row"><i class="fe-grid"></i><a href="{{route('admin.box.index')}}" class="p-0">Edytuj zdjęcie</a><span class="d-inline-flex ml-2 mr-2">/</span>{{ $cardTitle }}</h4>
-                    </div>
+        <div class="card-head container">
+            <div class="row">
+                <div class="col-12 pl-0">
+                    <h4 class="page-title row"><i class="fe-grid"></i><a href="{{route('admin.box.index')}}" class="p-0">Edytuj zdjęcie</a><span class="d-inline-flex ml-2 mr-2">/</span>{{ $cardTitle }}</h4>
                 </div>
             </div>
+        </div>
+
+        <div class="card mt-3">
             @include('form-elements.back-route-button')
             <div class="card-body">
                 <div class="row">

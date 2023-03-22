@@ -143,16 +143,34 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-8">
                     <div id="gallery-nav">
-                        <ul class="list-unstyled mb-0 row">
-                            <li class="col-3"><a href="" class="bttn bttn-border bttn-active">Wszystkie</a></li>
-                            <li class="col-3"><a href="" class="bttn bttn-border">Wizualizacje</a></li>
-                            <li class="col-3"><a href="" class="bttn bttn-border">Okolica</a></li>
-                            <li class="col-3"><a href="" class="bttn bttn-border">Domy</a></li>
+                        <ul class="list-unstyled mb-0 row filter">
+                            <li class="col-3">
+                                <span class="bttn bttn-border bttn-active" data-filter="all">@lang('cms.filter-all') @endlang</span>
+                            </li>
+                            @foreach($galeries as $gallery)
+                                @if($gallery->photos()->count() > 0)
+                                <li class="col-3">
+                                    <span class="bttn bttn-border" data-filter="gallery-{{ $gallery->id }}">{{ $gallery->name }}</span>
+                                </li>
+                                @endif
+                            @endforeach
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
+
+        <ul id="gallery-carousel" class="mb list-unstyled">
+            @foreach($images as $img)
+            <li class="gallery-{{$img->gallery_id}}">
+                <picture>
+                    <source srcset="{{ asset('/uploads/gallery/images/webp/'.$img->file_webp) }}" type="image/webp">
+                    <source srcset="{{ asset('/uploads/gallery/images/'.$img->file) }}" type="image/jpeg">
+                    <img src="{{ asset('/uploads/gallery/images/'.$img->file) }}" alt="Obrazek galerii" loading="lazy" width="1360" height="765">
+                </picture>
+            </li>
+            @endforeach
+        </ul>
     </section>
 
     <section id="standards">
@@ -275,12 +293,12 @@
         </div>
     </section>
 
-    
-
 @endsection
 @push('scripts')
-    <script src="{{ asset('/js/validation.js') }}" charset="utf-8"></script>
+    <script src="{{ asset('/js/validation.min.js') }}" charset="utf-8"></script>
     <script src="{{ asset('/js/pl.js') }}" charset="utf-8"></script>
+    <script src="{{ asset('/js/slick.min.js') }}" charset="utf-8"></script>
+
     <script type="text/javascript">
         $(document).ready(function(){
             $(".validateForm").validationEngine({
@@ -288,6 +306,32 @@
                 updatePromptsPosition:true,
                 promptPosition : "topRight:-137px"
             });
+
+            $("#gallery-carousel").slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                centerMode: true,
+                centerPadding: '260px',
+            });
+            $(".filter span").on('click', function(){
+                $(".filter span").removeClass('bttn-active');
+                $(this).addClass('bttn-active');
+                const filter = $(this).data('filter');
+                $("#gallery-carousel").slick('slickUnfilter');
+
+                @foreach($galeries as $gallery)
+                    @if($gallery->photos()->count() > 0)
+                    if(filter === 'gallery-{{$gallery->id}}'){
+                        $("#gallery-carousel").slick('slickFilter','.gallery-{{$gallery->id}}');
+                    }
+                    @endif
+                @endforeach
+                if(filter === 'all'){
+                    $("#gallery-carousel").slick('slickUnfilter');
+                }
+
+            })
         });
         @if (session('success')||session('warning'))
         $(window).load(function() {

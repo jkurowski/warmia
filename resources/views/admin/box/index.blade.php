@@ -30,6 +30,7 @@
                         <th class="text-center">Miejsce</th>
                         <th>Data modyfikacji</th>
                         <th></th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody class="content">
@@ -43,6 +44,11 @@
                             </td>
                             <td class="text-center">{!! boxPlace($item->place_id) !!}</td>
                             <td>{{ $item->updated_at }}</td>
+                            <td class="option-120">
+                                <div class="btn-group">
+                                    <a href="{{route('admin.box.edit', [$item->id, 'lang' => 'en'])}}" class="btn action-button lang-button me-1" data-toggle="tooltip" data-placement="top" title="Edytuj"><img src="{{ asset('/cms/flags/en.png') }}" alt="Tłumaczenie: en"></a>
+                                </div>
+                            </td>
                             <td class="option-120">
                                 <div class="btn-group">
                                     <span class="btn action-button move-button me-1"><i class="fe-move"></i></span>
