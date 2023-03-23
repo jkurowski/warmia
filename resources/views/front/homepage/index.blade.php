@@ -2,19 +2,18 @@
 
 @section('content')
     <section id="investment" class="pb-0">
-        <div class="container">
+        <div class="container inline inline-tc">
             <div class="row">
                 <div class="col-12">
                     <div class="section-title text-start">
-                        <p>WORYTY NAD JEZIOREM GIŁWA</p>
-                        <h2>Warmia Residence - enklawa <br>spokoju i luksusu</h2>
+                        <p data-modaleditor="6">{{ getInline($array, 6, 'modaleditor') }}</p>
+                        <h2 data-modaltytul="6">{!! getInline($array, 6, 'modaltytul') !!}</h2>
                     </div>
                 </div>
             </div>
             <div class="row row-with-icons">
                 <div class="col-6">
                     <div class="row">
-
                         @foreach($boxes as $box)
                             @if($box->place_id == 1)
                                 <div class="col-12">
@@ -32,23 +31,28 @@
                     </div>
                 </div>
                 <div class="col-6 d-flex align-items-center">
-                    <div>
-                        <p>Warmia Residence to miejsce stworzone z myślą o osobach, które poszukują nieruchomości premium. Klimatyczny i zarazem komfortowy dom z ogrodem, tarasem i pięknym widokiem to propozycja dla wymagających. Miejsce, gdzie można się wyciszyć, odpocząć i zrelaksować w komfortowych warunkach z dala od wielkiego miasta.</p>
-                        <p>Dla właścicieli domów oddajemy do dyspozycji prestiżową strefę relaksu. Odkryty basen, korty tenisowe, boisko multifunkcyjne, boisko do badmintona, mini golf i plac zabaw dla najmłodszych to udogodnienia, które są kwintesencją luksusu i komfortu, które oferuje Warmia Residence. To idealne miejsce do odpoczynku w eleganckich i klimatycznych okolicznościach.</p>
+                    <div data-modaleditortext="6">
+                        {!! getInline($array, 6, 'modaleditortext') !!}
                     </div>
                 </div>
             </div>
+            @auth
+                <div class="inline-btn"><button type="button" class="btn btn-primary btn-modal btn-sm" data-bs-toggle="modal" data-bs-target="#inlineModal" data-inline="6" data-hideinput="modallink,modallinkbutton,file,file_alt" data-method="update" data-imgwidth="796" data-imgheight="738"></button></div>
+            @endauth
         </div>
     </section>
 
     <section id="plan" class="pb-0">
         <div class="container">
-            <div class="row">
+            <div class="row inline inline-tc">
                 <div class="col-12">
                     <div class="section-title text-center">
-                        <h2>Wybierz swoje miejsce</h2>
+                        <h2 data-modaltytul="5">{{ getInline($array, 5, 'modaltytul') }}</h2>
                     </div>
                 </div>
+                @auth
+                    <div class="inline-btn"><button type="button" class="btn btn-primary btn-modal btn-sm" data-bs-toggle="modal" data-bs-target="#inlineModal" data-inline="5" data-hideinput="modallink,modallinkbutton,modaleditor,modaleditortext,file,file_alt" data-method="update" data-imgwidth="796" data-imgheight="738"></button></div>
+                @endauth
             </div>
         </div>
         <img src="{{ asset('/images/plan.jpg') }}" alt="Plan inwestycji">
@@ -56,13 +60,16 @@
 
     <section id="features">
         <div class="container">
-            <div class="row">
+            <div class="row inline inline-tc">
                 <div class="col-12">
                     <div class="section-title text-center">
-                        <p>TWÓJ DOM W OTOCZENIU NATURY</p>
-                        <h2>Warmia Residence w pigułce</h2>
+                        <p data-modaleditor="4">{{ getInline($array, 4, 'modaleditor') }}</p>
+                        <h2 data-modaltytul="4">{{ getInline($array, 4, 'modaltytul') }}</h2>
                     </div>
                 </div>
+                @auth
+                    <div class="inline-btn"><button type="button" class="btn btn-primary btn-modal btn-sm" data-bs-toggle="modal" data-bs-target="#inlineModal" data-inline="4" data-hideinput="modallink,modallinkbutton,modaleditortext,file,file_alt" data-method="update" data-imgwidth="796" data-imgheight="738"></button></div>
+                @endauth
             </div>
             <div class="row">
                 @foreach($boxes as $box)
@@ -85,14 +92,19 @@
 
     <section id="restzone">
         <div class="container">
-            <div class="row">
+            <div class="row inline inline-tc">
                 <div class="col-6">
-                    <h2>Tutaj poczujesz się <br>jak w bajkowej krainie</h2>
+                    <h2></h2>
+                    <h2 data-modaltytul="7">{!! getInline($array, 7, 'modaltytul') !!}</h2>
                 </div>
                 <div class="col-6">
-                    <p>Warmia Residence leży w sercu malowniczej krainy, która oferuje czyste powietrze, piękne krajobrazy, niezliczone jeziora i dziewicze lasy. Inwestycja znajduje się na terenie gminy Gietrzwałd, w miejscowości Woryty. Jest to drugi etap inwestycji Adept Investment Sp. z o.o. na Warmii. Pierwszy etap inwestycji to Warmia Resort - komfortowo wykończone Ville wypoczynkowe. Warmia Residence jest zlokalizowana zaledwie 20 km od Olsztyna, 25 km od Ostródy. Droga do Trójmiasta zajmuje ok 1h 30 minut, a do Warszawy 2h 15 minut. Niewątpliwym atutem lokalizacji jest jezioro Giłwa - oddalone o 300 metrów.</p>
-                    <p>W pobliżu znajdują się liczne trasy pieszo-rowerowe, miejsca do uprawiania kajakarstwa i żeglarstwa oraz pole golfowe.</p>
+                    <div data-modaleditortext="7">
+                        {!! getInline($array, 7, 'modaleditortext') !!}
+                    </div>
                 </div>
+                @auth
+                    <div class="inline-btn"><button type="button" class="btn btn-primary btn-modal btn-sm" data-bs-toggle="modal" data-bs-target="#inlineModal" data-inline="7" data-hideinput="modallink,modallinkbutton,modaleditor,file,file_alt" data-method="update" data-imgwidth="796" data-imgheight="738"></button></div>
+                @endauth
             </div>
             <div class="row">
 
@@ -118,9 +130,12 @@
     </section>
 
     <section id="lake">
-        <div class="apla">
-            <h2>Twoje miejsce z dala <br>od wielkiego miasta</h2>
-            <p>Warmia to jeden z najpiękniejszych regionów w Polsce. Przyroda zachwyca pięknymi jeziorami, łąkami i pachnącymi lasami. Na Warmii nie ma drugiego takiego miejsca jak Warmia Residence, to prestiżowy resort klimatycznych domów, gdzie malownicze krajobrazy i czyste powietrze łączą się z luksusowymi udogodnieniami.</p>
+        <div class="apla inline inline-tc">
+            <h2 data-modaltytul="8">{!! getInline($array, 8, 'modaltytul') !!}</h2>
+            <p data-modaleditor="8">{{ getInline($array, 8, 'modaleditor') }}</p>
+            @auth
+                <div class="inline-btn"><button type="button" class="btn btn-primary btn-modal btn-sm" data-bs-toggle="modal" data-bs-target="#inlineModal" data-inline="8" data-hideinput="modallink,modallinkbutton,modaleditortext,file,file_alt" data-method="update" data-imgwidth="796" data-imgheight="738"></button></div>
+            @endauth
         </div>
     </section>
 
@@ -132,13 +147,16 @@
 
     <section id="gallery">
         <div class="container">
-            <div class="row">
+            <div class="row inline inline-tc">
                 <div class="col-12">
                     <div class="section-title text-center">
-                        <p>GALERIA</p>
-                        <h2>Poznaj możliwości domów</h2>
+                        <p data-modaleditor="3">{{ getInline($array, 3, 'modaleditor') }}</p>
+                        <h2 data-modaltytul="3">{{ getInline($array, 3, 'modaltytul') }}</h2>
                     </div>
                 </div>
+                @auth
+                    <div class="inline-btn"><button type="button" class="btn btn-primary btn-modal btn-sm" data-bs-toggle="modal" data-bs-target="#inlineModal" data-inline="3" data-hideinput="modallink,modallinkbutton,modaleditortext,file,file_alt" data-method="update" data-imgwidth="796" data-imgheight="738"></button></div>
+                @endauth
             </div>
             <div class="row d-flex justify-content-center">
                 <div class="col-8">
@@ -175,13 +193,16 @@
 
     <section id="standards">
         <div class="container">
-            <div class="row">
+            <div class="row inline inline-tc">
                 <div class="col-12">
                     <div class="section-title text-center">
-                        <p>ROZWIĄZANIA ZAPEWNIAJĄCE NAJWYŻSZY KOMFORT</p>
-                        <h2>Standard inwestycji</h2>
+                        <p data-modaleditor="1">{{ getInline($array, 1, 'modaleditor') }}</p>
+                        <h2 data-modaltytul="1">{{ getInline($array, 1, 'modaltytul') }}</h2>
                     </div>
                 </div>
+                @auth
+                    <div class="inline-btn"><button type="button" class="btn btn-primary btn-modal btn-sm" data-bs-toggle="modal" data-bs-target="#inlineModal" data-inline="1" data-hideinput="modallink,modallinkbutton,modaleditortext,file,file_alt" data-method="update" data-imgwidth="796" data-imgheight="738"></button></div>
+                @endauth
             </div>
             <div class="row">
                 @foreach($boxes as $box)
@@ -204,13 +225,16 @@
 
     <section id="facilities">
         <div class="container">
-            <div class="row">
+            <div class="row inline inline-tc">
                 <div class="col-12">
                     <div class="section-title text-center">
-                        <p>BY ŻYŁO SIĘ LEPIEJ!</p>
-                        <h2>Udogodnienia</h2>
+                        <p data-modaleditor="2">{{ getInline($array, 2, 'modaleditor') }}</p>
+                        <h2 data-modaltytul="2">{{ getInline($array, 2, 'modaltytul') }}</h2>
                     </div>
                 </div>
+                @auth
+                    <div class="inline-btn"><button type="button" class="btn btn-primary btn-modal btn-sm" data-bs-toggle="modal" data-bs-target="#inlineModal" data-inline="2" data-hideinput="modallink,modallinkbutton,modaleditortext,file,file_alt" data-method="update" data-imgwidth="796" data-imgheight="738"></button></div>
+                @endauth
             </div>
             <div class="row">
                 @foreach($boxes as $box)
