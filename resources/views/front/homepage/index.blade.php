@@ -1,6 +1,20 @@
 @extends('layouts.homepage')
 
 @section('content')
+    <section id="slider">
+        <img src="{{ asset('/uploads/slider/slider-1.jpg') }}" alt="" class="w-100">
+        <div class="slider-gradient"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Miejsce, gdzie natura <br>spotyka się z luksusem</h1>
+                    <a href="" class="bttn mt-5">Znajdź swój dom</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
     <section id="investment" class="pb-0">
         <div class="container inline inline-tc">
             <div class="row">
@@ -145,7 +159,7 @@
         <img src="{{ asset('/images/mapa.jpg') }}" alt="Mapa okolicy i lokalizacja inwestycji" loading="lazy" width="1920" height="1123" class="w-100">
     </picture>
 
-    <section id="gallery">
+    <section id="gallery" class="pb-0">
         <div class="container">
             <div class="row inline inline-tc">
                 <div class="col-12">

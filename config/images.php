@@ -124,9 +124,9 @@ return [
 
     'slider' => [
         'big_width' => 1920,
-        'big_height' => 1080,
+        'big_height' => 920,
         'thumb_width' => 248,
-        'thumb_height' => 140,
+        'thumb_height' => 119,
         'file_path' => 'uploads/slider/',
         'thumb_file_path' => 'uploads/slider/thumbs/',
         'preview_file_path' => 'uploads/slider/thumbs/',
