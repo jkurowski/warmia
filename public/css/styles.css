@@ -243,6 +243,7 @@ h3,
 h4 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
+  color: var(--main-color-blue);
 }
 h1 {
   font-size: 72px;
@@ -374,6 +375,9 @@ button:focus,
   width: 100%;
   padding: 10px;
   font-weight: 400;
+}
+.blue-bg {
+  background: var(--main-color-blue);
 }
 /* Popup
 ================================================== */
@@ -533,7 +537,7 @@ header nav li a:after {
 aside {
   position: fixed;
   right: 50px;
-  z-index: 100;
+  z-index: 500;
   top: 50vh;
 }
 aside span {
@@ -743,6 +747,12 @@ section {
 ================================================== */
 #page {
   padding: 60px 0;
+}
+.no-top #page {
+  padding-top: 0;
+}
+.no-bottom #page {
+  padding-bottom: 0;
 }
 /* Pageheader
 ================================================== */
@@ -1126,14 +1136,15 @@ section {
 ================================================== */
 #page-header {
   background-size: cover !important;
-  padding: 40px 0;
+  padding: 250px 0 80px;
+  background-attachment: fixed !important;
 }
 #page-header .container,
 #page-header .row {
   height: 100%;
 }
 #page-header h1 {
-  color: var(--main-color-gold);
+  color: #fff;
   font-size: 70px;
   margin: 0;
   text-align: center;
@@ -1141,7 +1152,7 @@ section {
 #page-header li,
 #page-header a {
   font-size: 15px;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
 }
 #page-header .breadcrumb {
   justify-content: center;
@@ -1277,7 +1288,7 @@ div[class*='col-'].slick-slide {
 /* Footer
 ================================================== */
 footer {
-  background: var(--main-color-blue);
+  background: #1b203f;
   padding: 30px 0;
 }
 footer p {
@@ -1291,73 +1302,110 @@ footer p a {
 }
 /* Contact section
 ================================================== */
-.property #contact .form-container img,
-#contact .form-container img {
-  width: 320px;
+#contact {
+  background: #f9f9f9;
 }
-.property #contact .form-container p,
-#contact .form-container p {
-  font-size: 18px;
-  line-height: 29px;
-}
-.property #contact .form-container p,
-#contact .form-container p,
-.property #contact .form-container a,
-#contact .form-container a {
-  color: #282828;
-}
-.property #contact form,
-#contact form {
-  margin-top: 80px;
-}
-.property #contact label,
-#contact label {
-  font-size: 16px;
-  display: block;
-  margin-bottom: 10px;
-}
-.property #contact label span,
-#contact label span {
-  color: var(--main-color-gold);
-}
-.property #contact input,
-#contact input {
-  border: 1px solid #c6c6c6;
+#contact input[type="text"],
+#contact input[type="text"],
+#contact input[type="text"],
+#contact textarea {
+  border: 0;
+  border-bottom: 1px solid rgba(27, 32, 63, 0.4);
   background: white;
-  border-radius: 6px;
   font-size: 18px;
-  padding: 10px;
+  color: var(--main-color-blue);
 }
-.property #contact .rodo-rule label,
-#contact .rodo-rule label {
-  font-size: 13px;
-  line-height: 22px;
-  color: #3e3e3e;
-  font-weight: 300;
-  padding-left: 24px;
-}
-.property #contact .rodo-rule input,
-#contact .rodo-rule input {
-  float: left;
-  margin-top: 5px;
-}
-.property #contact .rodo-rule p,
-#contact .rodo-rule p {
-  font-size: 13px;
-  line-height: 22px;
-  color: #3e3e3e;
-  font-weight: 300;
-}
-.property #contact button,
 #contact button {
-  border-radius: 6px;
-  background: #ae935d;
+  padding: 23px 60px;
   font-size: 18px;
+}
+#contact .rodo-rule p {
+  font-size: 12px;
+  color: var(--main-color-blue);
+  line-height: 22px;
+}
+#contact label {
+  color: var(--main-color-blue);
+  font-size: 18px;
+}
+#contact textarea {
+  height: 210px;
+}
+#contact h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+#contact p,
+#contact a {
+  color: #222;
+}
+#contact.blue-bg {
+  background: var(--main-color-blue);
+}
+#contact.blue-bg input[type="text"],
+#contact.blue-bg input[type="text"],
+#contact.blue-bg input[type="text"],
+#contact.blue-bg textarea {
+  border: 0;
+  border-bottom: 1px solid white;
+  background: var(--main-color-blue);
   color: white;
-  padding: 20px 0;
-  min-width: 310px;
-  font-weight: 500;
-  margin-top: 25px;
+}
+#contact.blue-bg .rodo-rule p {
+  color: rgba(255, 255, 255, 0.7);
+}
+#contact.blue-bg label {
+  color: white;
+}
+#contact.blue-bg .bttn {
+  color: white;
+  border-color: white;
+}
+#contact.blue-bg h2,
+#contact.blue-bg h3,
+#contact.blue-bg p,
+#contact.blue-bg a {
+  color: white;
+}
+#contact.blue-bg .with-icon img {
+  filter: none;
+}
+#contact .with-icon {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 40px;
+  margin: 5px 0;
+}
+#contact .with-icon img {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  filter: invert(80%) sepia(100%) saturate(410%) hue-rotate(175deg);
+}
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label,
+.form-floating > .form-select ~ label {
+  opacity: 0.35;
+  transform: scale(0.85) translateY(-0.9rem) translateX(0.15rem);
+}
+.rodo-rule {
+  position: relative;
+  padding-left: 40px;
+}
+.rodo-rule input {
+  position: absolute;
+  left: 15px;
+  margin: 0;
+  top: 4px;
+}
+#map {
+  width: 100%;
+  border: 0;
+  height: 400px;
 }
 /* Responsive
 ================================================== */

@@ -7,22 +7,21 @@ use App\Http\Controllers\Controller;
 // CMS
 use App\Models\Box;
 use App\Models\Gallery;
-use App\Models\Image;
 use App\Models\Inline;
+use App\Models\RodoRules;
 
 class IndexController extends Controller
 {
     public function index()
     {
         $boxes = Box::all()->sortBy('sort');
-        $galeries = Gallery::all()->where('status', '=', 1);
-        $images = Image::all()->whereIn('gallery_id', $galeries->pluck('id'));
+        $galleries = Gallery::withCount(['photos'])->where('status', '=', 1)->get();
 
         return view('front.homepage.index', [
             'boxes' => $boxes,
-            'galeries' => $galeries,
-            'images' => $images,
-            'array' => Inline::getElements(1)
+            'galleries' => $galleries,
+            'array' => Inline::getElements(1),
+            'rules' => RodoRules::orderBy('sort')->whereActive(1)->get()
         ]);
     }
 }

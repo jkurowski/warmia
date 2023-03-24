@@ -29,7 +29,7 @@
 {!! settings()->get("scripts_afterbody") !!}
 
 <div id="pagecontent">
-    @include('layouts.partials.page-header')
+    @include('layouts.partials.header')
 
     @yield('pageheader')
 

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ContactFormRequest;
 
 use App\Mail\ChatSend;
+use App\Models\RodoRules;
 use App\Repositories\Client\ClientRepository;
 use Illuminate\Support\Facades\Mail;
 
@@ -24,6 +25,13 @@ class ContactController extends Controller
     public function __construct(ClientRepository $repository)
     {
         $this->repository = $repository;
+    }
+
+    public function index ()
+    {
+        return view('front.contact.index', [
+            'rules' => RodoRules::orderBy('sort')->whereActive(1)->get()
+        ]);
     }
 
     function property(ContactFormRequest $request, $id)

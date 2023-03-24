@@ -5,7 +5,7 @@
                 <div class="col-2">
                     <div id="logo">
                         <a href="/">
-                            <img src="https://placehold.co/400x195" alt="">
+                            <img src="{{ asset('/images/logo.svg') }}" alt="">
                         </a>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                                     <li><a href="">Galeria</a></li>
                                     <li><a href="">Poleć nas i zyskaj</a></li>
                                     <li><a href="">O inwestorze</a></li>
-                                    <li><a href="">Kontakt</a></li>
+                                    <li><a href="{{ route('contact') }}">Kontakt</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -42,8 +42,8 @@
 
 <aside>
     <ul class="mb-0 list-unstyled">
-        <li><a href=""><span><i class="lab la-facebook-f"></i></span></a></li>
-        <li><a href=""><span><i class="lab la-instagram"></i></span></a></li>
-        <li><a href=""><span><i class="lab la-linkedin-in"></i></span></a></li>
+        <li><a href="https://www.facebook.com/WarmiaResidence" target="_blank"><span><i class="lab la-facebook-f"></i></span></a></li>
+        <li><a href="https://www.instagram.com/warmia_residence/" target="_blank"><span><i class="lab la-instagram"></i></span></a></li>
+        <li><a href="https://www.facebook.com/WarmiaResidence" target="_blank"><span><i class="lab la-youtube"></i></span></a></li>
     </ul>
 </aside>

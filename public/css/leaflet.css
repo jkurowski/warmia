@@ -254,8 +254,24 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	outline: 0;
 	}
 .leaflet-container a {
-	color: #0078A8;
+	color: #1b203f;
 	}
+.leaflet-popup-content a {
+	color: #1b203f;
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+	border: 1px solid #1b203f;
+	padding: 7px 0;
+	-webkit-transition: all 100ms linear;
+	-moz-transition: all 100ms linear;
+	-o-transition: all 100ms linear;
+	transition: all 100ms linear;
+}
+.leaflet-popup-content a:hover {
+	background: #1b203f;
+	color: white;
+}
 .leaflet-container a.leaflet-active {
 	outline: 2px solid orange;
 	}
@@ -267,7 +283,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 /* general typography */
 .leaflet-container {
-	font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font: 12px/1.5 'Poppins',sans-serif;
 	}
 
 

@@ -10,14 +10,11 @@ class InlineController extends Controller
 {
     public function show(Inline $inline)
     {
-        if($inline)
-        {
-            return $inline;
-        } else {
-            return response()->json([
+        return $inline->exists
+            ? $inline
+            : response()->json([
                 'error' => 'Brak wpisu w bazie',
             ]);
-        }
     }
 
     public function update(Request $request, Inline $inline)

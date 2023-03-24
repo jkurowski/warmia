@@ -37,6 +37,7 @@ Route::middleware(['restrictIp'])->group(function () {
                     'Developro\InvestmentPropertyController@index')->name('property');
             });
 
+            Route::get('/kontakt', 'ContactController@index')->name('contact');
             Route::post('/kontakt', 'ContactController@contact')->name('homepage.contact');
             Route::post('/kontakt/{property}', 'ContactController@property')->name('contact.property');
 

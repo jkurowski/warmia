@@ -1,4 +1,4 @@
-<div id="page-header" style="background:#f3f3f3 url('{{ asset('/uploads/headers/'.$header_file) }}') no-repeat bottom center">
+<div id="page-header" style="background:#252b54 url('{{ asset('/uploads/slider/slider-1.jpg') }}') no-repeat bottom center">
     <div class="container">
         <div class="row">
             <div class="col-12 d-flex align-items-end justify-content-center">
