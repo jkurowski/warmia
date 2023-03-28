@@ -52,6 +52,10 @@
 <script src="{{ asset('/js/bootstrap.bundle.min.js') }}" charset="utf-8"></script>
 <script src="{{ asset('/js/app.min.js') }}" charset="utf-8"></script>
 
+@auth
+    @include('layouts.partials.inline')
+@endauth
+
 @stack('scripts')
 
 </body>

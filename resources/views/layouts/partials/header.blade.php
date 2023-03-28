@@ -25,10 +25,9 @@
                                 <ul class="mb-0 list-unstyled">
                                     <li><a href="/">Home</a></li>
                                     <li><a href="">Wybór domów</a></li>
-                                    <li><a href="">Lokalizacja</a></li>
+                                    <li><a href="{{ route('location') }}">Lokalizacja</a></li>
                                     <li><a href="{{ route('gallery') }}">Galeria</a></li>
-                                    <li><a href="">Poleć nas i zyskaj</a></li>
-                                    <li><a href="{{ route('investor') }}">O inwestorze</a></li>
+                                    <li><a href="">Strefa klienta</a></li>
                                     <li><a href="{{ route('contact') }}">Kontakt</a></li>
                                 </ul>
                             </nav>

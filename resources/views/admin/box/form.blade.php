@@ -29,7 +29,9 @@
                                             '2' => 'W pigułce',
                                             '3' => 'Boksy na tle',
                                             '4' => 'Standard',
-                                            '5' => 'Udogodnienia'
+                                            '5' => 'Udogodnienia',
+                                            '6' => 'Lokalizacja - 1 sekcja',
+                                            '7' => 'Lokalizacja - 2 sekcja'
                                         ]])
                                         @else
                                             <input type="hidden" name="place_id" value="{{$entry->place_id}}">

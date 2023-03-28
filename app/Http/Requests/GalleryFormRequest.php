@@ -40,7 +40,7 @@ class GalleryFormRequest extends FormRequest
             'name' => 'required|string|max:255',
             'text' => 'max:255|nullable',
             'slug' => '',
-            'status' => 'boolean'
+            'status' => 'integer'
         ];
     }
 }
