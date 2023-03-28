@@ -25,6 +25,7 @@ Route::middleware(['restrictIp'])->group(function () {
         Route::group(['namespace' => 'Front'], function () {
             Route::get('/', 'IndexController@index')->name('index');
             Route::get('/mieszkania', 'InvestmentController@show')->name('plan');
+            Route::get('/galeria', 'Gallery\IndexController@index')->name('gallery');
 
             // Developro
             Route::group(['prefix'=>'/pietro', 'as' => 'front.investment.'], function() {

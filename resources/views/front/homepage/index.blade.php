@@ -108,7 +108,6 @@
             <div class="container">
                 <div class="row inline inline-tc">
                     <div class="col-6">
-                        <h2></h2>
                         <h2 data-modaltytul="7">{!! getInline($array, 7, 'modaltytul') !!}</h2>
                     </div>
                     <div class="col-6">

@@ -667,6 +667,10 @@ section {
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
+}
+#restzone h2,
+#restzone h3,
+#restzone p {
   color: white;
 }
 .blue-box {

@@ -41,12 +41,21 @@ class IndexController extends Controller
 
     public function store(PageFormRequest $request)
     {
-        $this->repository->create($request->validated());
+        $data = $request->validated();
+        //$this->repository->create($data);
+
+        Page::create($data);
+
         return redirect(route('admin.page.index'))->with('success', 'Strona dodana');
     }
 
     public function edit(Page $page)
     {
+
+        if(request()->get('lang')) {
+            app()->setLocale(request()->get('lang'));
+        }
+
         return view('admin.page.form', [
             'entry' => $page,
             'selectMenu' => Page::where('id', '!=', $page->id)->pluck('title', 'id')->prepend('Brak podstrony', 0),
@@ -57,6 +66,10 @@ class IndexController extends Controller
 
     public function update(PageFormRequest $request, int $id)
     {
+        if(request()->get('lang')) {
+            app()->setLocale(request()->get('lang'));
+        }
+
         $page = $this->repository->find($id);
         $this->repository->update($request->validated(), $page);
 

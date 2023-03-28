@@ -65,6 +65,12 @@
                                     <span class="bullet bullet-dot"></span>
                                 </span> Boxy z ikonkami</a>
                         </li>
+                        <li {{ Request::routeIs('admin.page.*') ? 'class=active' : '' }}>
+                            <a href="{{ route('admin.page.index') }}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span> Menu i strony</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="active">

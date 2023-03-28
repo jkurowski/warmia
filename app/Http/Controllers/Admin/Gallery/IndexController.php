@@ -48,8 +48,6 @@ class IndexController extends Controller
         if ($request->hasFile('file')) {
             $this->service->upload($request->name, $request->file('file'), $gallery);
         }
-
-
         return redirect(route('admin.gallery.index'))->with('success', 'Nowa galeria dodana');
     }
 

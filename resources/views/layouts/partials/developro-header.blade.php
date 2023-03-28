@@ -5,7 +5,7 @@
                 <div class="page-header-content">
                     <div>
                         <h1>{{ $title }}</h1>
-                        @include('layouts.partials.breadcrumbs', ['items' => $items, 'title' => $title])
+                        @include('layouts.partials.breadcrumbs', ['items' => $page->ancestors, 'title' => $title])
                     </div>
                 </div>
             </div>

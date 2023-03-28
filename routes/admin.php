@@ -20,6 +20,8 @@ Route::group([
     Route::post('box/set', 'Box\IndexController@sort')->name('box.sort');
 
     Route::resources([
+        'page' => 'Page\IndexController',
+        'url' => 'Url\IndexController',
         'dictionary' => 'Dictionary\IndexController',
         'file' => 'File\IndexController',
         'file-catalog' => 'File\CatalogController',
