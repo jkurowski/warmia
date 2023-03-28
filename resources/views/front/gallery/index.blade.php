@@ -1,4 +1,4 @@
-@extends('layouts.page', ['body_class' => 'contact no-top no-bottom'])
+@extends('layouts.page', ['body_class' => 'gallery'])
 
 @section('meta_title', $page->title)
 @section('seo_title', $page->meta_title)
@@ -14,13 +14,13 @@
 @stop
 
 @section('content')
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                {!! $page->content !!}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {!! parse_text($page->content) !!}
             </div>
         </div>
-    </section>
+    </div>
     @push('scripts')
         <script>
 

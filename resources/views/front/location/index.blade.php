@@ -232,8 +232,6 @@
     @push('scripts')
         <script src="{{ asset('/js/validation.min.js') }}" charset="utf-8"></script>
         <script src="{{ asset('/js/pl.js') }}" charset="utf-8"></script>
-        <script src="{{ asset('/js/slick.min.js') }}" charset="utf-8"></script>
-
         <script type="text/javascript">
             $(document).ready(function(){
                 $(".validateForm").validationEngine({

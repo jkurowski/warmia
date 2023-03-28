@@ -10,7 +10,7 @@
         plugins: [
             "code advlist autolink link image lists charmap print preview hr anchor pagebreak",
             "searchreplace wordcount visualblocks visualchars insertdatetime media nonbreaking",
-            "table contextmenu directionality emoticons paste textcolor responsivefilemanager code"
+            "table contextmenu directionality emoticons paste textcolor responsivefilemanager code gallery"
         ],
         toolbar1: "formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent | removeformat | gallery | responsivefilemanager | code",
         relative_urls: false,

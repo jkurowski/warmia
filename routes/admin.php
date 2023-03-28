@@ -35,6 +35,8 @@ Route::group([
         'box' => 'Box\IndexController',
         'map' => 'Map\IndexController'
     ]);
+    // Gallery
+    Route::get('ajaxGetGalleries', 'Gallery\IndexController@ajaxGetGalleries')->name('ajaxGetGalleries');
 
     Route::get('dictionary/{slug}/{locale}/edit', 'Dictionary\IndexController@edit')->name('dictionary.edit');
 
