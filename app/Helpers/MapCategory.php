@@ -7,23 +7,23 @@ if (! function_exists('mapCategory')) {
             case '1':
                 return "Inwestycja";
             case '2':
-                return "Park / skwer";
+                return "Stadion";
             case '3':
-                return "Restauracja";
+                return "Piekarnia";
             case '4':
-                return "Edukacja";
+                return "Apteka";
             case '5':
-                return "Kościół";
+                return "Sklep";
             case '6':
-                return "Sklep spożywczy";
+                return "Stacja paliw";
             case '7':
-                return "Sport";
+                return "Restauracja";
             case '8':
-                return "Zdrowie";
+                return "Przedszkole";
             case '9':
-                return "Paczkomat";
+                return "Szkoła";
             case '10':
-                return "Inne";
+                return "Kościół";
         }
     }
 }

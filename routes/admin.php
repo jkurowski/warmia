@@ -33,6 +33,7 @@ Route::group([
         'contract' => 'Contract\IndexController',
         'image' => 'Gallery\ImageController',
         'box' => 'Box\IndexController',
+        'map' => 'Map\IndexController'
     ]);
 
     Route::get('dictionary/{slug}/{locale}/edit', 'Dictionary\IndexController@edit')->name('dictionary.edit');

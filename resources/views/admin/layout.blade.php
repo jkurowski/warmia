@@ -124,6 +124,13 @@
                                 </span> Inwestycje
                             </a>
                         </li>
+                        <li class="{{ Request::routeIs('admin.map.*') ? 'active' : '' }}">
+                            <a href="{{route('admin.map.index')}}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span> Mapa
+                            </a>
+                        </li>
                     </ul>
                 </li>
             </ul>

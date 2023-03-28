@@ -52,6 +52,11 @@ class IndexController extends Controller
 
     public function edit($id)
     {
+
+        if(request()->get('lang')) {
+            app()->setLocale(request()->get('lang'));
+        }
+
         return view('admin.map.form', [
             'entry' => Map::find($id),
             'cardTitle' => 'Edytuj punkt',
@@ -61,6 +66,10 @@ class IndexController extends Controller
 
     public function update(MapFormRequest $request, int $id)
     {
+        if(request()->get('lang')) {
+            app()->setLocale(request()->get('lang'));
+        }
+
         $map = $this->repository->find($id);
         $this->repository->update($request->validated(), $map);
 

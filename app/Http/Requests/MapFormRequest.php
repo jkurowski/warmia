@@ -23,13 +23,19 @@ class MapFormRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'name' => 'required|string|min:5|max:100',
-            'group_id' => '',
-            'lat' => 'required',
-            'lng' => 'required',
-            'zoom' => 'required|integer',
-            'address' => 'required|string'
-        ];
+        if ($this->request->get('lang')) {
+            return [
+                'name' => 'required|string|min:5|max:100',
+            ];
+        } else {
+            return [
+                'name' => 'required|string|min:5|max:100',
+                'group_id' => '',
+                'lat' => 'required',
+                'lng' => 'required|',
+                'zoom' => 'required|integer',
+                'address' => 'required|string'
+            ];
+        }
     }
 }

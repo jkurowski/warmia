@@ -21,30 +21,34 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-12">
+                                @if(!Request::get('lang'))
                                 @include('form-elements.html-select', ['label' => 'Kategoria', 'name' => 'group_id', 'selected' => $entry->group_id, 'select' => [
                                     '1' => 'Inwestycja',
-                                    '2' => 'Park / skwer',
-                                    '3' => 'Restauracja',
-                                    '4' => 'Edukacja',
-                                    '5' => 'Kościół',
-                                    '6' => 'Sklep spożywczy',
-                                    '7' => 'Sport',
-                                    '8' => 'Zdrowie',
-                                    '9' => 'Paczkomat',
-                                    '10' => 'Inne'
+                                    '2' => 'Stadion',
+                                    '3' => 'Piekarnia',
+                                    '4' => 'Apteka',
+                                    '5' => 'Sklep',
+                                    '6' => 'Stacja paliw',
+                                    '7' => 'Restauracja',
+                                    '8' => 'Przedszkole',
+                                    '9' => 'Szkoła',
+                                    '10' => 'Kościół'
                                 ]])
+                                @endif
                                 @include('form-elements.html-input-text', ['label' => 'Nazwa', 'name' => 'name', 'value' => $entry->name, 'required' => 1])
+                                @if(!Request::get('lang'))
                                 @include('form-elements.html-input-text', ['label' => 'Szerokość geograficzna', 'name' => 'lat', 'value' => $entry->lat, 'required' => 1])
                                 @include('form-elements.html-input-text', ['label' => 'Długość geograficzna', 'name' => 'lng', 'value' => $entry->lng, 'required' => 1])
                                 @include('form-elements.html-input-text', ['label' => 'Zoom', 'name' => 'zoom', 'value' => $entry->zoom, 'required' => 1])
                                 @include('form-elements.html-input-text', ['label' => 'Adres', 'name' => 'address', 'value' => $entry->address, 'required' => 1])
+                                @endif
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            @if(Route::is('admin.map.edit'))
-                <input type="hidden" name="article_id" value="{{$entry->id}}">
+            @if(Request::get('lang'))
+            <input type="hidden" name="lang" value="{{$current_locale}}">
             @endif
             @include('form-elements.submit', ['name' => 'submit', 'value' => 'Zapisz'])
         </form>
