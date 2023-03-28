@@ -1,4 +1,4 @@
-<div class="textSlider pb-5">
+<div class="textSlider pt-5 pb-5">
     <ul class="list-unstyled mb-0">
         @foreach ($list as $p)
             <li>
