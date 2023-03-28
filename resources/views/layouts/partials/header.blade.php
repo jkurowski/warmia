@@ -28,7 +28,7 @@
                                     <li><a href="">Lokalizacja</a></li>
                                     <li><a href="{{ route('gallery') }}">Galeria</a></li>
                                     <li><a href="">Poleć nas i zyskaj</a></li>
-                                    <li><a href="">O inwestorze</a></li>
+                                    <li><a href="{{ route('investor') }}">O inwestorze</a></li>
                                     <li><a href="{{ route('contact') }}">Kontakt</a></li>
                                 </ul>
                             </nav>
