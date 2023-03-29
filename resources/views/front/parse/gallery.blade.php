@@ -1,7 +1,7 @@
 <div id="photos-list" class="container pt-5 pb-5">
     <div class="row d-flex justify-content-center">
         @foreach ($list as $p)
-        <div class="col-3">
+        <div class="col-4">
             <div class="col-gallery-thumb">
                 <a href="{{ asset('/uploads/gallery/images/'.$p->file) }}" class="swipebox" data-fslightbox="gallery-{{ $p->gallery_id }}" title="">
                     <picture>
