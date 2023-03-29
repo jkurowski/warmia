@@ -17,6 +17,10 @@
                                     <li><a href="tel:+48512655888">+48 512 655 888</a></li>
                                     <li><a href="tel:+48797055188">+48 797 055 188</a></li>
                                     <li><a href="mailto:">Napisz do nas</a></li>
+                                    <li class="sep">
+                                        <a href="{{ changeLang('pl') }}" class="@if($current_locale == "pl") active @endif lang me-2">PL</a>
+                                        <a href="{{ changeLang('en') }}" class="@if($current_locale == "en") active @endif lang">EN</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

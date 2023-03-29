@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +24,7 @@ Route::get('routes', function() {
 Route::middleware(['restrictIp'])->group(function () {
     Route::group(['prefix' => '{locale?}', 'where' => ['locale' => '(?!admin)*[a-z]{2}'],], function() {
         Route::group(['namespace' => 'Front'], function () {
+
             Route::get('/', 'IndexController@index')->name('index');
             Route::get('/mieszkania', 'InvestmentController@show')->name('plan');
             Route::get('/galeria', 'Gallery\IndexController@index')->name('gallery');
