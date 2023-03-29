@@ -114,4 +114,19 @@ class PropertyController extends Controller
         $this->repository->delete($id);
         return response()->json('Deleted');
     }
+
+    public function copy(Investment $investment, Property $property)
+    {
+        $newProperty = $property->replicate();
+        $newProperty->html = '';
+        $newProperty->cords = '';
+        $newProperty->file = '';
+        $newProperty->file_webp = '';
+        $newProperty->name = $property->name.' - kopia';
+        $newProperty->number = $property->number + 1;
+        $newProperty->number_order = $property->number_order + 1;
+        $newProperty->save();
+
+        return redirect()->route('admin.developro.investment.houses.index', $investment)->with('success', 'Dom skopiowany');
+    }
 }

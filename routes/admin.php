@@ -178,6 +178,7 @@ Route::group([
 
             Route::get('{investment}/floors/{floor}/copy', 'Floor\FloorController@copy')->name('floors.copy');
             Route::get('{investment}/building/{building}/floors/{floor}/copy', 'Building\BuildingFloorController@copy')->name('building.floors.copy');
+            Route::get('{investment}/property/{property}/copy', 'Property\PropertyController@copy')->name('property.copy');
         });
     });
 
