@@ -25,30 +25,36 @@ class InvestmentController extends Controller
 
     public function show(Request $request)
     {
-        $investments = Investment::with('floors')->get();
+        /**
+         * Inwestycja z domami
+         */
+        $investment = Investment::find(1);
+        if ($investment->type == 3) {
+            $investment_room = $investment->load(array(
+                'properties' => function ($query) use ($request) {
+                    if ($request->input('rooms')) {
+                        $query->where('rooms', $request->input('rooms'));
+                    }
+                    if ($request->input('status')) {
+                        $query->where('status', $request->input('status'));
+                    }
+                    if ($request->input('sort')) {
+                        $order_param = explode(':', $request->input('sort'));
+                        $column = $order_param[0];
+                        $direction = $order_param[1];
+                        $query->orderBy($column, $direction);
+                    }
+                }
+            ));
 
-
-        $query = Property::orderBy('status', 'ASC');
-
-        if ($request->input('rooms')) {
-            $query->where('rooms', $request->input('rooms'));
+            $properties = $investment_room->properties;
         }
-        if ($request->input('status')) {
-            $query->where('status', $request->input('status'));
-        }
-        if ($request->input('area')) {
-            $area_param = explode('-', $request->input('area'));
-            $min = $area_param[0];
-            $max = $area_param[1];
-            $query->whereBetween('area', [$min, $max]);
-        }
-
-        $page = Page::where('id', $this->pageId)->first();
 
         return view('front.investment.show', [
-            'investments' => $investments,
-            'properties' => $query->get(),
-            'page' => $page
+            'investment' => $investment,
+            'properties' => $properties,
+            'uniqueRooms' => $this->repository->getUniqueRooms($investment_room->properties),
+            'page' => Page::whereId($this->pageId)->first()
         ]);
     }
 

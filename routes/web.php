@@ -26,20 +26,12 @@ Route::middleware(['restrictIp'])->group(function () {
         Route::group(['namespace' => 'Front'], function () {
 
             Route::get('/', 'IndexController@index')->name('index');
-            Route::get('/mieszkania', 'InvestmentController@show')->name('plan');
+            Route::get('/plan-inwestycji', 'InvestmentController@show')->name('plan');
             Route::get('/galeria', 'Gallery\IndexController@index')->name('gallery');
             Route::get('/lokalizacja', 'Location\IndexController@index')->name('location');
 
-            // Developro
-            Route::group(['prefix'=>'/pietro', 'as' => 'front.investment.'], function() {
-                // Inwestycja budynkowa
-
-                Route::get('/budynek/{investment_id}/p/{floor}',
-                    'Developro\InvestmentFloorController@index')->name('floor');
-
-                Route::get('/budynek/{investment_id}/p/{floor}/m/{property}',
-                    'Developro\InvestmentPropertyController@index')->name('property');
-            });
+            Route::get('/dom/{property}',
+                'Developro\InvestmentPropertyController@index')->name('property');
 
             Route::get('/kontakt', 'ContactController@index')->name('contact');
             Route::post('/kontakt', 'ContactController@contact')->name('homepage.contact');

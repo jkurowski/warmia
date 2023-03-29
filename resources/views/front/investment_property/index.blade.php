@@ -1,7 +1,7 @@
 @extends('layouts.page', ['body_class' => 'property'])
 
 @section('meta_title', $property->name)
-@section('seo_title', $investment->name.' - '.$floor->name.' - '.$property->name)
+@section('seo_title', $property->name)
 
 @section('pageheader')
     @include('layouts.partials.developro-header', [
@@ -9,7 +9,7 @@
     'header_file' => 'rooms.jpg',
     'items' => [
         ['uri'=> '#plan', 'title' => 'Mieszkania'],
-        ['uri'=> 'pietro/budynek/'.$investment->id.'/p/'.$floor->id, 'title' => $investment->name.' - '.$floor->name]
+        ['uri'=> '']
     ]
 ])
 @stop
@@ -19,13 +19,13 @@
     <div class="container-fluid container-md">
         <div id="propertyNav" class="row">
             <div class="col-12 col-sm-4">
-                @if($prev) <a href="{{route('front.investment.property', ['investment_id' => $property->investment_id, 'floor' => $property->floor_id, 'property' => $prev->id])}}" class="bttn bttn-nav">Poprzednie</a>@endif
+                @if($prev) <a href="" class="bttn bttn-nav">Poprzednie</a>@endif
             </div>
             <div class="col-12 col-sm-4">
-                <a href="{{route('front.investment.floor', [$floor->investment_id, $floor->id])}}" class="bttn bttn-nav">Plan piętra</a>
+                <a href="{{route('plan')}}" class="bttn bttn-nav">Plan inwestycji</a>
             </div>
             <div class="col-12 col-sm-4">
-                @if($next) <a href="{{route('front.investment.property', ['investment_id' => $property->investment_id, 'floor' => $property->floor_id, 'property' => $next->id])}}" class="bttn bttn-nav">Następne</a>@endif
+                @if($next) <a href="" class="bttn bttn-nav">Następne</a>@endif
             </div>
         </div>
         <div class="row">
@@ -53,8 +53,6 @@
                                 <h6 class="propertyPrice">@money($property->price)</h6>
                             @endif
                             <ul class="list-unstyled">
-                                <li>Budynek:<span>{{$property->investment_id}}</span></li>
-                                <li>Piętro:<span>{{$floor->number}}</span></li>
                                 <li>Pokoje:<span>{{$property->rooms}}</span></li>
                                 <li>Powierzchnia:<span>{{$property->area}} m<sup>2</sup></span></li>
                                 @if($property->garden_area)<li>Ogródek:<span>{{$property->garden_area}} m<sup>2</sup></span></li>@endif
@@ -82,16 +80,8 @@
                 <div id="contact">
                     <div class="form-container">
                         <div class="row">
-                            <div class="d-none d-sm-block col-6">
-                                <img src="{{ asset('/images/logo.png') }}" alt="Logo firmy Radan">
-                            </div>
-                            <div class="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-end align-items-end text-end">
-                                <div>
-                                    <p>tel. <a href="tel:+48607928447">+48 607 928 447</a></p>
-                                    <p>tel. <a href="tel:+48665740034">+48 665 740 034</a></p>
-                                    <p>tel. <a href="tel:+48609537141">+48 609 537 141</a></p>
-                                    <p><a href="mailto:ogrodybony@radan.com.pl">OgrodyBony@radan.com.pl</a></p>
-                                </div>
+                            <div class="col-12">
+                                Dane firmowe
                             </div>
                         </div>
                         <form class="row validateForm" id="contact-form" action="{{route('contact.property', $property->id)}}" method="post">

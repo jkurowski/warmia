@@ -19,20 +19,18 @@ class InvestmentPropertyController extends Controller
         $this->pageId = 2;
     }
 
-    public function index($investment_id, $floor_id, Property $property)
+    public function index($lang, Property $property)
     {
-        $floor = Floor::find($floor_id);
-        $investment = Investment::find($investment_id);
+        $investment = Investment::find(1);
 
         $page = Page::where('id', $this->pageId)->first();
 
         return view('front.investment_property.index', [
             'investment' => $investment,
-            'floor' => $floor,
             'property' => $property,
             'rules' => RodoRules::orderBy('sort')->whereActive(1)->get(),
-            'next' => $property->findNext($floor->id, $investment->id, $property->number_order),
-            'prev' => $property->findPrev($floor->id, $investment->id, $property->number_order),
+            'next' => $property->findNext(0, $investment->id, $property->number_order),
+            'prev' => $property->findPrev(0, $investment->id, $property->number_order),
             'page' => $page
         ]);
     }

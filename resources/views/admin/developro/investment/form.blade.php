@@ -28,7 +28,7 @@
                                 'name' => 'type',
                                 'selected' => $entry->type,
                                 'select' => [
-                                    '2' => 'Inwestycja budynkowa'
+                                    '3' => 'Inwestycja z domami'
                             ]])
                             @include('form-elements.html-select', [
                                 'label' => 'Status inwestycji',

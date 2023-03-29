@@ -28,7 +28,7 @@
                             <nav>
                                 <ul class="mb-0 list-unstyled">
                                     <li><a href="/">Home</a></li>
-                                    <li><a href="">Wybór domów</a></li>
+                                    <li><a href="{{ route('plan') }}">Wybór domów</a></li>
                                     <li><a href="{{ route('location') }}">Lokalizacja</a></li>
                                     <li><a href="{{ route('gallery') }}">Galeria</a></li>
                                     <li><a href="">Strefa klienta</a></li>
