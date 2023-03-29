@@ -137,23 +137,7 @@
             <div class="row">
                 <div class="col-6">
                     <div class="contact-text">
-                        <h2>Skontaktuj się z nami!</h2>
-                        <div class="row">
-                            <div class="col-6">
-                                <h3>Warmia Residence</h3>
-                                <p class="with-icon"><img src="{{ asset('/images/phone-icon.svg') }}" alt="Ikonka telefonu"><a href="">+48 512 655 888</a></p>
-                                <p class="with-icon"><img src="{{ asset('/images/email-icon.svg') }}" alt="Ikonka adres e-mail"><a href="">l.dawiec@warmiaresort.pl</a></p>
-                                <p class="with-icon"><img src="{{ asset('/images/phone-icon.svg') }}" alt="Ikonka telefonu"><a href="">+48 797 055 188</a></p>
-                                <p class="with-icon"><img src="{{ asset('/images/email-icon.svg') }}" alt="Ikonka adres e-mail"><a href="">sprzedaz@condoville.pl</a></p>
-                                <h3>Adept Investment Sp. z o.o</h3>
-                                <p class="with-icon"><img src="{{ asset('/images/phone-icon.svg') }}" alt="Ikonka telefonu"><a href="">+ 48 22 883 68 71</a></p>
-                                <p class="with-icon"><img src="{{ asset('/images/email-icon.svg') }}" alt="Ikonka adres e-mail"><a href="">office@adept-investment.pl</a></p>
-                                <p class="with-icon"><img src="{{ asset('/images/map-icon.svg') }}" alt="Ikonka lokalizacji">ul. Prymasa A. Hlonda 2 B lok. 122 <br>02-972 Warszawa</p>
-                            </div>
-                            <div class="col-6">
-
-                            </div>
-                        </div>
+                        {!! $contact->content !!}
                     </div>
                 </div>
                 <div class="col-6">

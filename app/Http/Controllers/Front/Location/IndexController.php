@@ -26,6 +26,7 @@ class IndexController extends Controller
             'page' => Page::find(4),
             'galleries' => $galleries,
             'array' => Inline::getElements(2),
+            'contact' => Page::find(2),
         ]);
     }
 
