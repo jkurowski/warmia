@@ -17,7 +17,7 @@ class IndexController extends Controller
     public function index()
     {
         $ids = [6,7];
-        $boxes = Box::whereIn('id', $ids)->get()->sortBy('sort');
+        $boxes = Box::whereIn('place_id', $ids)->get()->sortBy('sort');
         $galleries = Gallery::withCount(['photos'])->where('status', '=', 2)->get();
 
         return view(('front.location.index'), [

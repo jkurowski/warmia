@@ -28,7 +28,7 @@
                 <div class="col-6">
                     <div class="row">
                         @foreach($boxes as $box)
-                            @if($box->gallery_id == 6)
+                            @if($box->place_id == 6)
                                 <div class="col-12">
                                     <div class="box-icon">
                                         <div class="box-icon-img">
@@ -76,7 +76,7 @@
             </div>
             <div class="row">
                 @foreach($boxes as $box)
-                    @if($box->gallery_id == 7)
+                    @if($box->place_id == 7)
                         <div class="col-3">
                             <div class="box-icon">
                                 <div class="box-icon-img">
