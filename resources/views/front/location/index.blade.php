@@ -121,11 +121,18 @@
             @foreach($galleries as $gallery)
                 @foreach($gallery->photos as $img)
                     <li class="gallery-{{$img->gallery_id}}">
+                        <a href="{{ asset('/uploads/gallery/images/'.$img->file) }}" class="swipebox" data-fslightbox="gallery" title="{{ $img->file_alt }}">
                         <picture>
-                            <source srcset="{{ asset('/uploads/gallery/images/webp/'.$img->file_webp) }}" type="image/webp">
-                            <source srcset="{{ asset('/uploads/gallery/images/'.$img->file) }}" type="image/jpeg">
-                            <img src="{{ asset('/uploads/gallery/images/'.$img->file) }}" alt="Obrazek galerii" loading="lazy" width="1360" height="765">
+                            <source srcset="{{ asset('/uploads/gallery/images/thumbs/webp/'.$img->file_webp) }}" type="image/webp">
+                            <source srcset="{{ asset('/uploads/gallery/images/thumbs/'.$img->file) }}" type="image/jpeg">
+                            <img src="{{ asset('/uploads/gallery/images/thumbs/'.$img->file) }}" alt="{{ $img->file_alt }}" loading="lazy" width="1360" height="765">
                         </picture>
+                        @if($img->file_alt)
+                        <div class="gallery-apla">
+                            {{ $img->file_alt }}
+                        </div>
+                        @endif
+                        </a>
                     </li>
                 @endforeach
             @endforeach
@@ -225,11 +232,9 @@
                 });
 
                 $("#gallery-carousel").slick({
-                    slidesToShow: 1,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
-                    arrows: true,
-                    centerMode: true,
-                    centerPadding: '260px',
+                    arrows: true
                 });
             });
             @if (session('success')||session('warning'))

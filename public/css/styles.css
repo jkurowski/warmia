@@ -872,6 +872,24 @@ section {
   color: var(--main-color-gold);
   font-size: 32px;
 }
+.gallery-apla {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, rgba(37, 43, 84, 0), #252b54);
+  font-family: 'Playfair Display', serif;
+  color: white;
+  padding: 15px;
+  font-size: 30px;
+  line-height: 32px;
+  display: flex;
+  align-items: end;
+}
+.location .slick-track li {
+  padding: 0 30px;
+}
 /* Contact
 ================================================== */
 /* Developro
