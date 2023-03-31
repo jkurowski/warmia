@@ -7,7 +7,6 @@ if (! function_exists('changeLang')) {
     {
         $route = Route::getCurrentRoute();
         $routeName = $route->getName();
-
         $parameters = $route->parameters();
         $parameters['locale'] = $lang;
 

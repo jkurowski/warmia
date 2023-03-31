@@ -181,5 +181,8 @@ Route::group([
             Route::get('{investment}/property/{property}/copy', 'Property\PropertyController@copy')->name('property.copy');
         });
     });
+});
 
+Route::group(['prefix' => '{locale?}', 'where' => ['locale' => '(?!admin)*[a-z]{2}'],], function() {
+    Route::get('{uri}', 'Front\MenuController@index')->where('uri', '([A-Za-z0-9\-\/]+)')->name('subupage');
 });
