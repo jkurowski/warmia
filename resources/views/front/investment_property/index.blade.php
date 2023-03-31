@@ -55,7 +55,7 @@
                             <ul class="list-unstyled">
                                 <li>Pokoje:<span>{{$property->rooms}}</span></li>
                                 <li>Powierzchnia:<span>{{$property->area}} m<sup>2</sup></span></li>
-                                @if($property->garden_area)<li>Ogródek:<span>{{$property->garden_area}} m<sup>2</sup></span></li>@endif
+                                @if($property->garden_area)<li>Powierzchnia działki:<span>{{$property->garden_area}} m<sup>2</sup></span></li>@endif
                                 @if($property->balcony_area)<li>Balkon:<span>{{$property->balcony_area}} m<sup>2</sup></span></li>@endif
                                 @if($property->balcony_area_2)<li>Balkon 2:<span>{{$property->balcony_area_2}} m<sup>2</sup></span></li>@endif
                                 @if($property->terrace_area)<li>Taras:<span>{{$property->terrace_area}} m<sup>2</sup></span></li>@endif
@@ -79,11 +79,6 @@
             <div class="col-12 col-xl-7">
                 <div id="contact">
                     <div class="form-container">
-                        <div class="row">
-                            <div class="col-12">
-                                Dane firmowe
-                            </div>
-                        </div>
                         <form class="row validateForm" id="contact-form" action="{{route('contact.property', $property->id)}}" method="post">
                             {{ csrf_field() }}
                             <div class="col-12">
