@@ -14,7 +14,7 @@
 
 @section('content')
     @if($investment->plan)
-        <div class="plan-info">Z planu poniżej, wybierz dom lub skorzystaj z <a href="">wyszukiwarki</a>.</div>
+        <div class="plan-info">Z planu poniżej, wybierz dom lub z listy <a href="#floor" class="scroll-to" data-offset="80">poniżej</a>.</div>
         <div id="plan">
             <div id="plan-holder"><img src="{{ asset('/investment/plan/'.$investment->plan->file.'') }}" alt="{{$investment->name}}" id="invesmentplan" usemap="#invesmentplan"></div>
             <map name="invesmentplan">
@@ -38,9 +38,6 @@
 
     <div id="floor" class="container">
         <div class="row">
-            <div class="col-12 text-center pb-5">
-                [ Tu pojawi się wyszukiwarka ]
-            </div>
             <div class="col-12">
                 <div class="ps-0 ps-lg-5">
                     @include('front.investment_shared.list')

@@ -24,7 +24,7 @@
                     <div class="row">
                         <div class="col-12">
                             <h1>Żyj aktywnie na Warmii</h1>
-                            <a href="" class="bttn mt-5 mb-5">Lokalizacja</a>
+                            <a href="{{ route('location') }}" class="bttn mt-5 mb-5">Lokalizacja</a>
                         </div>
                     </div>
                 </div>

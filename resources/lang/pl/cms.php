@@ -13,4 +13,11 @@ return array (
     'menu-gallery' => 'Galeria',
     'menu-client' => 'Strefa klienta',
     'menu-contact' => 'Kontakt',
+    'list-special-offer' => 'Oferta specjalna',
+    'list-small-price' => 'cena',
+    'list-small-rooms' => 'pokoje',
+    'list-small-area' => 'pow.',
+    'list-small-landarea' => 'pow. działki',
+    'list-bttn' => 'ZOBACZ',
+    'list-no-results' => 'Brak wyników',
 );
