@@ -313,7 +313,7 @@
                     <div class="col-6 d-flex justify-content-center align-items-center">
                         <div class="benefits-text">
                             <h2>Poleć nas i zyskaj!</h2>
-                            <p>W Warmia Residence możesz mieszkać przez cały rok, wypoczywać, zaprosić przyjaciół lub wynająć swój dom i zarabiać. Sprawdź jak możemy Ci pomóc w uzyskaniu wymarzonego domu w trudnych czasach.</p>
+                            <p>Z domów w Warmia Residence możesz korzystać na wiele sposobów – jest to idealne miejsce do mieszkania przez cały rok, ale nic nie stoi też na przeszkodzie, aby przekształcić to w dom letniskowy na wynajem. Dostosujemy się do Twoich indywidualnych potrzeb! Jeśli zainteresowała Cię nasza oferta i proponowane rozwiązania, to już teraz zapytaj o szczegóły zakupu lub poleć nas znajomym.</p>
                             <a href="" class="bttn mt-5">Więcej szczegółów</a>
                         </div>
                     </div>
