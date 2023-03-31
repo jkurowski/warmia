@@ -43,6 +43,7 @@ class Property extends Model
         'file_webp',
         'meta_title',
         'meta_description',
+        'content',
         'views',
         'active'
     ];

@@ -17,24 +17,24 @@
 @section('content')
 <div id="property">
     <div class="container-fluid container-md">
-        <div id="propertyNav" class="row">
+        <div id="propertyNav" class="row mb-5">
             <div class="col-12 col-sm-4">
-                @if($prev) <a href="" class="bttn bttn-nav">Poprzednie</a>@endif
+                @if($prev) <a href="{{route('property', $prev)}}" class="bttn bttn-sm">Poprzedni</a>@endif
             </div>
             <div class="col-12 col-sm-4">
-                <a href="{{route('plan')}}" class="bttn bttn-nav">Plan inwestycji</a>
+                <a href="{{route('plan')}}" class="bttn bttn-sm">Plan inwestycji</a>
             </div>
             <div class="col-12 col-sm-4">
-                @if($next) <a href="" class="bttn bttn-nav">Następne</a>@endif
+                @if($next) <a href="{{route('property', $next)}}" class="bttn bttn-sm">Następny</a>@endif
             </div>
         </div>
         <div class="row">
             <div class="col-12 col-xl-5 pe-3 pe-xl-5">
                 <div class="row">
-                    <div class="col-12 col-lg-8 col-xl-12 order-2 order-lg-1">
+                    <div class="col-12 col-lg-8 col-xl-12 order-1 order-lg-2">
                         <div class="property-img">
                             @if($property->file)
-                                <a href="{{ asset('/investment/property/'.$property->file) }}" class="swipebox">
+                                <a href="{{ asset('/investment/property/'.$property->file) }}" class="swipebox" data-fslightbox="property">
                                     <picture>
                                         <source type="image/webp" srcset="{{ asset('/investment/property/thumbs/webp/'.$property->file_webp) }}">
                                         <source type="image/jpeg" srcset="{{ asset('/investment/property/thumbs/'.$property->file) }}">
@@ -44,7 +44,7 @@
                             @endif
                         </div>
                     </div>
-                    <div class="col-12 col-lg-4 col-xl-12 order-1 order-lg-2">
+                    <div class="col-12 col-lg-4 col-xl-12 order-2 order-lg-1">
                         <div class="property-desc">
                             <div class="room-status room-status-{{$property->status}}">
                                 {{ roomStatus($property->status )}}
@@ -77,9 +77,9 @@
                 </div>
             </div>
             <div class="col-12 col-xl-7">
-                <div id="contact">
+                <div id="contact" class="blue-bg">
                     <div class="form-container">
-                        <form class="row validateForm" id="contact-form" action="{{route('contact.property', $property->id)}}" method="post">
+                        <form class="row validateForm" id="contact-form" action="" method="post">
                             {{ csrf_field() }}
                             <div class="col-12">
                                 @if (session('success'))
@@ -95,58 +95,78 @@
                             </div>
 
                             <div class="col-12">
-                                <label for="form_name">Imię <span class="text-danger">*</span></label>
-                                <input name="form_name" id="form_name" class="validate[required] form-control @error('form_name') is-invalid @enderror" type="text" value="{{ old('form_name') }}">
-
-                                @error('name')
-                                <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
-                                @enderror
-
+                                <div class="form-floating">
+                                    <input name="form_name" id="form_name"
+                                           class="validate[required] form-control @error('form_name') is-invalid @enderror"
+                                           type="text" value="{{ old('form_name') }}" placeholder="">
+                                    <label for="form_name">@lang('cms.form-name') <span class="text-danger">*</span></label>
+                                    @error('form_name')
+                                    <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                    @enderror
+                                </div>
                             </div>
                             <div class="col-12 col-sm-6 mt-4">
-                                <label for="form_email">E-mail <span class="text-danger">*</span></label>
-                                <input name="form_email" id="form_email" class="validate[required] form-control @error('form_email') is-invalid @enderror" type="text" value="{{ old('form_email') }}">
-
-                                @error('email')
-                                <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
-                                @enderror
+                                <div class="form-floating">
+                                    <input name="form_email" id="form_email"
+                                           class="validate[required,custom[email]] form-control @error('form_email') is-invalid @enderror"
+                                           type="text" value="{{ old('form_email') }}" placeholder="">
+                                    <label for="form_email">@lang('cms.form-email') <span class="text-danger">*</span></label>
+                                    @error('form_email')
+                                    <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                    @enderror
+                                </div>
                             </div>
                             <div class="col-12 col-sm-6 mt-4">
-                                <label for="form_phone">Telefon <span class="text-danger">*</span></label>
-                                <input name="form_phone" id="form_phone" class="validate[required] form-control @error('form_phone') is-invalid @enderror" type="text" value="{{ old('form_phone') }}">
-
-                                @error('phone')
-                                <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
-                                @enderror
+                                <div class="form-floating">
+                                    <input name="form_phone" id="form_phone"
+                                           class="validate[required,custom[phone]] form-control @error('form_phone') is-invalid @enderror"
+                                           type="text" value="{{ old('form_phone') }}" placeholder="">
+                                    <label for="form_phone">@lang('cms.form-phone') <span class="text-danger">*</span></label>
+                                    @error('form_phone')
+                                    <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                    @enderror
+                                </div>
                             </div>
                             <div class="col-12 mt-4">
-                                <label for="form_message">Treść wiadomości <span class="text-danger">*</span></label>
-                                <textarea rows="5" cols="1" name="form_message" id="form_message" class="validate[required] form-control @error('form_message') is-invalid @enderror">{{ old('form_message') }}</textarea>
-
-                                @error('message')
-                                <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
-                                @enderror
+                                <div class="form-floating">
+                                <textarea rows="5" cols="1" name="form_message" id="form_message"
+                                          class="validate[required] form-control @error('form_message') is-invalid @enderror"
+                                          placeholder="">{{ old('form_message') }}</textarea>
+                                    <label for="form_message">@lang('cms.form-message') <span class="text-danger">*</span></label>
+                                    @error('form_message')
+                                    <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                    @enderror
+                                </div>
                             </div>
                             @foreach ($rules as $r)
                                 <div class="col-12 mt-4">
                                     <div class="rodo-rule clearfix">
-                                        <input name="rule_{{$r->id}}" id="zgoda_{{$r->id}}" value="1" type="checkbox" @if($r->required === 1) class="validate[required]" @endif data-prompt-position="topLeft:0">
+                                        <input name="rule_{{$r->id}}" id="zgoda_{{$r->id}}" value="1" type="checkbox"
+                                               @if($r->required === 1) class="validate[required]"
+                                               @endif data-prompt-position="topLeft:0">
                                         <label for="zgoda_{{$r->id}}">{!! $r->text !!}</label>
                                     </div>
                                 </div>
                             @endforeach
 
-                            <div class="col-12">
+                            <div class="col-12 pt-5">
                                 <input name="form_page" type="hidden" value="{{$property->name}}">
                                 <script type="text/javascript">
-                                    document.write("<button class=\"bttn\" type=\"submit\">WYŚLIJ WIADOMOŚĆ</button>");
+                                    document.write("<button class=\"bttn\" type=\"submit\">@lang('cms.form-button')</button>");
                                 </script>
-                                <noscript><p><b>Do poprawnego działania, Java musi być włączona.</b><p></noscript>
+                                <noscript><p><b>Do poprawnego działania, Java musi być włączona.</b>
+                                    <p></noscript>
                             </div>
                         </form>
+
                     </div>
                 </div>
             </div>
+            @if($property->content)
+            <div class="col-12 mt-5">
+                {!! parse_text($property->content) !!}
+            </div>
+            @endif
         </div>
     </div>
 </div>

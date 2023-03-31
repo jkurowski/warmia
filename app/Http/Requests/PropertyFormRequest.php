@@ -46,6 +46,7 @@ class PropertyFormRequest extends FormRequest
             'html' => '',
             'meta_title' => '',
             'meta_description' => '',
+            'content' => '',
             'active' => 'boolean',
         ];
     }

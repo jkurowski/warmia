@@ -332,7 +332,7 @@
                         <div class="benefits-text">
                             <h2>Poleć nas i zyskaj!</h2>
                             <p>Z domów w Warmia Residence możesz korzystać na wiele sposobów – jest to idealne miejsce do mieszkania przez cały rok, ale nic nie stoi też na przeszkodzie, aby przekształcić to w dom letniskowy na wynajem. Dostosujemy się do Twoich indywidualnych potrzeb! Jeśli zainteresowała Cię nasza oferta i proponowane rozwiązania, to już teraz zapytaj o szczegóły zakupu lub poleć nas znajomym.</p>
-                            <a href="" class="bttn mt-5">Więcej szczegółów</a>
+                            <a href="" class="bttn mt-5 d-none">Więcej szczegółów</a>
                         </div>
                     </div>
                 </div>

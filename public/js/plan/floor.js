@@ -32,6 +32,7 @@ $(document).ready(function() {
     const normalState = 0.5;
 
     $("#invesmentplan").mapster({
+
         onClick: function() {
             const a = $(this).attr("data-roomstatus");
             // if (a !== "2") {
@@ -43,30 +44,50 @@ $(document).ready(function() {
             window.open(this.href, "_self")
         },
         fillOpacity: hoverOpacity,
+        stroke: true,
+        strokeColor: 'd1d1d1',
+        strokeOpacity: 1,
+        strokeWidth: 1,
         onMouseover: function() {
             const a = $(this).attr("data-roomstatus");
             if (a === "2") {
                 $(this).mapster("set", false).mapster("set", true, {
                     fillColor: reservation,
-                    fillOpacity: hoverOpacity
+                    fillOpacity: hoverOpacity,
+                    stroke: true,
+                    strokeColor: 'ffffff',
+                    strokeOpacity: 1,
+                    strokeWidth: 1
                 })
             }
             if (a === "3") {
                 $(this).mapster("set", false).mapster("set", true, {
                     fillColor: sold,
-                    fillOpacity: hoverOpacity
+                    fillOpacity: hoverOpacity,
+                    stroke: true,
+                    strokeColor: 'ffffff',
+                    strokeOpacity: 1,
+                    strokeWidth: 1
                 })
             }
             if (a === "1") {
                 $(this).mapster("set", false).mapster("set", true, {
                     fillColor: forsale,
-                    fillOpacity: hoverOpacity
+                    fillOpacity: hoverOpacity,
+                    stroke: true,
+                    strokeColor: 'ffffff',
+                    strokeOpacity: 1,
+                    strokeWidth: 1
                 })
             }
             if (a === "4") {
                 $(this).mapster("set", false).mapster("set", true, {
                     fillColor: rent,
-                    fillOpacity: hoverOpacity
+                    fillOpacity: hoverOpacity,
+                    stroke: true,
+                    strokeColor: 'ffffff',
+                    strokeOpacity: 1,
+                    strokeWidth: 1
                 })
             }
         },
@@ -74,38 +95,70 @@ $(document).ready(function() {
             $(this).mapster("set", false);
             $("area[data-roomstatus='2']").mapster("set", true, {
                 fillColor: reservation,
-                fillOpacity: normalState
+                fillOpacity: normalState,
+                stroke: true,
+                strokeColor: 'd1d1d1',
+                strokeOpacity: 1,
+                strokeWidth: 1
             });
             $("area[data-roomstatus='3']").mapster("set", true, {
                 fillColor: sold,
-                fillOpacity: normalState
+                fillOpacity: normalState,
+                stroke: true,
+                strokeColor: 'd1d1d1',
+                strokeOpacity: 1,
+                strokeWidth: 1
             });
             $("area[data-roomstatus='1']").mapster("set", true, {
                 fillColor: forsale,
-                fillOpacity: normalState
+                fillOpacity: normalState,
+                stroke: true,
+                strokeColor: 'd1d1d1',
+                strokeOpacity: 1,
+                strokeWidth: 1
             });
             $("area[data-roomstatus='4']").mapster("set", true, {
                 fillColor: rent,
-                fillOpacity: normalState
+                fillOpacity: normalState,
+                stroke: true,
+                strokeColor: 'd1d1d1',
+                strokeOpacity: 1,
+                strokeWidth: 1
             })
         }
     });
 
     $("area[data-roomstatus='2']").mapster("set", true, {
         fillColor: reservation,
-        fillOpacity: normalState
+        fillOpacity: normalState,
+        stroke: true,
+        strokeColor: 'd1d1d1',
+        strokeOpacity: 1,
+        strokeWidth: 1
     });
     $("area[data-roomstatus='3']").mapster("set", true, {
         fillColor: sold,
-        fillOpacity: normalState
+        fillOpacity: normalState,
+        stroke: true,
+        strokeColor: 'd1d1d1',
+        strokeOpacity: 1,
+        strokeWidth: 1
     });
     $("area[data-roomstatus='1']").mapster("set", true, {
         fillColor: forsale,
-        fillOpacity: normalState
+        fillOpacity: normalState,
+        stroke: true,
+        strokeColor: 'd1d1d1',
+        strokeOpacity: 1,
+        strokeWidth: 1
     });
     $("area[data-roomstatus='4']").mapster("set", true, {
         fillColor: rent,
-        fillOpacity: normalState
+        fillOpacity: normalState,
+        stroke: true,
+        strokeColor: 'd1d1d1',
+        strokeOpacity: 1,
+        strokeWidth: 1
     });
 });
 

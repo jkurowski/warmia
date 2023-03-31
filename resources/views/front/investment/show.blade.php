@@ -18,12 +18,12 @@
         <div id="plan">
             <div id="plan-holder"><img src="{{ asset('/investment/plan/'.$investment->plan->file.'') }}" alt="{{$investment->name}}" id="invesmentplan" usemap="#invesmentplan"></div>
             <map name="invesmentplan">
-                @if($investment->houses)
-                    @foreach($investment->houses as $house)
+                @if($properties->count() > 0)
+                    @foreach($properties as $house)
                         <area
                                 shape="poly"
                                 href="{{route('property', $house)}}"
-                                title="{{$house->name}}"
+                                title="{{$house->name}}<br>Powierzchnia: <b class=fr>{{$house->area}} m<sup>2</sup></b><br />Pokoje: <b class=fr>{{$house->rooms}}</b><br><b>{{ roomStatus($house->status) }}</b>"
                                 alt="{{$house->slug}}"
                                 data-item="{{$house->id}}"
                                 data-roomnumber="{{$house->number}}"
@@ -35,7 +35,7 @@
             </map>
         </div>
     @endif
-
+    @if($properties->count() > 0)
     <div id="floor" class="container">
         <div class="row">
             <div class="col-12">
@@ -45,27 +45,12 @@
             </div>
         </div>
     </div>
-    @push('scripts')
-        <script src="{{ asset('/js/plan/imagemapster.js') }}" charset="utf-8"></script>
-        <script src="{{ asset('/js/plan/tip.js') }}" charset="utf-8"></script>
-        <script src="{{ asset('/js/plan/floor.js') }}" charset="utf-8"></script>
-        <script>
-            function toggleNav() {
-                const sideMenu = document.getElementById("sideMenu");
-                const floor = document.getElementById("pagecontent");
-
-                if(sideMenu.classList.contains('openMenu')){
-                    sideMenu.style.width = "0";
-                    sideMenu.classList.remove("openMenu");
-                    floor.style.left = "0";
-                    document.body.style.overflow = 'scroll';
-                } else {
-                    sideMenu.style.width = "250px";
-                    sideMenu.classList.add("openMenu");
-                    floor.style.left = "250px";
-                    document.body.style.overflow = 'hidden';
-                }
-            }
-        </script>
-    @endpush
+    @endif
+    @if($properties->count() > 0)
+        @push('scripts')
+            <script src="{{ asset('/js/plan/imagemapster.js') }}" charset="utf-8"></script>
+            <script src="{{ asset('/js/plan/tip.js') }}" charset="utf-8"></script>
+            <script src="{{ asset('/js/plan/floor.js') }}" charset="utf-8"></script>
+        @endpush
+    @endif
 @endsection

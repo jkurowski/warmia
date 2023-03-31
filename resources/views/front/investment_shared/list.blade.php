@@ -11,11 +11,13 @@
                     </div>
                     <div class="col justify-content-center">
                         @if($room->file)
+                            <a href="{{route('property', $room)}}">
                             <picture>
                                 <source type="image/webp" srcset="/investment/property/list/webp/{{$room->file_webp}}">
                                 <source type="image/jpeg" srcset="/investment/property/list/{{$room->file}}">
                                 <img src="/investment/property/list/{{$room->file}}" alt="{{$room->name}}">
                             </picture>
+                            </a>
                         @endif
                     </div>
                     <div class="col pe-3 pe-lg-5">

@@ -112,6 +112,7 @@
                                             'file' => $entry->file_pdf,
                                             'file_preview' => config('images.property.preview_pdf_path')
                                         ])
+                                        @include('form-elements.textarea-fullwidth', ['label' => 'Opis lokalu', 'name' => 'content', 'value' => $entry->content, 'rows' => 31, 'class' => 'tinymce', 'required' => 1])
                                     </div>
                                 </div>
                             </div>
@@ -119,7 +120,9 @@
                         @include('form-elements.submit', ['name' => 'submit', 'value' => 'Zapisz'])
                     </div>
                 </form>
+                @include('form-elements.tintmce')
                 @endsection
+
 @push('scripts')
 <script src="{{ asset('/js/plan/underscore.js') }}" charset="utf-8"></script>
 <script src="{{ asset('/js/plan/mappa-backbone.js') }}" charset="utf-8"></script>

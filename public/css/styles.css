@@ -1087,16 +1087,16 @@ section {
   font-weight: 600;
 }
 .property .property-desc .bttn {
-  border-radius: 4px;
-  background: #ae935d;
+  border-color: white;
   color: white;
   margin-top: 15px;
 }
 .property .property-desc .bttn:hover {
-  background: #baa06e;
+  background: #ae935d;
+  border-color: #ae935d;
 }
 .property .property-img {
-  padding: 0 0 35px;
+  padding: 35px 0 0;
 }
 .property .property-img img {
   border: 10px solid white;
@@ -1105,31 +1105,19 @@ section {
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.38);
 }
 .property .property-desc {
-  background: #183245;
+  background: #1b203f;
   padding: 30px;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.38);
-}
-.property #contact form {
-  margin-top: 50px;
-}
-.property #contact textarea {
-  border: 1px solid #c6c6c6;
-  background: #fff;
-  padding: 10px;
-  border-radius: 6px;
-  font-size: 18px;
-  height: 160px;
 }
 .property #contact .form-container {
   padding: 40px;
 }
-.property #contact .form-container img {
-  width: 240px;
+#propertyNav a {
+  width: 100%;
 }
-.property #contact .form-container p {
+#propertyNav .bttn.bttn-sm {
   font-size: 16px;
-  line-height: 24px;
-  color: #282828;
+  padding: 12px 17px;
 }
 .property-desc {
   position: relative;
