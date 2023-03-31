@@ -361,7 +361,7 @@
                         <div class="col-12">
                             <div class="form-floating">
                                 <input name="form_name" id="form_name" class="validate[required] form-control @error('form_name') is-invalid @enderror" type="text" value="{{ old('form_name') }}" placeholder="">
-                                <label for="form_name">Imię <span class="text-danger">*</span></label>
+                                <label for="form_name">@lang('cms.form-name') <span class="text-danger">*</span></label>
                                 @error('form_name')
                                 <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                                 @enderror
@@ -370,7 +370,7 @@
                         <div class="col-12 col-sm-6 mt-4">
                             <div class="form-floating">
                                 <input name="form_email" id="form_email" class="validate[required,custom[email]] form-control @error('form_email') is-invalid @enderror" type="text" value="{{ old('form_email') }}" placeholder="">
-                                <label for="form_email">E-mail <span class="text-danger">*</span></label>
+                                <label for="form_email">@lang('cms.form-email') <span class="text-danger">*</span></label>
                                 @error('form_email')
                                 <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                                 @enderror
@@ -379,7 +379,7 @@
                         <div class="col-12 col-sm-6 mt-4">
                             <div class="form-floating">
                                 <input name="form_phone" id="form_phone" class="validate[required,custom[phone]] form-control @error('form_phone') is-invalid @enderror" type="text" value="{{ old('form_phone') }}" placeholder="">
-                                <label for="form_phone">Telefon <span class="text-danger">*</span></label>
+                                <label for="form_phone">@lang('cms.form-phone') <span class="text-danger">*</span></label>
                                 @error('form_phone')
                                 <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                                 @enderror
@@ -388,7 +388,7 @@
                         <div class="col-12 mt-4">
                             <div class="form-floating">
                                 <textarea rows="5" cols="1" name="form_message" id="form_message" class="validate[required] form-control @error('form_message') is-invalid @enderror" placeholder="">{{ old('form_message') }}</textarea>
-                                <label for="form_message">Treść wiadomości <span class="text-danger">*</span></label>
+                                <label for="form_message">@lang('cms.form-message') <span class="text-danger">*</span></label>
                                 @error('form_message')
                                 <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                                 @enderror
@@ -405,7 +405,7 @@
 
                         <div class="col-12 pt-5">
                             <script type="text/javascript">
-                                document.write("<button class=\"bttn\" type=\"submit\">Wyślij wiadomość</button>");
+                                document.write("<button class=\"bttn\" type=\"submit\">@lang('cms.form-button')</button>");
                             </script>
                             <noscript><p><b>Do poprawnego działania, Java musi być włączona.</b><p></noscript>
                         </div>
@@ -418,7 +418,7 @@
 @endsection
 @push('scripts')
     <script src="{{ asset('/js/validation.min.js') }}" charset="utf-8"></script>
-    <script src="{{ asset('/js/pl.js') }}" charset="utf-8"></script>
+    <script src="{{ asset('/js/'.$current_locale.'.js') }}" charset="utf-8"></script>
     <script src="{{ asset('/js/slick.min.js') }}" charset="utf-8"></script>
 
     <script type="text/javascript">
