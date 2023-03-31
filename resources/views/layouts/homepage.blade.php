@@ -20,6 +20,8 @@
     <link href="{{ asset('/css/styles.min.css') }}" rel="stylesheet">
 
     @stack('style')
+
+    <style>#slider {overflow: hidden}#slider .list-unstyled li {display: none}#slider .list-unstyled li:first-child {display: block}#slider img {width:100%}</style>
 </head>
 <body class="homepage">
 {!! settings()->get("scripts_afterbody") !!}

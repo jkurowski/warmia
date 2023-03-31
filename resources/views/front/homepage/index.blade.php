@@ -3,16 +3,34 @@
 @section('content')
     <div class="d-block">
         <section id="slider">
-            <img src="{{ asset('/uploads/slider/slider-1.jpg') }}" alt="" class="w-100">
-            <div class="slider-gradient"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h1>Miejsce, gdzie natura <br>spotyka się z luksusem</h1>
-                        <a href="" class="bttn mt-5">Znajdź swój dom</a>
+
+        <ul class="mb-0 list-unstyled">
+            <li>
+                <img src="{{ asset('/uploads/slider/slider-1.jpg') }}" alt="" class="w-100">
+                <div class="slider-gradient"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1>Miejsce, gdzie natura <br>spotyka się z luksusem</h1>
+                            <a href="" class="bttn mt-5 mb-5">Znajdź swój dom</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </li>
+            <li>
+                <img src="{{ asset('/uploads/slider/slider-2.jpg') }}" alt="" class="w-100">
+                <div class="slider-gradient"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1>Żyj aktywnie na Warmii</h1>
+                            <a href="" class="bttn mt-5 mb-5">Lokalizacja</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
         </section>
 
         <section id="investment" class="pb-0">
@@ -428,6 +446,22 @@
                 updatePromptsPosition:true,
                 promptPosition : "topRight:-137px"
             });
+
+            $('#slider ul').responsiveSlides(
+                {
+                    auto:true,
+                    pager:true,
+                    nav:false,
+                    timeout:4000,
+                    random:false,
+                    speed: 500,
+                    before: function(){
+                        //
+                    },
+                    after: function(){
+                        //
+                    }
+                });
 
             $("#gallery-carousel").slick({
                 slidesToShow: 1,
