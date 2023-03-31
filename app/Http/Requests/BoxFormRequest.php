@@ -25,7 +25,7 @@ class BoxFormRequest extends FormRequest
     {
         return [
             'title' => 'required|string|min:5|max:100',
-            'text' => 'required|string|min:5|max:200',
+            'text' => 'required|string|min:5',
             'place_id' => 'required',
             'file_alt' => '',
             'link' => '',
