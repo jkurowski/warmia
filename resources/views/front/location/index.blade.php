@@ -190,7 +190,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-12 mt-4">
+                        <div class="col-12 mt-4 mb-2">
                             <div class="form-floating">
                                 <textarea rows="5" cols="1" name="form_message" id="form_message" class="validate[required] form-control @error('form_message') is-invalid @enderror" placeholder="">{{ old('form_message') }}</textarea>
                                 <label for="form_message">@lang('cms.form-message') <span class="text-danger">*</span></label>
@@ -200,7 +200,7 @@
                             </div>
                         </div>
                         @foreach ($rules as $r)
-                            <div class="col-12 mt-4">
+                            <div class="col-12 mt-2">
                                 <div class="rodo-rule clearfix">
                                     <input name="rule_{{$r->id}}" id="zgoda_{{$r->id}}" value="1" type="checkbox" @if($r->required === 1) class="validate[required]" @endif data-prompt-position="topLeft:0">
                                     <label for="zgoda_{{$r->id}}">{!! $r->text !!}</label>
@@ -229,6 +229,14 @@
                     validateNonVisibleFields: true,
                     updatePromptsPosition:true,
                     promptPosition : "topRight:-137px"
+                });
+
+                $('.rodo-rule p').readmore({
+                    speed: 75,
+                    collapsedHeight: 50,
+                    moreLink: '<a href="#">zobacz więcej</a>',
+                    lessLink: '<a href="#">zwiń treść</a>',
+                    heightMargin: 6
                 });
 
                 $("#gallery-carousel").slick({

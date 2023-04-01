@@ -2,18 +2,18 @@
     <div id="partners">
         <div class="container">
             <div class="row d-flex justify-content-center">
-                <div class="col-8">
+                <div class="col-12 col-md-8">
                     <div class="row">
-                        <div class="col-3">
+                        <div class="col-6 col-sm-3">
                             <a href="https://www.condoville.pl/" target="_blank"><img src="{{ asset('/images/condo-ville-logo.png') }}" alt="Condo Ville logo"></a>
                         </div>
-                        <div class="col-3">
+                        <div class="col-6 col-sm-3">
                             <a href="https://gruntywarmia.pl/" target="_blank"><img src="{{ asset('/images/grunty-warmia-logo.png') }}" alt="Grunty Warmia logo"></a>
                         </div>
-                        <div class="col-3">
+                        <div class="col-6 col-sm-3">
                             <a href="https://www.warmiaresort.pl/pl" target="_blank"><img src="{{ asset('/images/warmia-resort-logo.png') }}" alt="Warmia Resort logo"></a>
                         </div>
-                        <div class="col-3">
+                        <div class="col-6 col-sm-3">
                             <img src="{{ asset('/images/warmia-residence-logo.png') }}" alt="Warmia Residence logo">
                         </div>
                     </div>

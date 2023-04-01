@@ -17,12 +17,12 @@
     <section id="contact">
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="mb-4 mb-lg-0 col-12 col-lg-6">
                     <div class="contact-text">
                         {!! $page->content !!}
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-lg-6">
                     <form class="row validateForm" id="contact-form" action="" method="post">
                         {{ csrf_field() }}
                         <div class="col-12">
@@ -71,7 +71,7 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="col-12 mt-4">
+                        <div class="col-12 mt-4 mb-2">
                             <div class="form-floating">
                                 <textarea rows="5" cols="1" name="form_message" id="form_message"
                                           class="validate[required] form-control @error('form_message') is-invalid @enderror"
@@ -83,7 +83,7 @@
                             </div>
                         </div>
                         @foreach ($rules as $r)
-                            <div class="col-12 mt-4">
+                            <div class="col-12 mt-2">
                                 <div class="rodo-rule clearfix">
                                     <input name="rule_{{$r->id}}" id="zgoda_{{$r->id}}" value="1" type="checkbox"
                                            @if($r->required === 1) class="validate[required]"
@@ -118,6 +118,15 @@
                     updatePromptsPosition:true,
                     promptPosition : "topRight:-137px"
                 });
+
+                $('.rodo-rule p').readmore({
+                    speed: 75,
+                    collapsedHeight: 50,
+                    moreLink: '<a href="#">zobacz więcej</a>',
+                    lessLink: '<a href="#">zwiń treść</a>',
+                    heightMargin: 6
+                });
+
             });
             let map = L.map('map').setView([53.761629, 20.229406], 14),
                 theMarker = {},
