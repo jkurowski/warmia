@@ -6,25 +6,27 @@
 
         <ul class="mb-0 list-unstyled">
             <li>
-                <img src="{{ asset('/uploads/slider/slider-1.jpg') }}" alt="" class="w-100">
+                <img src="{{ asset('/uploads/slider/slider-1.jpg') }}" alt="" class="w-100 d-none d-sm-block">
+                <img src="{{ asset('/uploads/slider/slider-1-sm.jpg') }}" alt="" class="w-100 d-block d-sm-none">
                 <div class="slider-gradient"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
                             <h1>Miejsce, gdzie natura <br>spotyka się z luksusem</h1>
-                            <a href="" class="bttn mt-5 mb-5">Znajdź swój dom</a>
+                            <a href="{{ route('plan') }}" class="bttn mt-3 mt-lg-5 mb-3 mb-md-5">Znajdź swój dom</a>
                         </div>
                     </div>
                 </div>
             </li>
             <li>
-                <img src="{{ asset('/uploads/slider/slider-2.jpg') }}" alt="" class="w-100">
+                <img src="{{ asset('/uploads/slider/slider-2.jpg') }}" alt="" class="w-100 d-none d-sm-block">
+                <img src="{{ asset('/uploads/slider/slider-2-sm.jpg') }}" alt="" class="w-100 d-block d-sm-none">
                 <div class="slider-gradient"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
                             <h1>Żyj aktywnie na Warmii</h1>
-                            <a href="{{ route('location') }}" class="bttn mt-5 mb-5">Lokalizacja</a>
+                            <a href="{{ route('location') }}" class="bttn mt-3 mt-lg-5 mb-3 mb-md-5">Lokalizacja</a>
                         </div>
                     </div>
                 </div>
@@ -44,11 +46,11 @@
                     </div>
                 </div>
                 <div class="row row-with-icons">
-                    <div class="col-6">
+                    <div class="col-12 col-xl-6 order-2 order-xl-1">
                         <div class="row">
                             @foreach($boxes as $box)
                                 @if($box->place_id == 1)
-                                    <div class="col-12">
+                                    <div class="col-12 col-md-4 col-xl-12">
                                         <div class="box-icon">
                                             <div class="box-icon-img">
                                                 <img src="{{ asset('/uploads/box/'.$box->file) }}" alt="{{ $box->file_alt }}">
@@ -62,7 +64,7 @@
                             @endforeach
                         </div>
                     </div>
-                    <div class="col-6 d-flex align-items-center">
+                    <div class="col-12 col-xl-6 d-flex align-items-center order-1 order-xl-2">
                         <div data-modaleditortext="6">
                             {!! getInline($array, 6, 'modaleditortext') !!}
                         </div>
@@ -106,7 +108,7 @@
                 <div class="row">
                     @foreach($boxes as $box)
                         @if($box->place_id == 2)
-                            <div class="col-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="box-icon">
                                     <div class="box-icon-img">
                                         <img src="{{ asset('/uploads/box/'.$box->file) }}" alt="{{ $box->file_alt }}">
@@ -125,10 +127,10 @@
         <section id="restzone">
             <div class="container">
                 <div class="row inline inline-tc">
-                    <div class="col-6">
+                    <div class="col-12 col-xl-6">
                         <h2 data-modaltytul="7">{!! getInline($array, 7, 'modaltytul') !!}</h2>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-xl-6">
                         <div data-modaleditortext="7">
                             {!! getInline($array, 7, 'modaleditortext') !!}
                         </div>
@@ -138,10 +140,9 @@
                     @endauth
                 </div>
                 <div class="row">
-
                     @foreach($boxes as $box)
                         @if($box->place_id == 3)
-                            <div class="col-3">
+                            <div class="col-12 col-md-6 col-xxl-3">
                                 <div class="blue-box">
                                     <div class="blue-box-img">
                                         <img src="{{ asset('/uploads/box/'.$box->file) }}" alt="{{ $box->file_alt }}">
@@ -176,7 +177,7 @@
             <img src="{{ asset('/images/mapa.jpg') }}" alt="Mapa okolicy i lokalizacja inwestycji" loading="lazy" width="1920" height="1123" class="w-100">
         </picture>
 
-        <section id="gallery" class="pb-0">
+        <section id="gallery" class="d-none pb-0">
             <div class="container">
                 <div class="row inline inline-tc">
                     <div class="col-12">
@@ -240,7 +241,7 @@
                 <div class="row">
                     @foreach($boxes as $box)
                         @if($box->place_id == 4)
-                            <div class="col-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="box-icon">
                                     <div class="box-icon-img">
                                         <img src="{{ asset('/uploads/box/'.$box->file) }}" alt="{{ $box->file_alt }}">
@@ -272,7 +273,7 @@
                 <div class="row">
                     @foreach($boxes as $box)
                         @if($box->place_id == 5)
-                            <div class="col-3">
+                            <div class="col-6 col-md-4 col-lg-3">
                                 <div class="box-icon">
                                     <div class="box-icon-img">
                                         <img src="{{ asset('/uploads/box/'.$box->file) }}" alt="{{ $box->file_alt }}">
@@ -291,10 +292,10 @@
         <section id="benefits" class="p-0">
             <div class="container-fluid p-0">
                 <div class="row no-gutters flex-row-reverse">
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6">
                         <img src="{{ asset('/images/klub-korzysci.jpg') }}" alt="">
                     </div>
-                    <div class="col-6 d-flex justify-content-center align-items-center">
+                    <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
                         <div class="benefits-text">
                             <h2>Klub korzyści</h2>
                             <ul class="mb-0">
@@ -307,10 +308,10 @@
                     </div>
                 </div>
                 <div class="row no-gutters">
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6">
                         <img src="{{ asset('/images/usluga-concierge.jpg') }}" alt="">
                     </div>
-                    <div class="col-6 d-flex justify-content-center align-items-center">
+                    <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
                         <div class="benefits-text">
                             <h2>Usługa Concierge</h2>
                             <ul class="mb-0">
@@ -325,10 +326,10 @@
                     </div>
                 </div>
                 <div class="row no-gutters flex-row-reverse">
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6">
                         <img src="{{ asset('/images/polec-nas.jpg') }}" alt="">
                     </div>
-                    <div class="col-6 d-flex justify-content-center align-items-center">
+                    <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
                         <div class="benefits-text">
                             <h2>Poleć nas i zyskaj!</h2>
                             <p>Z domów w Warmia Residence możesz korzystać na wiele sposobów – jest to idealne miejsce do mieszkania przez cały rok, ale nic nie stoi też na przeszkodzie, aby przekształcić to w dom letniskowy na wynajem. Dostosujemy się do Twoich indywidualnych potrzeb! Jeśli zainteresowała Cię nasza oferta i proponowane rozwiązania, to już teraz zapytaj o szczegóły zakupu lub poleć nas znajomym.</p>
@@ -337,10 +338,10 @@
                     </div>
                 </div>
                 <div class="row no-gutters">
-                    <div class="col-6">
+                    <div class="col-12 col-lg-6">
                         <img src="{{ asset('/images/o-inwestorze.jpg') }}" alt="">
                     </div>
-                    <div class="col-6 d-flex justify-content-center align-items-center">
+                    <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
                         <div class="benefits-text">
                             <h2>O inwestorze</h2>
                             <p>Adept Investment Sp. z o.o. to inwestor i deweloper, który realizuje projekty na terenie Polski w segmencie obiektów handlowych, inwestycji mieszkaniowych oraz hoteli. W skład grupy kapitałowej Adept Investment Group wchodzą spółki zależne takie jak Adept Development – deweloper osiedli mieszkaniowych i apartamentowców, Adept Hotels – partner międzynarodowych sieci hotelarskich, a także Adept 24 – spółka odpowiedzialna za prace budowlane i wykończeniowe.</p>
@@ -355,12 +356,12 @@
     <section id="contact" class="blue-bg">
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="mb-4 mb-lg-0 col-12 col-lg-6">
                     <div class="contact-text">
                         {!! $contact->content !!}
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-lg-6">
                     <form class="row validateForm" id="contact-form" action="" method="post">
                         {{ csrf_field() }}
                         <div class="col-12">
