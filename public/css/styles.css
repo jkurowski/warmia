@@ -1701,6 +1701,44 @@ footer p a {
   #page-header {
     padding: 140px 0 40px;
   }
+  .location #investment .row-with-icons {
+    margin-top: 40px;
+  }
+  .location #investment .box-icon {
+    display: block;
+    text-align: center;
+  }
+  .location #investment .box-icon .box-icon-img,
+  .location #investment .box-icon .box-icon-text {
+    width: 100%;
+    padding: 0;
+  }
+  .location #investment .box-icon img {
+    margin: 0 auto 20px;
+  }
+  .location #investment .box-icon h3 {
+    padding: 0 30px;
+    text-align: center;
+    width: 100%;
+  }
+  .box-icon {
+    display: flex;
+    margin-top: 80px;
+  }
+  .box-icon-img img {
+    width: 65px;
+  }
+  .box-icon-text h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  section {
+    padding: 90px 0;
+  }
+  .gallery-apla {
+    font-size: 21px;
+    line-height: 23px;
+  }
 }
 /* end of 1199.98 */
 @media (max-width: 991.98px) {
@@ -1718,12 +1756,47 @@ footer p a {
     font-size: 16px;
     line-height: 29px;
   }
+  .section-title h2,
   h2 {
     font-size: 53px;
     line-height: 63px;
   }
+  .section-title h2 {
+    margin: 0;
+  }
+  .section-title p {
+    font-size: 16px;
+  }
   #map {
     height: 250px;
+  }
+  #bike .apla,
+  #lake .apla {
+    width: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  #bike .apla p,
+  #lake .apla p {
+    font-size: 17px;
+    line-height: 28px;
+  }
+  #bike .apla br,
+  #lake .apla br {
+    display: none;
+  }
+  .gallery-apla {
+    font-size: 14px;
+    line-height: 14px;
+    height: 90px;
+  }
+  #gallery-carousel {
+    margin-top: 40px;
   }
 }
 /* end of 991.98 */
@@ -1734,6 +1807,7 @@ footer p a {
   #page-header h1 {
     font-size: 40px;
   }
+  .section-title h2,
   h2 {
     font-size: 46px;
     line-height: 54px;
@@ -1775,9 +1849,21 @@ footer p a {
     font-size: 14px;
     line-height: 25px;
   }
-  h2 {
+  #bike .apla p,
+  #lake .apla p {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .section-title h2,
+  h2,
+  #bike .apla h2,
+  #lake .apla h2 {
     font-size: 30px;
     line-height: 44px;
+  }
+  #bike .apla h2,
+  #lake .apla h2 {
+    margin-bottom: 10px;
   }
   #contact h3 {
     font-size: 22px;
@@ -1794,8 +1880,66 @@ footer p a {
     top: auto;
     bottom: 0;
   }
+  .box-icon-text h3 {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .location #investment .row-with-icons {
+    margin-top: 14px;
+  }
+  #investment .box-icon {
+    margin: 20px 0;
+  }
+  #bike,
+  #lake {
+    height: 100vh;
+  }
+  .box-icon {
+    display: block;
+    text-align: center;
+  }
+  .box-icon .box-icon-img,
+  .box-icon .box-icon-text {
+    width: 100%;
+    padding: 0;
+  }
+  .box-icon img {
+    margin: 0 auto 20px;
+  }
+  .box-icon h3 {
+    padding: 0 30px;
+    text-align: center;
+    width: 100%;
+  }
 }
 /* end of 575.98 */
+@media (max-width: 480px) {
+  .location .slick-track li {
+    padding: 0 15px;
+  }
+  .gallery-apla {
+    left: 15px;
+    right: 15px;
+  }
+  #gallery-carousel button.slick-prev,
+  .textSlider button.slick-prev {
+    left: 0;
+  }
+  #gallery-carousel button.slick-next,
+  .textSlider button.slick-next {
+    right: 0;
+  }
+  .box-icon-img img {
+    width: 50px;
+  }
+  .box-icon h3 {
+    padding: 0 10px;
+    font-size: 14px;
+  }
+  .box-icon {
+    margin-top: 30px;
+  }
+}
 @media (max-width: 389.98px) {
   footer {
     padding: 30px;
@@ -1805,6 +1949,9 @@ footer p a {
   }
   #page-header {
     padding: 105px 0 20px;
+  }
+  .box-icon h3 {
+    padding: 0;
   }
 }
 /* end of 359.98 */

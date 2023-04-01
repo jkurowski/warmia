@@ -25,11 +25,11 @@
                 </div>
             </div>
             <div class="row row-with-icons">
-                <div class="col-6">
+                <div class="col-12 col-xl-6 order-2 order-xl-1">
                     <div class="row">
                         @foreach($boxes as $box)
                             @if($box->place_id == 6)
-                                <div class="col-12">
+                                <div class="col-12 col-md-4 col-xl-12">
                                     <div class="box-icon">
                                         <div class="box-icon-img">
                                             <img src="{{ asset('/uploads/box/'.$box->file) }}" alt="{{ $box->file_alt }}">
@@ -43,7 +43,7 @@
                         @endforeach
                     </div>
                 </div>
-                <div class="col-6 d-flex align-items-center">
+                <div class="col-12 col-xl-6 d-flex align-items-center order-1 order-xl-2">
                     <div data-modaleditortext="9">
                         {!! getInline($array, 9, 'modaleditortext') !!}
                     </div>
@@ -77,7 +77,7 @@
             <div class="row">
                 @foreach($boxes as $box)
                     @if($box->place_id == 7)
-                        <div class="col-3">
+                        <div class="col-6 col-md-4 col-lg-3">
                             <div class="box-icon">
                                 <div class="box-icon-img">
                                     <img src="{{ asset('/uploads/box/'.$box->file) }}" alt="{{ $box->file_alt }}">
@@ -142,12 +142,12 @@
     <section id="contact" class="blue-bg">
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="mb-4 mb-lg-0 col-12 col-lg-6">
                     <div class="contact-text">
                         {!! $contact->content !!}
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-lg-6">
                     <form class="row validateForm" id="contact-form" action="" method="post">
                         {{ csrf_field() }}
                         <div class="col-12">
@@ -242,7 +242,21 @@
                 $("#gallery-carousel").slick({
                     slidesToShow: 3,
                     slidesToScroll: 1,
-                    arrows: true
+                    arrows: true,
+                    responsive: [
+                        {
+                            breakpoint: 991,
+                            settings: {
+                                slidesToShow: 2,
+                            }
+                        },
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                slidesToShow: 1,
+                            }
+                        }
+                    ]
                 });
             });
             @if (session('success')||session('warning'))
