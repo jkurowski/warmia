@@ -148,7 +148,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <form class="row validateForm" id="contact-form" action="" method="post">
+                    <form class="row validateForm" id="contact-form" action="{{route('contact.homepage')}}" method="post">
                         {{ csrf_field() }}
                         <div class="col-12">
                             @if (session('success'))

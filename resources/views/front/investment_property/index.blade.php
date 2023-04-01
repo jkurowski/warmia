@@ -79,7 +79,7 @@
             <div class="order-2 order-lg-3 col-12 col-lg-7">
                 <div id="contact" class="blue-bg">
                     <div class="form-container">
-                        <form class="row validateForm" id="contact-form" action="" method="post">
+                        <form class="row validateForm" id="contact-form" action="{{route('contact.property', $property->id)}}" method="post">
                             {{ csrf_field() }}
                             <div class="col-12">
                                 @if (session('success'))
