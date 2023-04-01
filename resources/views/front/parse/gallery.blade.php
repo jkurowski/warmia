@@ -1,4 +1,4 @@
-<div id="photos-list" class="container pt-5 pb-5">
+<div id="photos-list" class="container pt-3 pt-sm-5 pb-3 pb-sm-5">
     <div class="row d-flex justify-content-center">
         @foreach ($list as $p)
         <div class="col-6 col-lg-4">
