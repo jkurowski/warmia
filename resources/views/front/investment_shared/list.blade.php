@@ -6,10 +6,10 @@
                     @if($room->price)
                         <span class="ribbon1"><span>@lang('cms.list-special-offer')</span></span>
                     @endif
-                    <div class="col col-top p-0 align-items-center">
+                    <div class="col-12 col-md col-top p-0 align-items-center">
                         <h2><a href="{{route('property', $room)}}">{{$room->name}}</a></h2>
                     </div>
-                    <div class="col justify-content-center">
+                    <div class="col-6 col-md justify-content-center">
                         @if($room->file)
                             <a href="{{route('property', $room)}}">
                             <picture>
@@ -20,7 +20,7 @@
                             </a>
                         @endif
                     </div>
-                    <div class="col pe-3 pe-lg-5">
+                    <div class="col-6 col-md pe-3 pe-lg-5">
                         <ul class="mb-0 list-unstyled">
                             @if($room->price)
                                 <li>@lang('cms.list-small-price'): <b>@money($room->price)</b></li>

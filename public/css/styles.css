@@ -939,6 +939,12 @@ section {
   width: 100%;
   cursor: pointer;
 }
+#gallery-carousel {
+  display: none;
+}
+#gallery-carousel.slick-initialized {
+  display: block;
+}
 #gallery-carousel,
 .textSlider {
   margin-top: 80px;
@@ -1361,6 +1367,74 @@ section {
 }
 .qtip-tip.status-4 canvas {
   background: #de8300 !important;
+}
+@media (max-width: 1399.98px) {
+  #roomsList .col img {
+    width: 140px;
+  }
+}
+@media (max-width: 1199.98px) {
+  #roomsList h2 {
+    font-size: 29px;
+  }
+  #roomsList .col img {
+    width: 86px;
+  }
+  #roomsList ul li {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    font-size: 12px;
+  }
+  #roomsList .bttn {
+    padding: 9px 0;
+    width: 100%;
+  }
+}
+@media (max-width: 991.98px) {
+  #roomsList .row {
+    padding: 5px 15px;
+  }
+  #roomsList h2 {
+    font-size: 24px;
+  }
+  #roomsList .col img {
+    width: 80px;
+  }
+  #roomsList ul li {
+    font-size: 10px;
+  }
+  #roomsList .badge {
+    font-size: 18px;
+  }
+  #roomsList .bttn {
+    padding: 6px 0;
+  }
+}
+@media (max-width: 767.98px) {
+  #roomsList h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  #roomsList .row {
+    padding: 15px;
+  }
+  #roomsList img {
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+    width: auto;
+  }
+  #plan {
+    padding: 20px;
+  }
+}
+/* end of 767.98 */
+@media (max-width: 575.98px) {
+  .plan-info {
+    font-size: 16px;
+    padding: 18px;
+  }
 }
 /* Pageheader
 ================================================== */
