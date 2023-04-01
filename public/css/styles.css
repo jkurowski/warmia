@@ -1176,6 +1176,9 @@ section {
   color: white;
   font-weight: 600;
 }
+.property #property #contact {
+  margin-top: -387px;
+}
 .property .property-desc ul li {
   color: #fff;
   font-size: 18px;
@@ -1409,6 +1412,12 @@ section {
   #roomsList .bttn {
     padding: 6px 0;
   }
+  .property #property #contact {
+    margin-top: 35px;
+  }
+  .property .property-img img {
+    width: 100%;
+  }
 }
 @media (max-width: 767.98px) {
   #roomsList h2 {
@@ -1431,9 +1440,26 @@ section {
 }
 /* end of 767.98 */
 @media (max-width: 575.98px) {
+  #property {
+    padding: 0 15px;
+  }
   .plan-info {
     font-size: 16px;
     padding: 18px;
+  }
+  .property .property-desc {
+    padding: 20px;
+  }
+  .property .property-desc ul li {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+  .property .property-desc .bttn {
+    width: 100%;
+    padding: 13px 0;
+  }
+  .property #contact .form-container {
+    padding: 25px;
   }
 }
 /* Pageheader

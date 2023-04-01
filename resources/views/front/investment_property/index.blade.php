@@ -17,7 +17,7 @@
 @section('content')
 <div id="property">
     <div class="container-fluid container-md">
-        <div id="propertyNav" class="row mb-5">
+        <div id="propertyNav" class="row mb-3 mb-lg-5">
             <div class="col-12 col-sm-4">
                 @if($prev) <a href="{{route('property', $prev)}}" class="bttn bttn-sm">Poprzedni</a>@endif
             </div>
@@ -29,54 +29,54 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-xl-5 pe-3 pe-xl-5">
-                <div class="row">
-                    <div class="col-12 col-lg-8 col-xl-12 order-1 order-lg-2">
-                        <div class="property-img">
-                            @if($property->file)
-                                <a href="{{ asset('/investment/property/'.$property->file) }}" class="swipebox" data-fslightbox="property">
-                                    <picture>
-                                        <source type="image/webp" srcset="{{ asset('/investment/property/thumbs/webp/'.$property->file_webp) }}">
-                                        <source type="image/jpeg" srcset="{{ asset('/investment/property/thumbs/'.$property->file) }}">
-                                        <img src="{{ asset('/investment/property/thumbs/'.$property->file) }}" alt="{{$property->name}}">
-                                    </picture>
-                                </a>
-                            @endif
-                        </div>
+            <div class="col-12 col-lg-5">
+                <div class="property-desc">
+                    <div class="room-status room-status-{{$property->status}}">
+                        {{ roomStatus($property->status )}}
                     </div>
-                    <div class="col-12 col-lg-4 col-xl-12 order-2 order-lg-1">
-                        <div class="property-desc">
-                            <div class="room-status room-status-{{$property->status}}">
-                                {{ roomStatus($property->status )}}
-                            </div>
-                            @if($property->price)
-                                <h6 class="propertyPrice">@money($property->price)</h6>
-                            @endif
-                            <ul class="list-unstyled">
-                                <li>Pokoje:<span>{{$property->rooms}}</span></li>
-                                <li>Powierzchnia:<span>{{$property->area}} m<sup>2</sup></span></li>
-                                @if($property->garden_area)<li>Powierzchnia działki:<span>{{$property->garden_area}} m<sup>2</sup></span></li>@endif
-                                @if($property->balcony_area)<li>Balkon:<span>{{$property->balcony_area}} m<sup>2</sup></span></li>@endif
-                                @if($property->balcony_area_2)<li>Balkon 2:<span>{{$property->balcony_area_2}} m<sup>2</sup></span></li>@endif
-                                @if($property->terrace_area)<li>Taras:<span>{{$property->terrace_area}} m<sup>2</sup></span></li>@endif
-                                @if($property->loggia_area)<li>Balkon 3:<span>{{$property->loggia_area}} m<sup>2</sup></span></li>@endif
-                                @if($property->parking_space)<li>Miejsce postojowe:<span>{{$property->parking_space}}</span></li>@endif
-                                @if($property->garage)<li>Garaż:<span>{{$property->garage}}</span></li>@endif
-                            </ul>
+                    @if($property->price)
+                        <h6 class="propertyPrice">@money($property->price)</h6>
+                    @endif
+                    <ul class="list-unstyled">
+                        <li>Pokoje:<span>{{$property->rooms}}</span></li>
+                        <li>Powierzchnia:<span>{{$property->area}} m<sup>2</sup></span></li>
+                        @if($property->garden_area)<li>Powierzchnia działki:<span>{{$property->garden_area}} m<sup>2</sup></span></li>@endif
+                        @if($property->balcony_area)<li>Balkon:<span>{{$property->balcony_area}} m<sup>2</sup></span></li>@endif
+                        @if($property->balcony_area_2)<li>Balkon 2:<span>{{$property->balcony_area_2}} m<sup>2</sup></span></li>@endif
+                        @if($property->terrace_area)<li>Taras:<span>{{$property->terrace_area}} m<sup>2</sup></span></li>@endif
+                        @if($property->loggia_area)<li>Balkon 3:<span>{{$property->loggia_area}} m<sup>2</sup></span></li>@endif
+                        @if($property->parking_space)<li>Miejsce postojowe:<span>{{$property->parking_space}}</span></li>@endif
+                        @if($property->garage)<li>Garaż:<span>{{$property->garage}}</span></li>@endif
+                    </ul>
 
-                            <div class="d-flex justify-content-center">
-                                @if($property->file_pdf)
-                                    <a href="{{ asset('/investment/property/pdf/'.$property->file_pdf) }}" target="_blank" class="bttn">POBIERZ PLAN .PDF</a>
-                                @endif
-                            </div>
-                            <div class="d-flex justify-content-center d-block d-lg-none">
-                                <a href="#contact" class="bttn scroll-to" data-offset="0">FORMULARZ KONTAKTOWY</a>
-                            </div>
-                        </div>
+                    <div class="d-flex justify-content-center">
+                        @if($property->file_pdf)
+                            <a href="{{ asset('/investment/property/pdf/'.$property->file_pdf) }}" target="_blank" class="bttn">POBIERZ PLAN .PDF</a>
+                        @endif
+                    </div>
+                    <div class="d-flex justify-content-center d-block d-lg-none">
+                        <a href="#contact" class="bttn scroll-to" data-offset="0">FORMULARZ KONTAKTOWY</a>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-xl-7">
+
+            <div class="w-100"></div>
+
+            <div class="order-3 order-lg-2 col-12 col-lg-5">
+                <div class="property-img">
+                    @if($property->file)
+                        <a href="{{ asset('/investment/property/'.$property->file) }}" class="swipebox" data-fslightbox="property">
+                            <picture>
+                                <source type="image/webp" srcset="{{ asset('/investment/property/thumbs/webp/'.$property->file_webp) }}">
+                                <source type="image/jpeg" srcset="{{ asset('/investment/property/thumbs/'.$property->file) }}">
+                                <img src="{{ asset('/investment/property/thumbs/'.$property->file) }}" alt="{{$property->name}}">
+                            </picture>
+                        </a>
+                    @endif
+                </div>
+            </div>
+
+            <div class="order-2 order-lg-3 col-12 col-lg-7">
                 <div id="contact" class="blue-bg">
                     <div class="form-container">
                         <form class="row validateForm" id="contact-form" action="" method="post">
@@ -162,6 +162,7 @@
                     </div>
                 </div>
             </div>
+
             @if($property->content)
             <div class="col-12 mt-5">
                 {!! parse_text($property->content) !!}
