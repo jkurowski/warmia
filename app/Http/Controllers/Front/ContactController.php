@@ -41,7 +41,7 @@ class ContactController extends Controller
 
         $property = Property::find($id);
         $client = $this->repository->createClient($request, $property);
-        $property->notify(new PropertyNotification($request));
+        //$property->notify(new PropertyNotification($request));
 
         Mail::to(settings()->get("page_email"))->send(new ChatSend($request, $client, $property));
 
