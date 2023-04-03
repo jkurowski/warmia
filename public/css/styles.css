@@ -1743,6 +1743,9 @@ footer p a {
   border: 0;
   height: 400px;
 }
+.location #map {
+  height: 600px;
+}
 /* Responsive
 ================================================== */
 .closemenu {
@@ -1999,6 +2002,12 @@ footer p a {
     border-color: #fff;
     color: #fff;
     padding: 10px 30px;
+  }
+  .location .map-holder {
+    padding: 30px;
+  }
+  .location #map {
+    height: 400px;
   }
 }
 /* end of 767.98 */

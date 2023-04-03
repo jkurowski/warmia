@@ -103,6 +103,10 @@
         </div>
     </section>
 
+    <div class="map-holder">
+        <div id="map"></div>
+    </div>
+
     <section id="gallery">
         <div class="container">
             <div class="row inline inline-tc">
@@ -221,6 +225,8 @@
     </section>
 
     @push('scripts')
+        <link rel="stylesheet" href="{{ asset('/css/leaflet.css') }}">
+        <script src="{{ asset('/js/leaflet.js') }}"></script>
         <script src="{{ asset('/js/validation.min.js') }}" charset="utf-8"></script>
         <script src="{{ asset('/js/'.$current_locale.'.js') }}" charset="utf-8"></script>
         <script type="text/javascript">
@@ -259,6 +265,54 @@
                     ]
                 });
             });
+            let map = L.map('map').setView([50.29234233715241, 18.66161871182686], 13),
+                theMarker = {},
+                zoom = map.getZoom(),
+                latLng = map.getCenter();
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            const icon_1 = new L.icon({iconUrl: '{{ asset('/images/markers/inwestycja-icon.png') }}', iconSize: [48, 48], iconAnchor: [24, 24], popupAnchor: [0, -24]});
+            const icon_2 = new L.icon({iconUrl: '{{ asset('/images/markers/stadion-icon.png') }}', iconSize: [34, 34], iconAnchor: [17, 17], popupAnchor: [0, -17]});
+            const icon_3 = new L.icon({iconUrl: '{{ asset('/images/markers/piekarnia-icon.png') }}', iconSize: [34, 34], iconAnchor: [17, 17], popupAnchor: [0, -17]});
+            const icon_4 = new L.icon({iconUrl: '{{ asset('/images/markers/apteka-icon.png') }}', iconSize: [34, 34], iconAnchor: [17, 17], popupAnchor: [0, -17]});
+            const icon_5 = new L.icon({iconUrl: '{{ asset('/images/markers/sklep-icon.png') }}', iconSize: [34, 34], iconAnchor: [17, 17], popupAnchor: [0, -17]});
+            const icon_6 = new L.icon({iconUrl: '{{ asset('/images/markers/paliwo-icon.png') }}', iconSize: [34, 34], iconAnchor: [17, 17], popupAnchor: [0, -17]});
+            const icon_7 = new L.icon({iconUrl: '{{ asset('/images/markers/restauracja-icon.png') }}', iconSize: [34, 34], iconAnchor: [17, 17], popupAnchor: [0, -17]});
+            const icon_8 = new L.icon({iconUrl: '{{ asset('/images/markers/przedszkole-icon.png') }}', iconSize: [34, 34], iconAnchor: [17, 17], popupAnchor: [0, -17]});
+            const icon_9 = new L.icon({iconUrl: '{{ asset('/images/markers/szkola-icon.png') }}', iconSize: [34, 34], iconAnchor: [17, 17], popupAnchor: [0, -17]});
+            const icon_10 = new L.icon({iconUrl: '{{ asset('/images/markers/kosciol-icon.png') }}', iconSize: [34, 34], iconAnchor: [17, 17], popupAnchor: [0, -17]});
+
+            let markers = [
+                @foreach ($list as $p)
+                    [{{$p->lat}}, {{$p->lng}}, '{{$p->name}}', icon_{{$p->group_id}}],
+                @endforeach
+                ],
+                route = L.featureGroup().addTo(map),
+                n = markers.length;
+            for (let i = 0; i < n-1; i++) {
+                let marker = new L.Marker([markers[i][0], markers[i][1]], {icon: markers[i][3]}).bindPopup(markers[i][2]);
+                route.addLayer(marker);
+            }
+            route.addLayer(new L.Marker([markers[n-1][0], markers[n-1][1]], {icon: markers[n-1][3]}).bindPopup(markers[n-1][2]));
+            map.fitBounds(route.getBounds(), {
+                padding: [20, 20]
+            });
+            function debounce(func) {
+                let timer;
+                return function (event) {
+                    if (timer) clearTimeout(timer);
+                    timer = setTimeout(func, 100, event);
+                };
+            }
+
+            window.addEventListener("resize", debounce(function () {
+                map.fitBounds(route.getBounds(), {
+                    padding: [20, 20]
+                });
+            }));
             @if (session('success')||session('warning'))
             $(document).ready(function() {
                 const aboveHeight = $('header').outerHeight();

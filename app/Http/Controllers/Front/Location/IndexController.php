@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front\Location;
 
 use App\Http\Controllers\Controller;
+use App\Models\Map;
 use Illuminate\Http\Request;
 
 //CMS
@@ -27,6 +28,7 @@ class IndexController extends Controller
             'galleries' => $galleries,
             'array' => Inline::getElements(2),
             'contact' => Page::find(2),
+            'list' => Map::orderBy('id', 'asc')->get(),
         ]);
     }
 
