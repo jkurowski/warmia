@@ -43,8 +43,8 @@
                         'file_preview' => config('images.article.facebook_file_path')
                     ])
                     @include('form-elements.html-input-text', ['label' => 'Atrybut ALT zdjęcia', 'name' => 'file_alt', 'value' => $entry->file_alt])
-                    @include('form-elements.html-input-text', ['label' => 'Wprowadzenie', 'name' => 'content_entry', 'value' => $entry->content_entry, 'required' => 1])
-                    @include('form-elements.textarea-fullwidth', ['label' => 'Treść artukułu', 'name' => 'content', 'value' => $entry->content, 'rows' => 21, 'class' => 'tinymce', 'required' => 1])
+                    @include('form-elements.textarea-fullwidth', ['label' => 'Wprowadzenie', 'name' => 'content_entry', 'value' => $entry->content_entry, 'rows' => 11, 'class' => 'tinymce', 'required' => 1])
+                    @include('form-elements.textarea-fullwidth', ['label' => 'Pełna treść', 'name' => 'content', 'value' => $entry->content, 'rows' => 21, 'class' => 'tinymce'])
                 </div>
             </div>
         </div>

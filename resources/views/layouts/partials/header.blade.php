@@ -31,7 +31,7 @@
                                     <li><a href="{{ route('plan') }}">@lang('cms.menu-plan')</a></li>
                                     <li><a href="{{ route('location') }}">@lang('cms.menu-location')</a></li>
                                     <li><a href="{{ route('gallery') }}">@lang('cms.menu-gallery')</a></li>
-                                    <li class="d-none"><a href="">@lang('cms.menu-client')</a></li>
+                                    <li><a href="{{ route('client') }}">@lang('cms.menu-client')</a></li>
                                     <li><a href="{{ route('contact') }}">@lang('cms.menu-contact')</a></li>
                                 </ul>
                                 <div id="triggermenu" class="d-block d-lg-none">MENU</div>

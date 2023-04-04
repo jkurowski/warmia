@@ -357,7 +357,6 @@
                 </div>
             </div>
         </section>
-
     </div>
 
     <section id="contact" class="blue-bg">

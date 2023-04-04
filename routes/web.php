@@ -29,6 +29,8 @@ Route::middleware(['restrictIp'])->group(function () {
             Route::get('/plan-inwestycji', 'InvestmentController@show')->name('plan');
             Route::get('/galeria', 'Gallery\IndexController@index')->name('gallery');
             Route::get('/lokalizacja', 'Location\IndexController@index')->name('location');
+            Route::get('/strefa-klienta', 'Client\IndexController@index')->name('client');
+            Route::get('/strefa-klienta/{slug}', 'Client\IndexController@show')->name('client.show');
 
             Route::get('/dom/{property}',
                 'Developro\InvestmentPropertyController@index')->name('property');

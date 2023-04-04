@@ -924,8 +924,18 @@ section {
 .no-bottom #page {
   padding-bottom: 0;
 }
-/* Pageheader
+.client-area #page {
+  padding: 0;
+}
+/* Client area
 ================================================== */
+.client-area h2 {
+  font-size: 50px;
+  line-height: 60px;
+}
+.client-area #benefits .benefits-text {
+  padding: 0 80px;
+}
 /* Gallery
 ================================================== */
 #gallery-nav {
@@ -1821,7 +1831,7 @@ footer p a {
     margin-top: 30px;
   }
   #benefits .benefits-text {
-    padding: 0px 50px;
+    padding: 0 50px;
   }
   #benefits h2 {
     font-size: 43px;
@@ -1834,6 +1844,17 @@ footer p a {
   #benefits .benefits-text p {
     font-size: 17px;
     line-height: 30px;
+  }
+  .client-area h2 {
+    font-size: 43px;
+    line-height: 10px;
+  }
+  .client-area p {
+    font-size: 17px;
+    line-height: 30px;
+  }
+  .client-area #benefits .benefits-text {
+    padding: 0 50px;
   }
 }
 /* end of 1399.98 */
@@ -1904,6 +1925,18 @@ footer p a {
   #slider h1 {
     font-size: 52px;
   }
+  .client-area h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+    line-height: normal;
+  }
+  .client-area p {
+    font-size: 16px;
+    line-height: 27px;
+  }
+  .client-area #benefits .benefits-text {
+    padding: 0 30px;
+  }
 }
 /* end of 1199.98 */
 @media (max-width: 991.98px) {
@@ -1968,6 +2001,9 @@ footer p a {
   }
   #slider h1 {
     font-size: 39px;
+  }
+  .client-area #benefits .benefits-text {
+    padding: 30px;
   }
 }
 /* end of 991.98 */
@@ -2048,6 +2084,10 @@ footer p a {
     font-size: 14px;
     line-height: 25px;
   }
+  .client-area p {
+    font-size: 14px;
+    line-height: 25px;
+  }
   #bike .apla p,
   #lake .apla p {
     font-size: 14px;
@@ -2060,6 +2100,10 @@ footer p a {
   #benefits h2 {
     font-size: 30px;
     line-height: 35px;
+  }
+  .client-area h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
   }
   #bike .apla h2,
   #lake .apla h2 {
@@ -2113,6 +2157,13 @@ footer p a {
   }
   #slider h1 {
     font-size: 28px;
+  }
+  #benefits h2,
+  .client-area h2 {
+    margin-bottom: 19px;
+  }
+  .client-area .bttn {
+    padding: 11px 40px;
   }
 }
 /* end of 575.98 */

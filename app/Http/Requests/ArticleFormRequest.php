@@ -27,7 +27,7 @@ class ArticleFormRequest extends FormRequest
         return [
             'title' => 'required|string|min:5|max:100|unique:articles,title,'.$this->route()->article,
             'content_entry' => 'required|string|min:5',
-            'content' => 'required|string|min:5',
+            'content' => '',
             'status' => 'boolean',
             'file_alt' => '',
             'meta_title' => '',
