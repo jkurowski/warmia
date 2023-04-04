@@ -89,7 +89,14 @@
                     @endauth
                 </div>
             </div>
-            <img src="{{ asset('/images/plan.jpg') }}" alt="Plan inwestycji">
+
+            <picture>
+                <source srcset="{{ asset('/images/plan-600.webp') }}" type="image/webp" media="(max-width: 599px)">
+                <source srcset="{{ asset('/images/plan-1200.webp') }}" type="image/webp" media="(max-width: 1199px)">
+                <source srcset="{{ asset('/images/plan.webp') }}" type="image/webp" media="(min-width: 1200px)">
+                <source srcset="{{ asset('/images/plan.jpg') }}" type="image/jpeg">
+                <img src="{{ asset('/images/plan.jpg') }}" alt="Plan inwestycji" loading="lazy" width="1920" height="1123" class="w-100">
+            </picture>
         </section>
 
         <section id="features">
