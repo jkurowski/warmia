@@ -75,7 +75,7 @@
                             <a href="{{ route('admin.article.index') }}">
                                 <span class="menu-bullet">
                                     <span class="bullet bullet-dot"></span>
-                                </span> Artykuły</a>
+                                </span> Strefa klienta</a>
                         </li>
                     </ul>
                 </li>
