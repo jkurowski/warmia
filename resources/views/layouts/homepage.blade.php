@@ -43,17 +43,6 @@
 @endauth
 
 @stack('scripts')
-
-<script type="text/javascript">
-    $(document).ready(function(){
-
-    });
-    $(window).load(function() {
-
-    });
-</script>
-
 {!! settings()->get("scripts_beforebody") !!}
-
 </body>
 </html>

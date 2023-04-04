@@ -4,34 +4,34 @@
     <div class="d-block">
         <section id="slider">
 
-        <ul class="mb-0 list-unstyled">
-            <li>
-                <img src="{{ asset('/uploads/slider/slider-1.jpg') }}" alt="" class="w-100 d-none d-sm-block">
-                <img src="{{ asset('/uploads/slider/slider-1-sm.jpg') }}" alt="" class="w-100 d-block d-sm-none">
-                <div class="slider-gradient"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h1>Miejsce, gdzie natura <br>spotyka się z luksusem</h1>
-                            <a href="{{ route('plan') }}" class="bttn mt-3 mt-lg-5 mb-3 mb-md-5">Znajdź swój dom</a>
+            <ul class="mb-0 list-unstyled">
+                <li>
+                    <img src="{{ asset('/uploads/slider/slider-1.jpg') }}" alt="" class="w-100 d-none d-sm-block">
+                    <img src="{{ asset('/uploads/slider/slider-1-sm.jpg') }}" alt="" class="w-100 d-block d-sm-none">
+                    <div class="slider-gradient"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>Miejsce, gdzie natura <br>spotyka się z luksusem</h1>
+                                <a href="{{ route('plan') }}" class="bttn mt-3 mt-lg-5 mb-3 mb-md-5">Znajdź swój dom</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </li>
-            <li>
-                <img src="{{ asset('/uploads/slider/slider-2.jpg') }}" alt="" class="w-100 d-none d-sm-block">
-                <img src="{{ asset('/uploads/slider/slider-2-sm.jpg') }}" alt="" class="w-100 d-block d-sm-none">
-                <div class="slider-gradient"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h1>Żyj aktywnie na Warmii</h1>
-                            <a href="{{ route('location') }}" class="bttn mt-3 mt-lg-5 mb-3 mb-md-5">Lokalizacja</a>
+                </li>
+                <li>
+                    <img src="{{ asset('/uploads/slider/slider-2.jpg') }}" alt="" class="w-100 d-none d-sm-block">
+                    <img src="{{ asset('/uploads/slider/slider-2-sm.jpg') }}" alt="" class="w-100 d-block d-sm-none">
+                    <div class="slider-gradient"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h1>Żyj aktywnie na Warmii</h1>
+                                <a href="{{ route('location') }}" class="bttn mt-3 mt-lg-5 mb-3 mb-md-5">Lokalizacja</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </li>
-        </ul>
+                </li>
+            </ul>
 
         </section>
 
@@ -493,12 +493,12 @@
                 $("#gallery-carousel").slick('slickUnfilter');
 
                 @foreach($galleries as $gallery)
-                    @if($gallery->photos_count > 0)
-                    if(filter === 'gallery-{{$gallery->id}}'){
-                        $("#gallery-carousel").slick('slickFilter','.gallery-{{$gallery->id}}');
-                    }
-                    @endif
-                @endforeach
+                        @if($gallery->photos_count > 0)
+                if(filter === 'gallery-{{$gallery->id}}'){
+                    $("#gallery-carousel").slick('slickFilter','.gallery-{{$gallery->id}}');
+                }
+                @endif
+                        @endforeach
                 if(filter === 'all'){
                     $("#gallery-carousel").slick('slickUnfilter');
                 }
