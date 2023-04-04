@@ -202,7 +202,7 @@
                         <div id="gallery-nav">
                             <ul class="list-unstyled mb-0 row filter">
                                 <li class="col-3">
-                                    <span class="bttn bttn-border bttn-active" data-filter="all">@lang('cms.filter-all') @endlang</span>
+                                    <span class="bttn bttn-border bttn-active" data-filter="all">@lang('cms.filter-all')</span>
                                 </li>
                                 @foreach($galleries as $gallery)
                                     @if($gallery->photos_count > 0)
@@ -428,7 +428,6 @@
                                 </div>
                             </div>
                         @endforeach
-
                         <div class="col-12 pt-5">
                             <script type="text/javascript">
                                 document.write("<button class=\"bttn\" type=\"submit\">@lang('cms.form-button')</button>");
@@ -440,13 +439,12 @@
             </div>
         </div>
     </section>
-
 @endsection
+
 @push('scripts')
     <script src="{{ asset('/js/validation.min.js') }}" charset="utf-8"></script>
     <script src="{{ asset('/js/'.$current_locale.'.js') }}" charset="utf-8"></script>
     <script src="{{ asset('/js/slick.min.js') }}" charset="utf-8"></script>
-
     <script type="text/javascript">
         $(document).ready(function(){
             $(".validateForm").validationEngine({
@@ -470,13 +468,7 @@
                     nav:false,
                     timeout:4000,
                     random:false,
-                    speed: 500,
-                    before: function(){
-                        //
-                    },
-                    after: function(){
-                        //
-                    }
+                    speed: 500
                 });
 
             $("#gallery-carousel").slick({
@@ -493,16 +485,15 @@
                 $("#gallery-carousel").slick('slickUnfilter');
 
                 @foreach($galleries as $gallery)
-                        @if($gallery->photos_count > 0)
-                if(filter === 'gallery-{{$gallery->id}}'){
-                    $("#gallery-carousel").slick('slickFilter','.gallery-{{$gallery->id}}');
-                }
-                @endif
-                        @endforeach
+                    @if($gallery->photos_count > 0)
+                        if(filter === 'gallery-{{$gallery->id}}'){
+                            $("#gallery-carousel").slick('slickFilter','.gallery-{{$gallery->id}}');
+                        }
+                    @endif
+                @endforeach
                 if(filter === 'all'){
                     $("#gallery-carousel").slick('slickUnfilter');
                 }
-
             })
         });
         @if (session('success')||session('warning'))

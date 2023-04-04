@@ -268,7 +268,7 @@
             });
         })
 
-        myModal.addEventListener('hide.bs.modal', function (j)
+        myModal.addEventListener('hide.bs.modal', function ()
         {
             //console.log('Close modal');
             cleanModal();
