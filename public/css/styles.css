@@ -1951,7 +1951,8 @@ footer p a {
   body {
     font-size: 16px;
   }
-  p {
+  p,
+  .subpage li {
     font-size: 16px;
     line-height: 29px;
   }
