@@ -232,7 +232,8 @@ b,
 strong {
   font-weight: 600;
 }
-p {
+p,
+.subpage li {
   font-size: 18px;
   line-height: 36px;
   margin: 0;
