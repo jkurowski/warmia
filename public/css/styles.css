@@ -2082,9 +2082,10 @@ footer p a {
     font-size: 14px;
   }
   p,
-  #benefits .benefits-text p {
+  #benefits .benefits-text p,
+  .subpage li {
     font-size: 14px;
-    line-height: 25px;
+    line-height: 22px;
   }
   .client-area p {
     font-size: 14px;
