@@ -21,4 +21,6 @@ return array (
     'list-small-landarea' => 'pow. działki',
     'list-bttn' => 'ZOBACZ',
     'list-no-results' => 'Brak wyników',
+    'footer-privacy-policy' => 'Polityka prywatności',
+    'footer-cookies-policy' => 'Polityka cookies'
 );

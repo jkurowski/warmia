@@ -183,6 +183,6 @@ Route::group([
     });
 });
 
-Route::group(['prefix' => '{locale?}', 'where' => ['locale' => '(?!admin)*[a-z]{2}'],], function() {
+Route::group(['prefix' => '{locale?}', 'where' => ['locale' => '(?!admin)*[a-z]{2}'], 'middleware' => 'web'], function() {
     Route::get('{uri}', 'Front\MenuController@index')->where('uri', '([A-Za-z0-9\-\/]+)')->name('subupage');
 });

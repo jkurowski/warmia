@@ -21,4 +21,6 @@ return array (
     'list-small-landarea' => 'land area',
     'list-bttn' => 'SEE DETAILS',
     'list-no-results' => 'No results',
+    'footer-privacy-policy' => 'Polityka prywatności',
+    'footer-cookies-policy' => 'Polityka cookies'
 );

@@ -25,7 +25,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <p>© Warmia Residence 2023&nbsp;&nbsp;|&nbsp;&nbsp;Projekt: <a href="https://www.developro.pl/" target="_blank" title="System dla Deweloperów - DeveloPRO Marketing Nieruchomości">DeveloPRO</a></p>
+                    <p>© Warmia Residence 2023&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{{ route('subupage', ['uri' => 'polityka-prywatnosci']) }}">@lang('cms.footer-privacy-policy')</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{{ route('subupage', ['uri' => 'polityka-cookies']) }}">@lang('cms.footer-cookies-policy')</a>&nbsp;&nbsp;|&nbsp;&nbsp;Projekt: <a href="https://www.developro.pl/" target="_blank" title="System dla Deweloperów - DeveloPRO Marketing Nieruchomości">DeveloPRO</a></p>
                 </div>
             </div>
         </div>
