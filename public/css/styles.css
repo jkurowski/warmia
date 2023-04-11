@@ -914,6 +914,13 @@ section {
   font-size: 18px;
   line-height: 36px;
 }
+#benefits .bttn {
+  background: white;
+}
+#benefits .flex-row-reverse {
+  background: url("../images/white-wave-bg.jpg") no-repeat bottom left;
+  background-size: 40% auto;
+}
 /* Page
 ================================================== */
 #page {
