@@ -43,7 +43,11 @@ class ContactController extends Controller
         $client = $this->repository->createClient($request, $property);
         //$property->notify(new PropertyNotification($request));
 
-        Mail::to(settings()->get("page_email"))->send(new ChatSend($request, $client, $property));
+        $pageEmail = settings()->get("page_email");
+        $emailAddresses = json_decode($pageEmail, true);
+        foreach ($emailAddresses as $address) {
+            Mail::to($address['value'])->send(new ChatSend($request, $client, $property));
+        }
 
         if( count(Mail::failures()) == 0 ) {
             $cookie_name = 'dp_';
@@ -67,7 +71,12 @@ class ContactController extends Controller
         $recipient->notify(new ContactNotification($request));
 
         $client = $this->repository->createClient($request);
-        Mail::to(settings()->get("page_email"))->send(new ChatSend($request, $client));
+
+        $pageEmail = settings()->get("page_email");
+        $emailAddresses = json_decode($pageEmail, true);
+        foreach ($emailAddresses as $address) {
+            Mail::to($address['value'])->send(new ChatSend($request, $client));
+        }
 
         if( count(Mail::failures()) == 0 ) {
             $cookie_name = 'dp_';

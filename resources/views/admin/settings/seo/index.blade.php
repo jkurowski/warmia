@@ -107,6 +107,10 @@
                 const url = $( "#form_page_url" ).val();
                 window.open('https://developers.google.com/speed/pagespeed/insights/?url=' + url, '_blank');
             });
+
+            $('[name=page_email]').tagify({
+                'autoComplete.enabled': false
+            });
         });
     </script>
 @endpush
