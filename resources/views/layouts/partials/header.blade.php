@@ -27,7 +27,7 @@
                         <div class="col-12">
                             <nav>
                                 <ul class="mb-0 list-unstyled">
-                                    <li><a href="/">Home</a></li>
+                                    <li><a href="/">@lang('cms.menu-homepage')</a></li>
                                     <li><a href="{{ route('plan') }}">@lang('cms.menu-plan')</a></li>
                                     <li><a href="{{ route('location') }}">@lang('cms.menu-location')</a></li>
                                     <li><a href="{{ route('gallery') }}">@lang('cms.menu-gallery')</a></li>

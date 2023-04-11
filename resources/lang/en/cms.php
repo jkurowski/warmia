@@ -8,6 +8,7 @@ return array (
     'form-message' => 'Message content',
     'form-button' => 'Send message',
     'header-email-cta' => 'Email us',
+    'menu-homepage' => 'Homepage',
     'menu-plan' => 'Houses',
     'menu-location' => 'Location',
     'menu-gallery' => 'Gallery',

@@ -8,6 +8,7 @@ return array (
     'form-message' => 'Treść wiadomości',
     'form-button' => 'Wyślij wiadomość',
     'header-email-cta' => 'Napisz do nas',
+    'menu-homepage' => 'Strona główna',
     'menu-plan' => 'Wybór domów',
     'menu-location' => 'Lokalizacja',
     'menu-gallery' => 'Galeria',
