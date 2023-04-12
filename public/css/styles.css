@@ -901,12 +901,6 @@ section {
 #benefits img {
   width: 100%;
 }
-#benefits li {
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  line-height: 48px;
-  color: #252b54;
-}
 #benefits .benefits-text {
   padding: 0 160px;
 }
@@ -916,6 +910,16 @@ section {
 }
 #benefits .bttn {
   background: white;
+}
+.homepage #benefits li {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  line-height: 48px;
+  color: #252b54;
+}
+.client-area #benefits li {
+  font-size: 18px;
+  line-height: 36px;
 }
 #benefits .flex-row-reverse {
   background: url("../images/white-wave-bg.jpg") no-repeat bottom left;
@@ -1845,17 +1849,21 @@ footer p a {
     font-size: 43px;
     margin-bottom: 10px;
   }
-  #benefits li {
+  #benefits .benefits-text p {
+    font-size: 17px;
+    line-height: 30px;
+  }
+  .homepage #benefits li {
     font-size: 29px;
     line-height: 38px;
   }
-  #benefits .benefits-text p {
+  .client-area #benefits li {
     font-size: 17px;
     line-height: 30px;
   }
   .client-area h2 {
     font-size: 43px;
-    line-height: 10px;
+    line-height: 50px;
   }
   .client-area p {
     font-size: 17px;
@@ -1919,14 +1927,18 @@ footer p a {
     margin-bottom: 10px;
     line-height: normal;
   }
-  #benefits li {
-    font-size: 25px;
-    line-height: 34px;
-  }
   #benefits .benefits-text {
     padding: 0 30px;
   }
   #benefits .benefits-text p {
+    font-size: 16px;
+    line-height: 27px;
+  }
+  .homepage #benefits li {
+    font-size: 25px;
+    line-height: 34px;
+  }
+  .client-area #benefits li {
     font-size: 16px;
     line-height: 27px;
   }
@@ -2095,6 +2107,10 @@ footer p a {
     line-height: 22px;
   }
   .client-area p {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .client-area #benefits li {
     font-size: 14px;
     line-height: 25px;
   }
