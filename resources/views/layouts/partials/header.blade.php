@@ -48,6 +48,6 @@
     <ul class="mb-0 list-unstyled">
         <li><a href="https://www.facebook.com/WarmiaResidence" target="_blank"><span><i class="lab la-facebook-f"></i></span></a></li>
         <li><a href="https://www.instagram.com/warmia_residence/" target="_blank"><span><i class="lab la-instagram"></i></span></a></li>
-        <li><a href="https://www.facebook.com/WarmiaResidence" target="_blank"><span><i class="lab la-youtube"></i></span></a></li>
+        <li><a href="https://www.youtube.com/channel/UCXPikdTaD3fQSPgNVF-TMGQ" target="_blank"><span><i class="lab la-youtube"></i></span></a></li>
     </ul>
 </aside>
