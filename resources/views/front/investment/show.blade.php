@@ -1,12 +1,12 @@
 @extends('layouts.page', ['body_class' => 'investments no-top'])
 
-@section('meta_title', 'Wybór domów')
-@section('seo_title', 'Wybór domów')
-@section('seo_description', 'Wybór domów')
+@section('meta_title', 'Wybierz dom')
+@section('seo_title', 'Wybierz dom')
+@section('seo_description', 'Wybierz dom')
 
 @section('pageheader')
     @include('layouts.partials.developro-header', [
-    'title' => 'Wybór domów',
+    'title' => 'Wybierz dom',
     'header_file' => 'rooms.jpg',
     'items' => []
     ])

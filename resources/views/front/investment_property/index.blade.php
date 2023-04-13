@@ -51,7 +51,7 @@
 
                     <div class="d-flex justify-content-center">
                         @if($property->file_pdf)
-                            <a href="{{ asset('/investment/property/pdf/'.$property->file_pdf) }}" target="_blank" class="bttn">POBIERZ PLAN .PDF</a>
+                            <a href="{{ asset('/investment/property/pdf/'.$property->file_pdf) }}" target="_blank" class="bttn">POBIERZ KARTĘ .PDF</a>
                         @endif
                     </div>
                     <div class="d-flex justify-content-center d-block d-lg-none">
