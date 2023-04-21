@@ -25,7 +25,7 @@ $(document).ready(function() {
     });
 
     const sold = 'ec2327'; // mieszkanie sprzedane
-    const reservation = '1788c9'; // mieszkanie zarezerwowane
+    const reservation = 'e9bc5e'; // mieszkanie zarezerwowane
     const forsale = '3a9019'; // mieszkanie na sprzedaz
     const rent = 'de8300'; // mieszkanie wynajete
     const hoverOpacity = 0.8;
