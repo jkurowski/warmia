@@ -126,7 +126,6 @@
                     lessLink: '<a href="#">zwiń treść</a>',
                     heightMargin: 6
                 });
-
             });
             let map = L.map('map').setView([53.761629, 20.229406], 14),
                 theMarker = {},
@@ -142,7 +141,7 @@
                 iconSize: [184, 118],
                 iconAnchor: [92, 120],
             });
-            L.marker([53.761629, 20.229406], {icon: markerIcon}).addTo(map).bindPopup("53.761639, 20.229417<br><a href='https://goo.gl/maps/Rwnqqyjd3Co29FQh9' target='_blank'>Znajdź dojazd</a>");
+            L.marker([53.761629, 20.229406], {icon: markerIcon}).addTo(map).bindPopup("53.761639, 20.229417<br><a href='https://goo.gl/maps/Rwnqqyjd3Co29FQh9' target='_blank'>@lang('cms.cta-map-direction')</a>");
             @if (session('success')||session('warning'))
             $(document).ready(function() {
                 const aboveHeight = $('header').outerHeight();

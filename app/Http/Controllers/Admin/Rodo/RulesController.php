@@ -38,6 +38,11 @@ class RulesController extends Controller
 
     public function edit(int $id)
     {
+
+        if(request()->get('lang')) {
+            app()->setLocale(request()->get('lang'));
+        }
+
         return view('admin.rodo_rules.form', [
             'entry' => RodoRules::find($id),
             'cardTitle' => 'Edytuj regułkę',
@@ -47,6 +52,10 @@ class RulesController extends Controller
 
     public function update(RodoRulesFormRequest $request, RodoRules $rule)
     {
+        if(request()->get('lang')) {
+            app()->setLocale(request()->get('lang'));
+        }
+
         $this->repository->update($request->validated(), $rule);
         return redirect(route('admin.rodo.rules.index'))->with('success', 'Regułka zaktualizowana');
     }

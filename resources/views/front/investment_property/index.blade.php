@@ -19,13 +19,13 @@
     <div class="container-fluid container-md">
         <div id="propertyNav" class="row mb-3 mb-lg-5">
             <div class="col-12 col-sm-4">
-                @if($prev) <a href="{{route('property', $prev)}}" class="bttn bttn-sm">Poprzedni</a>@endif
+                @if($prev) <a href="{{route('property', $prev)}}" class="bttn bttn-sm">@lang('cms.cta-prev-property')</a>@endif
             </div>
             <div class="col-12 col-sm-4">
-                <a href="{{route('plan')}}" class="bttn bttn-sm">Plan inwestycji</a>
+                <a href="{{route('plan')}}" class="bttn bttn-sm">@lang('cms.cta-back-to-plan')</a>
             </div>
             <div class="col-12 col-sm-4">
-                @if($next) <a href="{{route('property', $next)}}" class="bttn bttn-sm">Następny</a>@endif
+                @if($next) <a href="{{route('property', $next)}}" class="bttn bttn-sm">@lang('cms.cta-next-property')</a>@endif
             </div>
         </div>
         <div class="row">
@@ -38,24 +38,24 @@
                         <h6 class="propertyPrice">@money($property->price)</h6>
                     @endif
                     <ul class="list-unstyled">
-                        <li>Pokoje:<span>{{$property->rooms}}</span></li>
-                        <li>Powierzchnia:<span>{{$property->area}} m<sup>2</sup></span></li>
-                        @if($property->garden_area)<li>Powierzchnia działki:<span>{{$property->garden_area}} m<sup>2</sup></span></li>@endif
-                        @if($property->balcony_area)<li>Balkon:<span>{{$property->balcony_area}} m<sup>2</sup></span></li>@endif
-                        @if($property->balcony_area_2)<li>Balkon 2:<span>{{$property->balcony_area_2}} m<sup>2</sup></span></li>@endif
-                        @if($property->terrace_area)<li>Taras:<span>{{$property->terrace_area}} m<sup>2</sup></span></li>@endif
-                        @if($property->loggia_area)<li>Balkon 3:<span>{{$property->loggia_area}} m<sup>2</sup></span></li>@endif
-                        @if($property->parking_space)<li>Miejsce postojowe:<span>{{$property->parking_space}}</span></li>@endif
-                        @if($property->garage)<li>Garaż:<span>{{$property->garage}}</span></li>@endif
+                        <li>@lang('cms.property-rooms'):<span>{{$property->rooms}}</span></li>
+                        <li>@lang('cms.property-area'):<span>{{$property->area}} m<sup>2</sup></span></li>
+                        @if($property->garden_area)<li>@lang('cms.property-field'):<span>{{$property->garden_area}} m<sup>2</sup></span></li>@endif
+                        @if($property->balcony_area)<li>@lang('cms.property-balcony'):<span>{{$property->balcony_area}} m<sup>2</sup></span></li>@endif
+                        @if($property->balcony_area_2)<li>@lang('cms.property-balcony-2'):<span>{{$property->balcony_area_2}} m<sup>2</sup></span></li>@endif
+                        @if($property->terrace_area)<li>@lang('cms.property-terrace'):<span>{{$property->terrace_area}} m<sup>2</sup></span></li>@endif
+                        @if($property->loggia_area)<li>@lang('cms.property-balcony-3'):<span>{{$property->loggia_area}} m<sup>2</sup></span></li>@endif
+                        @if($property->parking_space)<li>@lang('cms.property-parking'):<span>{{$property->parking_space}}</span></li>@endif
+                        @if($property->garage)<li>@lang('cms.property-garage'):<span>{{$property->garage}}</span></li>@endif
                     </ul>
 
                     <div class="d-flex justify-content-center">
                         @if($property->file_pdf)
-                            <a href="{{ asset('/investment/property/pdf/'.$property->file_pdf) }}" target="_blank" class="bttn">POBIERZ KARTĘ .PDF</a>
+                            <a href="{{ asset('/investment/property/pdf/'.$property->file_pdf) }}" target="_blank" class="bttn">@lang('cms.cta-download-pdf')</a>
                         @endif
                     </div>
                     <div class="d-flex justify-content-center d-block d-lg-none">
-                        <a href="#contact" class="bttn scroll-to" data-offset="0">FORMULARZ KONTAKTOWY</a>
+                        <a href="#contact" class="bttn scroll-to" data-offset="0">@lang('cms.cta-scroll-to-contactform')</a>
                     </div>
                 </div>
             </div>

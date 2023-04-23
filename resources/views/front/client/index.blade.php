@@ -22,7 +22,7 @@
                     <picture>
                         <source srcset="{{ asset('/uploads/articles/thumbs/webp/'.$article->file_webp) }}" type="image/webp">
                         <source srcset="{{ asset('/uploads/articles/thumbs/'.$article->file) }}" type="image/jpeg">
-                        <img src="{{ asset('/uploads/articles/thumbs/'.$article->file) }}" alt="Obrazek galerii" loading="lazy" width="792" height="594">
+                        <img src="{{ asset('/uploads/articles/thumbs/'.$article->file) }}" alt="{{ $article->title }}" loading="lazy" width="792" height="594">
                     </picture>
                 </div>
                 <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
@@ -30,7 +30,7 @@
                         <h2>{{ $article->title }}</h2>
                         {!! $article->content_entry !!}
                         @if($article->content)
-                            <a href="{{ route('client.show', $article->slug) }}" class="bttn mt-3 mt-sm-5">CZYTAJ WIĘCEJ</a>
+                            <a href="{{ route('client.show', $article->slug) }}" class="bttn mt-3 mt-sm-5">@lang('cms.cta-read-more')</a>
                         @endif
                     </div>
                 </div>

@@ -43,6 +43,7 @@
                             <th>Data utworzenia</th>
                             <th>Data edycji</th>
                             <th></th>
+                            <th></th>
                         </tr>
                         </thead>
                         <tbody class="content">
@@ -55,6 +56,11 @@
                                 <td class="text-center">{!! status($p->active) !!} </td>
                                 <td>{{ $p->created_at }}</td>
                                 <td>{{ $p->updated_at }}</td>
+                                <td class="option-120">
+                                    <div class="btn-group">
+                                        <a href="{{route('admin.rodo.rules.edit', [$p, 'lang' => 'en'])}}" class="btn action-button lang-button me-1" data-toggle="tooltip" data-placement="top" title="Edytuj"><img src="{{ asset('/cms/flags/en.png') }}" alt="Tłumaczenie: en"></a>
+                                    </div>
+                                </td>
                                 <td class="option-120">
                                     <div class="btn-group">
                                         <a href="{{route('admin.rodo.rules.edit', $p)}}" class="btn action-button me-1" data-toggle="tooltip" data-placement="top" title="Edytuj"><i class="fe-edit"></i></a>

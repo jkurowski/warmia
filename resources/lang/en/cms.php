@@ -22,5 +22,21 @@ return array (
     'list-bttn' => 'SEE DETAILS',
     'list-no-results' => 'No results',
     'footer-privacy-policy' => 'Polityka prywatności',
-    'footer-cookies-policy' => 'Polityka cookies'
+    'footer-cookies-policy' => 'Polityka cookies',
+    'cta-map-direction' => 'Znajdź dojazd',
+    'cta-read-more' => 'CZYTAJ WIĘCEJ',
+    'cta-prev-property' => 'Poprzedni',
+    'cta-next-property' => 'Następny',
+    'cta-back-to-plan' => 'Plan inwestycji',
+    'property-rooms' => 'Pokoje',
+    'property-area' => 'Powierzchnia',
+    'property-field' => 'Powierzchnia działki',
+    'property-balcony' => 'Balkon',
+    'property-balcony-2' => 'Balkon 2',
+    'property-terrace' => 'Taras',
+    'property-balcony-3' => 'Balkon 3',
+    'property-parking' => 'Miejsce postojowe',
+    'property-garage' => 'Garaż',
+    'cta-download-pdf' => 'POBIERZ KARTĘ .PDF',
+    'cta-scroll-to-contactform' => 'FORMULARZ KONTAKTOWY'
 );

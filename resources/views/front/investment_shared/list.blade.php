@@ -20,7 +20,7 @@
                             </a>
                         @endif
                     </div>
-                    <div class="col-6 col-md pe-3 pe-lg-5">
+                    <div class="col-6 col-md pe-3 pe-lg-5 d-flex align-items-center">
                         <ul class="mb-0 list-unstyled">
                             @if($room->price)
                                 <li>@lang('cms.list-small-price'): <b>@money($room->price)</b></li>

@@ -20,15 +20,18 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-12">
+                                        @if(!Request::get('lang'))
                                         @include('form-elements.html-select', ['label' => 'Status', 'name' => 'status', 'selected' => $entry->status, 'select' => ['1' => 'Pokaż na liście', '0' => 'Ukryj na liście']])
                                         @include('form-elements.html-select', ['label' => 'Wymagane', 'name' => 'required', 'selected' => $entry->required, 'select' => ['1' => 'Tak', '0' => 'Nie']])
                                         @include('form-elements.html-input-text', ['label' => 'Nazwa regułki', 'name' => 'title', 'value' => $entry->title, 'required' => 1])
                                         @include('form-elements.html-input-text', ['label' => 'Czas trwania regułki', 'name' => 'time', 'value' => $entry->time, 'required' => 1])
+                                        @endif
                                         @include('form-elements.textarea', ['label' => 'Treść regułki', 'name' => 'text', 'value' => $entry->text, 'rows' => 11, 'class' => 'tinymce'])
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <input type="hidden" name="lang" value="{{$current_locale}}">
                         @include('form-elements.submit', ['name' => 'submit', 'value' => 'Zapisz regułkę'])
                     </div>
                 </form>
