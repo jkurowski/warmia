@@ -47,6 +47,13 @@
                                 </span> Użytkownicy</a>
                         </li>
 
+                        <li {{ Request::routeIs('admin.dictionary') ? 'class=active' : '' }}>
+                            <a href="{{ route('admin.dictionary.index') }}">
+                                <span class="menu-bullet">
+                                    <span class="bullet bullet-dot"></span>
+                                </span> Tłumaczenie</a>
+                        </li>
+
                         <li {{ Request::routeIs('admin.greylist.*') ? 'class=active' : '' }}>
                             <a href="{{ route('admin.greylist.index') }}">
                                 <span class="menu-bullet">
