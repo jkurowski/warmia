@@ -60,8 +60,16 @@ class HouseController extends Controller
             $this->service->upload($request->name, $request->file('file'), $property);
         }
 
+        if ($request->hasFile('en_file')) {
+            $this->service->uploadEngFile($request->name, $request->file('en_file'), $property);
+        }
+
         if ($request->hasFile('file_pdf')) {
             $this->service->uploadPdf($request->name, $request->file('file_pdf'), $property);
+        }
+
+        if ($request->hasFile('en_file_pdf')) {
+            $this->service->uploadEngPdf($request->name, $request->file('en_file_pdf'), $property);
         }
 
         return redirect(route('admin.developro.investment.houses.index', ['investment' => $investment]))->with('success', 'Dom poprawnie zapisany');
@@ -85,8 +93,16 @@ class HouseController extends Controller
             $this->service->upload($request->name, $request->file('file'), $house, true);
         }
 
+        if ($request->hasFile('en_file')) {
+            $this->service->uploadEngFile($request->name, $request->file('en_file'), $house, true);
+        }
+
         if ($request->hasFile('file_pdf')) {
             $this->service->uploadPdf($request->name, $request->file('file_pdf'), $house, true);
+        }
+
+        if ($request->hasFile('en_file_pdf')) {
+            $this->service->uploadEngPdf($request->name, $request->file('en_file_pdf'), $house, true);
         }
 
         return redirect(route('admin.developro.investment.houses.index', ['investment' => $investment->id]))->with('success', 'Dom zaktualizowany');

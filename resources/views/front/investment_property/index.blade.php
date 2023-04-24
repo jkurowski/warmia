@@ -50,8 +50,11 @@
                     </ul>
 
                     <div class="d-flex justify-content-center">
-                        @if($property->file_pdf)
+                        @if($property->file_pdf && $current_locale == 'pl')
                             <a href="{{ asset('/investment/property/pdf/'.$property->file_pdf) }}" target="_blank" class="bttn">@lang('cms.cta-download-pdf')</a>
+                        @endif
+                        @if($property->en_file_pdf && $current_locale == 'en')
+                            <a href="{{ asset('/investment/property/pdf/'.$property->en_file_pdf) }}" target="_blank" class="bttn">@lang('cms.cta-download-pdf')</a>
                         @endif
                     </div>
                     <div class="d-flex justify-content-center d-block d-lg-none">
@@ -64,12 +67,21 @@
 
             <div class="order-3 order-lg-2 col-12 col-lg-5">
                 <div class="property-img">
-                    @if($property->file)
+                    @if($property->file && $current_locale == 'pl')
                         <a href="{{ asset('/investment/property/'.$property->file) }}" class="swipebox" data-fslightbox="property">
                             <picture>
                                 <source type="image/webp" srcset="{{ asset('/investment/property/thumbs/webp/'.$property->file_webp) }}">
                                 <source type="image/jpeg" srcset="{{ asset('/investment/property/thumbs/'.$property->file) }}">
                                 <img src="{{ asset('/investment/property/thumbs/'.$property->file) }}" alt="{{$property->name}}">
+                            </picture>
+                        </a>
+                    @endif
+                    @if($property->en_file && $current_locale == 'en')
+                        <a href="{{ asset('/investment/property/'.$property->en_file) }}" class="swipebox" data-fslightbox="property">
+                            <picture>
+                                <source type="image/webp" srcset="{{ asset('/investment/property/thumbs/webp/'.$property->en_file_webp) }}">
+                                <source type="image/jpeg" srcset="{{ asset('/investment/property/thumbs/'.$property->en_file) }}">
+                                <img src="{{ asset('/investment/property/thumbs/'.$property->en_file) }}" alt="{{$property->name}}">
                             </picture>
                         </a>
                     @endif

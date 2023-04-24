@@ -89,7 +89,7 @@
                             @include('form-elements.html-input-text-count', ['label' => 'Opis strony', 'sublabel'=> 'Meta tag - description', 'name' => 'meta_description', 'value' => $entry->meta_description, 'maxlength' => 158])
 
                             @include('form-elements.html-input-file', [
-                                'label' => 'Plan mieszkania',
+                                'label' => 'Plan domu',
                                 'sublabel' => '(wymiary: '.config('images.property_plan.width').'px / '.config('images.property_plan.height').'px)',
                                 'name' => 'file',
                                 'file' => $entry->file,
@@ -101,6 +101,22 @@
                                     'Plan do pobrania',
                                     'name' => 'file_pdf',
                                     'file' => $entry->file_pdf,
+                                    'file_preview' => config('images.property.preview_pdf_path')
+                                    ])
+
+                            @include('form-elements.html-input-file', [
+                                'label' => '[EN] Plan domu',
+                                'sublabel' => '(wymiary: '.config('images.property_plan.width').'px / '.config('images.property_plan.height').'px)',
+                                'name' => 'en_file',
+                                'file' => $entry->en_file,
+                                'file_preview' => config('images.property.preview_file_path')
+                                ])
+                            @include('form-elements.html-input-file-pdf', [
+                                    'label' => '[EN] Plan .pdf',
+                                    'sublabel' =>
+                                    'Plan do pobrania',
+                                    'name' => 'en_file_pdf',
+                                    'file' => $entry->en_file_pdf,
                                     'file_preview' => config('images.property.preview_pdf_path')
                                     ])
                             @include('form-elements.textarea-fullwidth', ['label' => 'Opis domu', 'name' => 'content', 'value' => $entry->content, 'rows' => 31, 'class' => 'tinymce'])
