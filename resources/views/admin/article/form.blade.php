@@ -23,10 +23,15 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-12">
+                    @if(!Request::get('lang'))
                     @include('form-elements.html-select', ['label' => 'Status', 'name' => 'status', 'selected' => $entry->status, 'select' => ['1' => 'Pokaż na liście', '0' => 'Ukryj na liście']])
+                    @endif
+
                     @include('form-elements.html-input-text', ['label' => 'Tytuł wpisu', 'name' => 'title', 'value' => $entry->title, 'required' => 1])
                     @include('form-elements.html-input-text-count', ['label' => 'Nagłówek strony', 'sublabel'=> 'Meta tag - title', 'name' => 'meta_title', 'value' => $entry->meta_title, 'maxlength' => 60])
                     @include('form-elements.html-input-text-count', ['label' => 'Opis strony', 'sublabel'=> 'Meta tag - description', 'name' => 'meta_description', 'value' => $entry->meta_description, 'maxlength' => 158])
+
+                    @if(!Request::get('lang'))
                     @include('form-elements.html-input-text', ['label' => 'Indeksowanie', 'sublabel'=> 'Meta tag - robots', 'name' => 'meta_robots', 'value' => $entry->meta_robots])
                     @include('form-elements.html-input-file', [
                         'label' => 'Zdjęcie',
@@ -42,6 +47,8 @@
                         'file' => $entry->file_facebook,
                         'file_preview' => config('images.article.facebook_file_path')
                     ])
+                    @endif
+
                     @include('form-elements.html-input-text', ['label' => 'Atrybut ALT zdjęcia', 'name' => 'file_alt', 'value' => $entry->file_alt])
                     @include('form-elements.textarea-fullwidth', ['label' => 'Wprowadzenie', 'name' => 'content_entry', 'value' => $entry->content_entry, 'rows' => 11, 'class' => 'tinymce', 'required' => 1])
                     @include('form-elements.textarea-fullwidth', ['label' => 'Pełna treść', 'name' => 'content', 'value' => $entry->content, 'rows' => 21, 'class' => 'tinymce'])
@@ -50,6 +57,7 @@
         </div>
     </div>
 </div>
+<input type="hidden" name="lang" value="{{$current_locale}}">
 @include('form-elements.submit', ['name' => 'submit', 'value' => 'Zapisz'])
 </form>
 @include('form-elements.tintmce')

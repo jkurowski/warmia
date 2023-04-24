@@ -65,6 +65,11 @@ class IndexController extends Controller
 
     public function edit(int $id)
     {
+
+        if(request()->get('lang')) {
+            app()->setLocale(request()->get('lang'));
+        }
+
         return view('admin.article.form', [
             'entry' => Article::find($id),
             'cardTitle' => 'Edytuj artykuł',
@@ -74,6 +79,9 @@ class IndexController extends Controller
 
     public function update(ArticleFormRequest $request, int $id)
     {
+        if(request()->get('lang')) {
+            app()->setLocale(request()->get('lang'));
+        }
 
         $article = $this->repository->find($id);
         $this->repository->update($request->validated(), $article);
