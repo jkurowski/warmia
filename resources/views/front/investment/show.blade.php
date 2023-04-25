@@ -1,14 +1,15 @@
 @extends('layouts.page', ['body_class' => 'investments no-top'])
 
-@section('meta_title', __('cms.menu-plan'))
-@section('seo_title', __('cms.menu-plan'))
-@section('seo_description', __('cms.menu-plan'))
+@section('meta_title', $page->title)
+@section('seo_title', $page->meta_title)
+@section('seo_description', $page->meta_description)
+@section('seo_robots', $page->meta_robots)
 
 @section('pageheader')
     @include('layouts.partials.developro-header', [
-    'title' => __('cms.menu-plan'),
+    'title' => ($page->content_header) ?: $page->title,
     'header_file' => 'rooms.jpg',
-    'items' => []
+    'items' => $page
     ])
 @stop
 
