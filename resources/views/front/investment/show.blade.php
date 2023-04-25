@@ -1,12 +1,12 @@
 @extends('layouts.page', ['body_class' => 'investments no-top'])
 
-@section('meta_title', 'Wybierz dom')
-@section('seo_title', 'Wybierz dom')
-@section('seo_description', 'Wybierz dom')
+@section('meta_title', __('cms.menu-plan'))
+@section('seo_title', __('cms.menu-plan'))
+@section('seo_description', __('cms.menu-plan'))
 
 @section('pageheader')
     @include('layouts.partials.developro-header', [
-    'title' => 'Wybierz dom',
+    'title' => __('cms.menu-plan'),
     'header_file' => 'rooms.jpg',
     'items' => []
     ])
@@ -14,16 +14,21 @@
 
 @section('content')
     @if($investment->plan)
+        @if($current_locale == 'pl')
         <div class="plan-info">Z planu poniżej, wybierz dom lub z listy <a href="#floor" class="scroll-to" data-offset="80">poniżej</a>.</div>
+        @endif
+        @if($current_locale == 'en')
+        <div class="plan-info">Select a house from the plan below or from the list <a href="#floor" class="scroll-to" data-offset="80">below</a>.</div>
+        @endif
         <div id="plan">
-            <div id="plan-holder"><img src="{{ asset('/investment/plan/'.$investment->plan->file.'') }}" alt="{{$investment->name}}" id="invesmentplan" usemap="#invesmentplan"></div>
+            <div id="plan-holder"><img src="{{ asset('/investment/plan/'.$investment->plan->file) }}" alt="{{$investment->name}}" id="invesmentplan" usemap="#invesmentplan"></div>
             <map name="invesmentplan">
                 @if($properties->count() > 0)
                     @foreach($properties as $house)
                         <area
                                 shape="poly"
                                 href="{{route('property', $house)}}"
-                                title="{{$house->name}}<br>Powierzchnia: <b class=fr>{{$house->area}} m<sup>2</sup></b><br />Pokoje: <b class=fr>{{$house->rooms}}</b><br><b>{{ roomStatus($house->status) }}</b>"
+                                title="{{$house->name}}<br>@lang('cms.property-area'): <b class=fr>{{$house->area}} m<sup>2</sup></b><br />@lang('cms.property-rooms'): <b class=fr>{{$house->rooms}}</b><br><b>{{ roomStatus($house->status) }}</b>"
                                 alt="{{$house->slug}}"
                                 data-item="{{$house->id}}"
                                 data-roomnumber="{{$house->number}}"

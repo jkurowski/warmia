@@ -38,5 +38,7 @@ return array (
     'property-parking' => 'Miejsce postojowe',
     'property-garage' => 'Garaż',
     'cta-download-pdf' => 'POBIERZ KARTĘ .PDF',
-    'cta-scroll-to-contactform' => 'FORMULARZ KONTAKTOWY'
+    'cta-scroll-to-contactform' => 'FORMULARZ KONTAKTOWY',
+    'rodo-rules-more' => 'zobacz więcej',
+    'rodo-rules-collapse' => 'zwiń treść'
 );

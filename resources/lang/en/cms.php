@@ -38,5 +38,7 @@ return array (
      'property-parking' => 'Parking space',
      'property-garage' => 'Garage',
      'cta-download-pdf' => 'DOWNLOAD CARD .PDF',
-     'cta-scroll-to-contactform' => 'CONTACT FORM'
+     'cta-scroll-to-contactform' => 'CONTACT FORM',
+    'rodo-rules-more' => 'show more',
+    'rodo-rules-collapse' => 'read less'
 );

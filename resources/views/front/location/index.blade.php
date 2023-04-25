@@ -240,8 +240,8 @@
                 $('.rodo-rule p').readmore({
                     speed: 75,
                     collapsedHeight: 50,
-                    moreLink: '<a href="#">zobacz więcej</a>',
-                    lessLink: '<a href="#">zwiń treść</a>',
+                    moreLink: '<a href="#">@lang('cms.rodo-rules-more')</a>',
+                    lessLink: '<a href="#">@lang('cms.rodo-rules-collapse')</a>',
                     heightMargin: 6
                 });
 
