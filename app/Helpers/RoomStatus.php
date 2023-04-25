@@ -3,15 +3,13 @@
 if (! function_exists('roomStatus')) {
     function roomStatus(int $number)
     {
-        switch ($number) {
-            case '1':
-                return 'Dostępne';
-            case '2':
-                return 'Rezerwacja';
-            case '3':
-                return 'Sprzedane';
-            case '4':
-                return 'Wynajęte';
-        }
+        $statuses = [
+            1 => __('cms.available'),
+            2 => __('cms.reservation'),
+            3 => __('cms.sold'),
+            4 => __('cms.rented'),
+        ];
+
+        return $statuses[$number] ?? null;
     }
 }

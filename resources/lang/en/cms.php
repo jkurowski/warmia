@@ -40,5 +40,9 @@ return array (
      'cta-download-pdf' => 'DOWNLOAD CARD .PDF',
      'cta-scroll-to-contactform' => 'CONTACT FORM',
     'rodo-rules-more' => 'show more',
-    'rodo-rules-collapse' => 'read less'
+    'rodo-rules-collapse' => 'read less',
+    'available' => 'Available',
+    'reservation' => 'Reservation',
+    'sold' => 'Sold',
+    'rented' => 'Rented'
 );

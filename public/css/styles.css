@@ -1185,13 +1185,13 @@ section {
   color: green;
 }
 #roomsList .badge.room-list-status-2 {
-  color: #0063a9;
+  color: #d09314;
 }
 #roomsList .badge.room-list-status-3 {
   color: #b71c1c;
 }
 #roomsList .badge.room-list-status-4 {
-  color: #e17f00;
+  color: #0063a9;
 }
 .property #property h6 {
   font-size: 30px;
@@ -1261,7 +1261,7 @@ section {
 }
 .property-desc .room-status-2 {
   color: white;
-  background: #1788c9;
+  background: #d09314;
 }
 .property-desc .room-status-3 {
   color: white;
@@ -1269,7 +1269,7 @@ section {
 }
 .property-desc .room-status-4 {
   color: white;
-  background: #de8300;
+  background: #1788c9;
 }
 #filtr {
   border-top: 4px solid var(--main-color-gold);

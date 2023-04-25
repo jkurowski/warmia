@@ -40,5 +40,9 @@ return array (
     'cta-download-pdf' => 'POBIERZ KARTĘ .PDF',
     'cta-scroll-to-contactform' => 'FORMULARZ KONTAKTOWY',
     'rodo-rules-more' => 'zobacz więcej',
-    'rodo-rules-collapse' => 'zwiń treść'
+    'rodo-rules-collapse' => 'zwiń treść',
+    'available' => 'Dostępny',
+    'reservation' => 'Rezerwacja',
+    'sold' => 'Sprzedany',
+    'rented' => 'Wynajęty'
 );
