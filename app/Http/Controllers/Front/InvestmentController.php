@@ -4,23 +4,21 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Models\Investment;
-use App\Models\Property;
 use Illuminate\Http\Request;
 
 // CMS
 use App\Repositories\InvestmentRepository;
 use App\Models\Page;
-use Illuminate\Support\Facades\DB;
 
 class InvestmentController extends Controller
 {
-    private $repository;
-    private $pageId;
+    private InvestmentRepository $repository;
+    private int $pageId;
 
     public function __construct(InvestmentRepository $repository)
     {
         $this->repository = $repository;
-        $this->pageId = 2;
+        $this->pageId = 8;
     }
 
     public function show(Request $request)
