@@ -404,8 +404,14 @@
                     </div>
                     <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
                         <div class="benefits-text">
+                            @if($current_locale == 'pl')
                             <h2>O inwestorze</h2>
                             <p>Adept Investment Sp. z o.o. to inwestor i deweloper, który realizuje projekty na terenie Polski w segmencie obiektów handlowych, inwestycji mieszkaniowych oraz hoteli. W skład grupy kapitałowej Adept Investment Group wchodzą spółki zależne takie jak Adept Development – deweloper osiedli mieszkaniowych i apartamentowców, Adept Hotels – partner międzynarodowych sieci hotelarskich, a także Adept 24 – spółka odpowiedzialna za prace budowlane i wykończeniowe.</p>
+                            @endif
+                            @if($current_locale == 'en')
+                            <h2>About the inwestor</h2>
+                            <p>Adept Investment Sp. z o.o. is an investor and developer, undertaking projects in Poland in retail construction and housing investment as well as hotel segments. The Adept Investment capital group includes three subsidiaries: Adept Development – developer of housing estates and apartment complexes, Adept Hotels – partner of international hotel networks, and Adept 24 – a company responsible for construction and finishing works.</p>
+                            @endif
                         </div>
                     </div>
                 </div>
