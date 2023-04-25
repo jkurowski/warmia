@@ -12,8 +12,14 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
+                                @if($current_locale == 'pl')
                                 <h1>Miejsce, gdzie natura <br>spotyka się z luksusem</h1>
                                 <a href="{{ route('plan') }}" class="bttn mt-3 mt-lg-5 mb-3 mb-md-5">Znajdź swój dom</a>
+                                @endif
+                                @if($current_locale == 'en')
+                                <h1>A place where nature <br>meets luxury</h1>
+                                <a href="{{ route('plan') }}" class="bttn mt-3 mt-lg-5 mb-3 mb-md-5">Find a house for yourself</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -25,8 +31,14 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
+                                @if($current_locale == 'pl')
                                 <h1>Żyj aktywnie na Warmii</h1>
                                 <a href="{{ route('location') }}" class="bttn mt-3 mt-lg-5 mb-3 mb-md-5">Lokalizacja</a>
+                                @endif
+                                @if($current_locale == 'en')
+                                <h1>Live an active lifestyle in Warmia</h1>
+                                <a href="{{ route('location') }}" class="bttn mt-3 mt-lg-5 mb-3 mb-md-5">Location</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -303,6 +315,7 @@
                         <img src="{{ asset('/images/klub-korzysci.jpg') }}" alt="">
                     </div>
                     <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
+                        @if($current_locale == 'pl')
                         <div class="benefits-text">
                             <h2>Klub korzyści</h2>
                             <ul class="mb-0">
@@ -312,6 +325,18 @@
                                 <li>strefa restauracyjna</li>
                             </ul>
                         </div>
+                        @endif
+                        @if($current_locale == 'en')
+                            <div class="benefits-text">
+                                <h2>Benefits Club</h2>
+                                <ul class="mb-0">
+                                    <li>pool zone</li>
+                                    <li>recreation and leisure zone</li>
+                                    <li>sports zone</li>
+                                    <li>restaurant zone</li>
+                                </ul>
+                            </div>
+                        @endif
                     </div>
                 </div>
                 <div class="row no-gutters">
@@ -319,6 +344,7 @@
                         <img src="{{ asset('/images/usluga-concierge.jpg') }}" alt="">
                     </div>
                     <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
+                        @if($current_locale == 'pl')
                         <div class="benefits-text">
                             <h2>Usługa Concierge</h2>
                             <ul class="mb-0">
@@ -330,6 +356,20 @@
                                 <li>kosz ze śniadaniem pod drzwi</li>
                             </ul>
                         </div>
+                        @endif
+                        @if($current_locale == 'en')
+                        <div class="benefits-text">
+                            <h2>Concierge</h2>
+                            <ul class="mb-0">
+                                <li>cleaning</li>
+                                <li>mowing</li>
+                                <li>snow removal</li>
+                                <li>lighting in the fireplace</li>
+                                <li>laundry</li>
+                                <li>breakfast basket at the door</li>
+                            </ul>
+                        </div>
+                        @endif
                     </div>
                 </div>
                 <div class="row no-gutters flex-row-reverse">
@@ -337,11 +377,18 @@
                         <img src="{{ asset('/images/polec-nas.jpg') }}" alt="">
                     </div>
                     <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
+                        @if($current_locale == 'pl')
                         <div class="benefits-text">
                             <h2>Poleć nas i zyskaj!</h2>
                             <p>Z domów w Warmia Residence możesz korzystać na wiele sposobów – jest to idealne miejsce do mieszkania przez cały rok, ale nic nie stoi też na przeszkodzie, aby przekształcić to w dom letniskowy na wynajem. Dostosujemy się do Twoich indywidualnych potrzeb! Jeśli zainteresowała Cię nasza oferta i proponowane rozwiązania, to już teraz zapytaj o szczegóły zakupu lub poleć nas znajomym.</p>
-                            <a href="" class="bttn mt-5 d-none">Więcej szczegółów</a>
                         </div>
+                        @endif
+                        @if($current_locale == 'en')
+                        <div class="benefits-text">
+                            <h2>Refer us and profit!</h2>
+                            <p>You can utilize your house at Warmia Residence in multiple ways. It offers an ideal place to live throughout the year, but it can also be transformed into a holiday home that can be rented out. We will accommodate your individual needs! If you are interested in our offer and proposed solutions, inquire now about the details of your purchase or recommend us to your friends.</p>
+                        </div>
+                        @endif
                     </div>
                 </div>
                 <div class="row no-gutters">
