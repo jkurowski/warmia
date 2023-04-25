@@ -189,13 +189,20 @@
                 @endauth
             </div>
         </section>
-
+        @if($current_locale == 'pl')
         <picture>
             <source srcset="{{ asset('/images/mapa.webp') }}" type="image/webp">
             <source srcset="{{ asset('/images/mapa.jpg') }}" type="image/jpeg">
             <img src="{{ asset('/images/mapa.jpg') }}" alt="Mapa okolicy i lokalizacja inwestycji" loading="lazy" width="1920" height="1123" class="w-100">
         </picture>
-
+        @endif
+        @if($current_locale == 'en')
+            <picture>
+                <source srcset="{{ asset('/images/mapa-en.webp') }}" type="image/webp">
+                <source srcset="{{ asset('/images/mapa-en.jpg') }}" type="image/jpeg">
+                <img src="{{ asset('/images/mapa-en.jpg') }}" alt="Map of the area and location of the investment" loading="lazy" width="1920" height="1123" class="w-100">
+            </picture>
+        @endif
         <section id="gallery" class="d-none pb-0">
             <div class="container">
                 <div class="row inline inline-tc">
