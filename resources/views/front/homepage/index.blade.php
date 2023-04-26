@@ -13,11 +13,11 @@
                         <div class="row">
                             <div class="col-12">
                                 @if($current_locale == 'pl')
-                                <h1>Miejsce, gdzie natura <br>spotyka się z luksusem</h1>
+                                <h1>Twoje miejsce w krainie <br>tysiąca jezior</h1>
                                 <a href="{{ route('plan') }}" class="bttn mt-3 mt-lg-5 mb-3 mb-md-5">Znajdź swój dom</a>
                                 @endif
                                 @if($current_locale == 'en')
-                                <h1>A place where nature <br>meets luxury</h1>
+                                <h1>Your palce in the <br>Land of the Thousand Lakes</h1>
                                 <a href="{{ route('plan') }}" class="bttn mt-3 mt-lg-5 mb-3 mb-md-5">Find a house for yourself</a>
                                 @endif
                             </div>
@@ -36,8 +36,46 @@
                                 <a href="{{ route('location') }}" class="bttn mt-3 mt-lg-5 mb-3 mb-md-5">Lokalizacja</a>
                                 @endif
                                 @if($current_locale == 'en')
-                                <h1>Live an active lifestyle in Warmia</h1>
+                                <h1>Live actively in Warmia</h1>
                                 <a href="{{ route('location') }}" class="bttn mt-3 mt-lg-5 mb-3 mb-md-5">Location</a>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="{{ asset('/uploads/slider/slider-4.jpg') }}" alt="" class="w-100 d-none d-sm-block">
+                    <img src="{{ asset('/uploads/slider/slider-4-sm.jpg') }}" alt="" class="w-100 d-block d-sm-none">
+                    <div class="slider-gradient"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                @if($current_locale == 'pl')
+                                    <h1>Miejsce, gdzie natura <br>spotyka się z luksusem</h1>
+                                    <a href="{{ route('client') }}" class="bttn mt-3 mt-lg-5 mb-3 mb-md-5">@lang('cms.menu-client')</a>
+                                @endif
+                                @if($current_locale == 'en')
+                                    <h1>A place where nature <br>meets luxury</h1>
+                                    <a href="{{ route('client') }}" class="bttn mt-3 mt-lg-5 mb-3 mb-md-5">@lang('cms.menu-client')</a>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="{{ asset('/uploads/slider/slider-3.jpg') }}" alt="" class="w-100 d-none d-sm-block">
+                    <img src="{{ asset('/uploads/slider/slider-3-sm.jpg') }}" alt="" class="w-100 d-block d-sm-none">
+                    <div class="slider-gradient"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                @if($current_locale == 'pl')
+                                    <h1>Oddychaj naturą</h1>
+                                    <a href="{{ route('gallery') }}" class="bttn mt-3 mt-lg-5 mb-3 mb-md-5">@lang('cms.menu-gallery')</a>
+                                @endif
+                                @if($current_locale == 'en')
+                                    <h1>Inhale nature</h1>
+                                    <a href="{{ route('gallery') }}" class="bttn mt-3 mt-lg-5 mb-3 mb-md-5">@lang('cms.menu-gallery')</a>
                                 @endif
                             </div>
                         </div>
