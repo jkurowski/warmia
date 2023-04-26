@@ -131,10 +131,15 @@
                             <source srcset="{{ asset('/uploads/gallery/images/thumbs/'.$img->file) }}" type="image/jpeg">
                             <img src="{{ asset('/uploads/gallery/images/thumbs/'.$img->file) }}" alt="{{ $img->file_alt }}" loading="lazy" width="1360" height="765">
                         </picture>
-                        @if($img->file_alt)
-                        <div class="gallery-apla">
-                            {{ $img->file_alt }}
-                        </div>
+                        @if($current_locale == 'pl' && $img->file_alt)
+                            <div class="gallery-apla">
+                                {{ $img->file_alt }}
+                            </div>
+                        @endif
+                        @if($current_locale == 'en' && $img->en_file_alt)
+                            <div class="gallery-apla">
+                                {{ $img->en_file_alt }}
+                            </div>
                         @endif
                         </a>
                     </li>

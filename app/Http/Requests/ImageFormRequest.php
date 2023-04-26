@@ -25,7 +25,8 @@ class ImageFormRequest extends FormRequest
     {
         return [
             'file' => 'image',
-            'file_alt' => 'max:255|nullable'
+            'file_alt' => 'max:255|nullable',
+            'en_file_alt' => 'max:255|nullable'
         ];
     }
 }

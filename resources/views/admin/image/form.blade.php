@@ -22,6 +22,7 @@
                         @include('form-elements.html-input-text', ['label' => 'Nazwa', 'name' => 'name', 'value' => $entry->name])
                         @include('form-elements.html-input-file', ['label' => 'Zdjęcie', 'name' => 'file'])
                         @include('form-elements.html-input-text', ['label' => 'Atrybut ALT zdjęcia', 'name' => 'file_alt', 'value' => $entry->file_alt])
+                        @include('form-elements.html-input-text', ['label' => '[EN] Atrybut ALT zdjęcia', 'name' => 'en_file_alt', 'value' => $entry->en_file_alt])
                     </div>
                 </div>
             </div>

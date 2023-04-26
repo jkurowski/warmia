@@ -17,6 +17,7 @@ class Image extends Model
         'name',
         'file',
         'file_webp',
-        'file_alt'
+        'file_alt',
+        'en_file_alt'
     ];
 }
