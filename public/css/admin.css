@@ -942,6 +942,13 @@ p {
   transition: all 0.2s ease-out;
   top: 56px;
 }
+#sidemenu {
+  height: 100%;
+}
+#sidemenu ul {
+  overflow: scroll;
+  height: 100%;
+}
 #sidemenu ul > li > a {
   color: #a2a3b7;
   display: block;
