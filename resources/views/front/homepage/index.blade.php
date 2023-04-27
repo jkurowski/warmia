@@ -70,11 +70,11 @@
                         <div class="row">
                             <div class="col-12">
                                 @if($current_locale == 'pl')
-                                    <h1>Oddychaj naturą w Warmia Residence</h1>
+                                    <h1>Oddychaj naturą <br>w Warmia Residence</h1>
                                     <a href="{{ route('gallery') }}" class="bttn mt-3 mt-lg-5 mb-3 mb-md-5">@lang('cms.menu-gallery')</a>
                                 @endif
                                 @if($current_locale == 'en')
-                                    <h1>Inhale nature in Warmia Residence</h1>
+                                    <h1>Inhale nature <br>in Warmia Residence</h1>
                                     <a href="{{ route('gallery') }}" class="bttn mt-3 mt-lg-5 mb-3 mb-md-5">@lang('cms.menu-gallery')</a>
                                 @endif
                             </div>
