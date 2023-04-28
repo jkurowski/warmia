@@ -2026,6 +2026,13 @@ footer p a {
   .client-area #benefits .benefits-text {
     padding: 30px;
   }
+  header .top ul li {
+    margin-left: 25px;
+  }
+  header .top ul li.sep {
+    padding-left: 15px;
+    margin-left: 15px;
+  }
 }
 /* end of 991.98 */
 @media (max-width: 767.98px) {
@@ -2065,6 +2072,12 @@ footer p a {
   }
   .location #map {
     height: 400px;
+  }
+  header .container {
+    max-width: 100%;
+  }
+  header .top ul li {
+    margin-left: 16px;
   }
 }
 /* end of 767.98 */
@@ -2191,6 +2204,13 @@ footer p a {
   .client-area .bttn {
     padding: 11px 40px;
   }
+  header .top ul li {
+    margin-left: 14px;
+  }
+  header .top ul li.sep {
+    padding-left: 10px;
+    margin-left: 10px;
+  }
 }
 /* end of 575.98 */
 @media (max-width: 480px) {
@@ -2232,6 +2252,11 @@ footer p a {
   }
   .box-icon h3 {
     padding: 0;
+  }
+}
+@media (max-width: 359.98px) {
+  header .top ul li {
+    margin-left: 5px;
   }
 }
 /* end of 359.98 */

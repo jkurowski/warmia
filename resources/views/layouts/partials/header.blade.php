@@ -2,22 +2,22 @@
     <header id="header">
         <div class="container">
             <div class="row">
-                <div class="col-6 col-sm-2">
+                <div class="col-5 col-sm-2">
                     <div id="logo">
-                        <a href="/">
+                        <a href="/@if($current_locale == "en")en @endif">
                             <img src="{{ asset('/images/logo.svg') }}" alt="{{ settings()->get("page_title") }}">
                         </a>
                     </div>
                 </div>
-                <div class="col-6 col-sm-10">
+                <div class="col-7 col-sm-10 ps-0 ps-sm-3">
                     <div class="row">
                         <div class="col-12">
                             <div class="top">
                                 <ul class="mb-0 list-unstyled">
                                     <li><a href="tel:+48512655888"><span>+48 512 655 888</span><i class="las la-phone-square"></i></a></li>
                                     <li><a href="tel:+48797055188"><span>+48 797 055 188</span><i class="las la-phone-square"></i></a></li>
-                                    <li><a href="mailto:l.dawiec@warmiaresort.pl"><span>@lang('cms.header-email-cta')</span><i class="las la-envelope-square"></i></a></li>
-                                    <li class="sep d-none">
+                                    <li><a href="{{ route('contact') }}"><span>@lang('cms.header-email-cta')</span><i class="las la-envelope-square"></i></a></li>
+                                    <li class="sep">
                                         <a href="{{ changeLang('pl') }}" class="@if($current_locale == "pl") active @endif lang me-2">PL</a>
                                         <a href="{{ changeLang('en') }}" class="@if($current_locale == "en") active @endif lang">EN</a>
                                     </li>
@@ -27,7 +27,7 @@
                         <div class="col-12">
                             <nav>
                                 <ul class="mb-0 list-unstyled">
-                                    <li><a href="/">@lang('cms.menu-homepage')</a></li>
+                                    <li><a href="/@if($current_locale == "en")en @endif">@lang('cms.menu-homepage')</a></li>
                                     <li><a href="{{ route('plan') }}">@lang('cms.menu-plan')</a></li>
                                     <li><a href="{{ route('location') }}">@lang('cms.menu-location')</a></li>
                                     <li><a href="{{ route('gallery') }}">@lang('cms.menu-gallery')</a></li>
