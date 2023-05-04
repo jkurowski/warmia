@@ -689,8 +689,8 @@ aside span:hover i {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 37%;
-  background: linear-gradient(to bottom, rgba(37, 43, 84, 0), #252b54);
+  background: rgba(0, 0, 0, 0.2);
+  top: 0;
 }
 #slider .container {
   position: absolute;
@@ -714,6 +714,7 @@ aside span:hover i {
 }
 #slider h1 {
   color: white;
+  text-shadow: 0 0 6px #000000;
 }
 #slider .rslides_tabs {
   position: absolute;
